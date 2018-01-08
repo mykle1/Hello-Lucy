@@ -59,6 +59,11 @@ I've provided the enhanced files in this repo.
 
 * Replace respective module.js files with the module.js files in this repo
 
+* Download the cool, female animated face.gif (if you want it) from
+https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclient/face.gif
+and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
+MMM-EasyPix to use it.
+
 ## How to add any module for use with this "hack"
 
 * Open the module.js file that you want to use. Example MMM-EARTH
