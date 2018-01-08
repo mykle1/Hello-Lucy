@@ -1,4 +1,4 @@
-## HELLO-LUCY
+## Hello-Lucy
 
 A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
 The sounds you will have to create on your own. It's not that hard.
