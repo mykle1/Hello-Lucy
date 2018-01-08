@@ -1,4 +1,4 @@
-## HELLO-LUCY
+## MMM-HELLO-LUCY
 
 A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
 The sounds you will have to create on your own. It's not that hard.
@@ -52,6 +52,8 @@ https://github.com/fewieden/MMM-voice
 
 * Replace the MMM-voice.js and the node helper.js in the MMM-voice module folder.
 I've provided the enhanced files in this repo.
+
+* Clone this repo
 
 * Install the modules listed above for immediate use with this "hack"
 
@@ -121,6 +123,19 @@ icon of MMM-voice will begin to flash(pulse). During this time you can issue
 your voice commands. Default is 15 seconds. After each successful command the
 15 seconds begins again. When the microphone stops flashing you'll have to speak
 your keyword again in order to issue new commands.
+
+## Who is Lucy and where does stuff go?
+
+Well, my granddaughter's name is Lucy, so I chose her name for this project.
+
+The animation (face.gif) is being displayed by MMM-EasyPix and resides in the 
+modules/MMM-EasyPix/pix folder along with another one of my favorites (2.gif). 
+
+The greeting sound file is in the modules/MMM-EasyPix/sounds folder. 
+You can replace this with any sound that you choose.
+Any other sounds you want to use can also be placed in this directory and
+triggered by notification through the EasyPix module itself.
+
 
 ## Old Dual Core laptop beats Quad Core i7 desktop dev machine
 
