@@ -42,18 +42,18 @@ Remember to replace the respective module.js files with the ones provided here.
 
 I've commented the enhanced files, telling you what you need to do
 if you want to use this with any other module. One enhancement for each module
-you want to use, one to the NEW node helper and two to the MMM-voice.js 
-(sentences array and notification)
+you want to use, one to the NEW node helper of MMM-voice and two to the new MMM-voice.js 
+(sentences array and notification). See directions below.
 
 ## Installation. Pay Attention!
 
 * You MUST install MMM-voice first and get that running
 https://github.com/fewieden/MMM-voice
 
+* Clone this repo
+
 * Replace the MMM-voice.js and the node helper.js in the MMM-voice module folder.
 I've provided the enhanced files in this repo.
-
-* Clone this repo
 
 * Install the modules listed above for immediate use with this "hack"
 
