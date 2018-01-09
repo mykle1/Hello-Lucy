@@ -1,5 +1,6 @@
 ## Hello-Lucy
 
+* A short video of Hello Lucy
 https://www.youtube.com/watch?v=ZXWf7s3K3as
 
 A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
