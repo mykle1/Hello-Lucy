@@ -1,5 +1,7 @@
 ## Hello-Lucy
 
+https://www.youtube.com/watch?v=ZXWf7s3K3as
+
 A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
 The sounds you will have to create on your own. It's not that hard.
 Sounds are triggered by notifications between modules.
