@@ -422,6 +422,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_MOON');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(NASA)/g.test(data)) {
+            this.sendSocketNotification('SHOW_NASA');
+        } else if (/(HIDE)/g.test(data) && /(NASA)/g.test(data)) {
+            this.sendSocketNotification('HIDE_NASA');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(COWBOY)/g.test(data)) {
             this.sendSocketNotification('SHOW_COWBOY');
         } else if (/(HIDE)/g.test(data) && /(COWBOY)/g.test(data)) {
