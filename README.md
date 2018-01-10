@@ -1,7 +1,8 @@
 ## Hello-Lucy
 
 * A short video of Hello Lucy
-https://www.youtube.com/watch?v=ZXWf7s3K3as
+
+https://youtu.be/tPcZlo-kims
 
 A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
 The sounds you will have to create on your own. It's not that hard.
@@ -33,6 +34,7 @@ dog of a PC runs it without a hitch and the response time is fantastic.
 * MMM-LICE        (Live International Currency Exchange)
 * MMM-Lottery     (Random Lottery Numbers)
 * MMM-Lunartic    (Lunar information and graphics)
+* MMM-NASA        (Your universe in a single module)
 * MMM-NOAA        (MM's most popular weather module)
 * MMM-PilotWX     (Conditions and Weather for Pilots)
 * MMM-SORT        (Worldwide tides module)
