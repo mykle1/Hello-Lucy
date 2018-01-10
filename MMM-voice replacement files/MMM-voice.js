@@ -66,10 +66,12 @@ Module.register('MMM-voice', {
             'SHOW LICE',
 			'HIDE MOON',
             'SHOW MOON',
-            'HIDE LOTTERY',
-            'SHOW LOTTERY',
+			'HIDE NASA',
+            'SHOW NASA',
 			'HIDE COWBOY',
             'SHOW COWBOY',
+            'HIDE LOTTERY',
+            'SHOW LOTTERY',
             'HIDE CLOCK',
             'SHOW CLOCK',
             'HIDE EARTH',
@@ -419,7 +421,17 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_MOON');
         }
 		
-		 // MMM-voice sends notification to MMM-NOAA to HIDE
+		// MMM-voice sends notification to MMM-NASA to HIDE
+        else if (notification === 'HIDE_NASA') {
+             this.sendNotification('HIDE_NASA');
+        }
+    
+        // MMM-voice sends notification to MMM-NASA to SHOW
+        else if (notification === 'SHOW_NASA') {
+             this.sendNotification('SHOW_NASA');
+        }
+		
+		// MMM-voice sends notification to MMM-NOAA to HIDE
         else if (notification === 'HIDE_COWBOY') {
              this.sendNotification('HIDE_COWBOY');
         }
