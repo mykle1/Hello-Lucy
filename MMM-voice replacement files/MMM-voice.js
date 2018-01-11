@@ -66,6 +66,8 @@ Module.register('MMM-voice', {
             'SHOW LICE',
 			'HIDE MOON',
             'SHOW MOON',
+            'HIDE COCKTAILS',
+            'SHOW COCKTAILS',
 			'HIDE NASA',
             'SHOW NASA',
 			'HIDE COWBOY',
@@ -439,6 +441,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-NOAA to SHOW
         else if (notification === 'SHOW_COWBOY') {
              this.sendNotification('SHOW_COWBOY');
+        }
+        
+        // MMM-voice sends notification to MMM-COCKTAILS to HIDE
+        else if (notification === 'HIDE_COCKTAILS') {
+             this.sendNotification('HIDE_COCKTAILS');
+        }
+    
+        // MMM-voice sends notification to MMM-COCKTAILS to SHOW
+        else if (notification === 'SHOW_COCKTAILS') {
+             this.sendNotification('SHOW_COCKTAILS');
         }
         
 /////////////////////////////////////////////////////////////////////////////////
