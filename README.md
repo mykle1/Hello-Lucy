@@ -28,6 +28,7 @@ dog of a PC runs it without a hitch and the response time is fantastic.
 
 * clock           (default module)
 * MMM-Alarm-Clock (I use this with alert module disabled and click button)
+* MMM-Cocktails   (How to make all kinds of mixed drinks)
 * MMM-EARTH       (Realtime images of Earth from 1,000,000 miles away)
 * MMM-EasyPix     (necessary for animated graphic and sound response)
 * MMM-EyeCandy    (Pretty damn cool)
