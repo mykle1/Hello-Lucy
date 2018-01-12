@@ -26,24 +26,24 @@ dog of a PC runs it without a hitch and the response time is fantastic.
 
 ## Works immediately with these modules after replacing module.js files
 
-* clock           (default module)
-* MMM-AfterShip   (Track all your deliveries in one module)
-* MMM-Alarm-Clock (I use this with alert module disabled and click button)
-* MMM-Cocktails   (How to make all kinds of mixed drinks)
-* MMM-EARTH       (Realtime images of Earth from 1,000,000 miles away)
-* MMM-EasyPix     (Necessary for animated graphic and sound response)
-* MMM-Events      (Concerts, Sports, Theatre, comning to your city)
-* MMM-EyeCandy    (Pretty damn cool)
-* MMM-JEOPARDY    (The widely popular gameshow on your mirror)
-* MMM-LICE        (Live International Currency Exchange)
-* MMM-Lottery     (Random Lottery Numbers)
-* MMM-Lunartic    (Lunar information and graphics)
-* MMM-NASA        (Your universe in a single module)
-* MMM-NOAA        (MM's most popular weather module)
-* MMM-PilotWX     (Conditions and Weather for Pilots)
-* MMM-SORT        (Worldwide tides module)
-* MMM-voice       (of course)
-* MMM-WunderGround
+* **clock**           (default module)
+* **MMM-AfterShip**   (Track all your deliveries in one module)
+* **MMM-Alarm-Clock** (I use this with alert module disabled and click button)
+* **MMM-Cocktails**   (How to make all kinds of mixed drinks)
+* **MMM-EARTH**      (Realtime images of Earth from 1,000,000 miles away)
+* **MMM-EasyPix**     (Necessary for animated graphic and sound response)
+* **MMM-Events**      (Concerts, Sports, Theatre, comning to your city)
+* **MMM-EyeCandy**    (Pretty damn cool)
+* **MMM-JEOPARDY**    (The widely popular gameshow on your mirror)
+* **MMM-LICE**        (Live International Currency Exchange)
+* **MMM-Lottery**     (Random Lottery Numbers)
+* **MMM-Lunartic**    (Lunar information and graphics)
+* **MMM-NASA**        (Your universe in a single module)
+* **MMM-NOAA**        (MM's most popular weather module)
+* **MMM-PilotWX**     (Conditions and Weather for Pilots)
+* **MMM-SORT**        (Worldwide tides module)
+* **MMM-voice**       (of course)
+* **MMM-WunderGround**
 
 Remember to replace the respective module.js files with the ones provided here.
 
