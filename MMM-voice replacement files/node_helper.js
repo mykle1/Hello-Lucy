@@ -439,6 +439,24 @@ module.exports = NodeHelper.create({
         } else if (/(HIDE)/g.test(data) && /(COCKTAILS)/g.test(data)) {
             this.sendSocketNotification('HIDE_COCKTAILS');
         }
+		
+		else if (/(SHOW)/g.test(data) && /(SHIPPING)/g.test(data)) {
+            this.sendSocketNotification('SHOW_SHIPPING');
+        } else if (/(HIDE)/g.test(data) && /(SHIPPING)/g.test(data)) {
+            this.sendSocketNotification('HIDE_SHIPPING');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
+            this.sendSocketNotification('SHOW_JEOPARDY');
+        } else if (/(HIDE)/g.test(data) && /(JEOPARDY)/g.test(data)) {
+            this.sendSocketNotification('HIDE_JEOPARDY');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(EVENTS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_EVENTS');
+        } else if (/(HIDE)/g.test(data) && /(EVENTS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_EVENTS');
+        }
         
         ////////////////////////////////////////////////////////////////////
         

@@ -66,10 +66,16 @@ Module.register('MMM-voice', {
             'SHOW LICE',
 			'HIDE MOON',
             'SHOW MOON',
+			'HIDE EVENTS',
+            'SHOW EVENTS',
             'HIDE COCKTAILS',
             'SHOW COCKTAILS',
+			'HIDE SHIPPING',
+            'SHOW SHIPPING',
 			'HIDE NASA',
             'SHOW NASA',
+			'HIDE JEOPARDY',
+            'SHOW JEOPARDY',
 			'HIDE COWBOY',
             'SHOW COWBOY',
             'HIDE LOTTERY',
@@ -451,6 +457,36 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-COCKTAILS to SHOW
         else if (notification === 'SHOW_COCKTAILS') {
              this.sendNotification('SHOW_COCKTAILS');
+        }
+		
+		// MMM-voice sends notification to MMM-AfterShip to HIDE
+        else if (notification === 'HIDE_SHIPPING') {
+             this.sendNotification('HIDE_SHIPPING');
+        }
+    
+        // MMM-voice sends notification to MMM-AfterShip to SHOW
+        else if (notification === 'SHOW_SHIPPING') {
+             this.sendNotification('SHOW_SHIPPING');
+        }
+		
+		// MMM-voice sends notification to MMM-JEOPARDY to HIDE
+        else if (notification === 'HIDE_JEOPARDY') {
+             this.sendNotification('HIDE_JEOPARDY');
+        }
+    
+        // MMM-voice sends notification to MMM-JEOPARDY to SHOW
+        else if (notification === 'SHOW_JEOPARDY') {
+             this.sendNotification('SHOW_JEOPARDY');
+        }
+		
+		// MMM-voice sends notification to MMM-Events to HIDE
+        else if (notification === 'HIDE_EVENTS') {
+             this.sendNotification('HIDE_EVENTS');
+        }
+    
+        // MMM-voice sends notification to MMM-Events to SHOW
+        else if (notification === 'SHOW_EVENTS') {
+             this.sendNotification('SHOW_EVENTS');
         }
         
 /////////////////////////////////////////////////////////////////////////////////
