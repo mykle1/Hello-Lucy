@@ -41,7 +41,7 @@ dog of a PC runs it without a hitch and the response time is fantastic.
 * **MMM-NASA**        (Your universe in a single module)
 * **MMM-NOAA**        (MM's most popular weather module)
 * **MMM-PilotWX**     (Conditions and Weather for Pilots)
-* **MMM-SORT**        (Worldwide tides module)
+* **MMM-SORT**        (Static Or Rotating Tides module, worldwide)
 * **MMM-voice**       (of course)
 * **MMM-WunderGround**
 
