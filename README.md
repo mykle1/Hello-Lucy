@@ -203,17 +203,17 @@ but only show certain ones at certain times.
 			'HIDE LUCY',      'SHOW LUCY', 
 			'HIDE MODULES',   'SHOW MODULES',    for ALL modules
 			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
-            'HIDE NASA',      'SHOW NASA',
+            		'HIDE NASA',      'SHOW NASA',
 			'HIDE NEO',       'SHOW NEO',
 			'HIDE PETFINDER', 'SHOW PETFINDER',
-            'HIDE PILOTS',    'SHOW PILOTS',
+            		'HIDE PILOTS',    'SHOW PILOTS',
 			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
 			'HIDE SUNRISE',   'SHOW SUNRISE',
-            'HIDE TIDES',     'SHOW TIDES',      for MMM-SORT
+            		'HIDE TIDES',     'SHOW TIDES',      for MMM-SORT
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
 			'HIDE VOICE',     'SHOW VOICE',
-            'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
+            		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
 			'WAKE UP',        'GO TO SLEEP',
-      //    'OPEN HELP',      'CLOSE HELP',
+     		  //    'OPEN HELP',      'CLOSE HELP',
 
 ## Peace
