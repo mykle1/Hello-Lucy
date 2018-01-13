@@ -56,10 +56,16 @@ Module.register('MMM-voice', {
             'SHOW MODULES',
             'WAKE UP',
             'GO TO SLEEP',
-            'OPEN HELP',
-            'CLOSE HELP',
+        //    'OPEN HELP',
+        //    'CLOSE HELP',
             'HIDE LUCY',
             'SHOW LUCY',
+			'HIDE CARDS',
+            'SHOW CARDS',
+			'HIDE CENSUS',
+            'SHOW CENSUS',
+			'HIDE DARWIN',
+            'SHOW DARWIN',
             'HIDE ALARM',
             'SHOW ALARM',
             'HIDE LICE',
@@ -72,8 +78,14 @@ Module.register('MMM-voice', {
             'SHOW COCKTAILS',
 			'HIDE SHIPPING',
             'SHOW SHIPPING',
+			'HIDE PETFINDER',
+            'SHOW PETFINDER',
 			'HIDE NASA',
             'SHOW NASA',
+			'HIDE NEO',
+            'SHOW NEO',
+			'HIDE FORTUNE',
+            'SHOW FORTUNE',
 			'HIDE JEOPARDY',
             'SHOW JEOPARDY',
 			'HIDE COWBOY',
@@ -86,6 +98,10 @@ Module.register('MMM-voice', {
             'SHOW EARTH',
             'HIDE TIDES',
             'SHOW TIDES',
+			'HIDE TRIVIA',
+            'SHOW TRIVIA',
+			'HIDE SUNRISE',
+            'SHOW SUNRISE',
             'HIDE VOICE',
             'SHOW VOICE',
             'HIDE PILOTS',
@@ -487,6 +503,86 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Events to SHOW
         else if (notification === 'SHOW_EVENTS') {
              this.sendNotification('SHOW_EVENTS');
+        }
+		
+		// MMM-voice sends notification to MMM-EOL to HIDE
+        else if (notification === 'HIDE_DARWIN') {
+             this.sendNotification('HIDE_DARWIN');
+        }
+    
+        // MMM-voice sends notification to MMM-EOL to SHOW
+        else if (notification === 'SHOW_DARWIN') {
+             this.sendNotification('SHOW_DARWIN');
+        }
+		
+		// MMM-voice sends notification to MMM-SunRiseSet to HIDE
+        else if (notification === 'HIDE_SUNRISE') {
+             this.sendNotification('HIDE_SUNRISE');
+        }
+    
+        // MMM-voice sends notification to MMM-SunRiseSet to SHOW
+        else if (notification === 'SHOW_SUNRISE') {
+             this.sendNotification('SHOW_SUNRISE');
+        }
+		
+		// MMM-voice sends notification to MMM-PETFINDER to HIDE
+        else if (notification === 'HIDE_PETFINDER') {
+             this.sendNotification('HIDE_PETFINDER');
+        }
+    
+        // MMM-voice sends notification to MMM-PETFINDER to SHOW
+        else if (notification === 'SHOW_PETFINDER') {
+             this.sendNotification('SHOW_PETFINDER');
+        }
+		
+		// MMM-voice sends notification to MMM-Fortune to HIDE
+        else if (notification === 'HIDE_FORTUNE') {
+             this.sendNotification('HIDE_FORTUNE');
+        }
+    
+        // MMM-voice sends notification to MMM-Fortune to SHOW
+        else if (notification === 'SHOW_FORTUNE') {
+             this.sendNotification('SHOW_FORTUNE');
+        }
+		
+		// MMM-voice sends notification to MMM-CARDS to HIDE
+        else if (notification === 'HIDE_CARDS') {
+             this.sendNotification('HIDE_CARDS');
+        }
+    
+        // MMM-voice sends notification to MMM-CARDS to SHOW
+        else if (notification === 'SHOW_CARDS') {
+             this.sendNotification('SHOW_CARDS');
+        }
+		
+		// MMM-voice sends notification to MMM-ATM to HIDE
+        else if (notification === 'HIDE_TRIVIA') {
+             this.sendNotification('HIDE_TRIVIA');
+        }
+    
+        // MMM-voice sends notification to MMM-ATM to SHOW
+        else if (notification === 'SHOW_TRIVIA') {
+             this.sendNotification('SHOW_TRIVIA');
+        }
+		
+		// MMM-voice sends notification to MMM-NEO to HIDE
+        else if (notification === 'HIDE_NEO') {
+             this.sendNotification('HIDE_NEO');
+        }
+    
+        // MMM-voice sends notification to MMM-NEO to SHOW
+        else if (notification === 'SHOW_NEO') {
+             this.sendNotification('SHOW_NEO');
+        }
+		
+		// MMM-voice sends notification to MMM-Census to HIDE
+        else if (notification === 'HIDE_CENSUS') {
+             this.sendNotification('HIDE_CENSUS');
+        }
+    
+        // MMM-voice sends notification to MMM-Census to SHOW
+        else if (notification === 'SHOW_CENSUS') {
+             this.sendNotification('SHOW_CENSUS');
         }
         
 /////////////////////////////////////////////////////////////////////////////////
