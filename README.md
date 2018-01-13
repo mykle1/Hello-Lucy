@@ -184,4 +184,36 @@ I set these two to the same postion (top left) but only show one at a time.
 In this way you can have many modules loaded and occupying the same position 
 but only show certain ones at certain times.
 
+## Voice commands for the default modules in Hello-Lucy
+```
+			'HIDE ALARM',     'SHOW ALARM',      for MMM-Alarm-Clock
+			'HIDE CARDS',     'SHOW CARDS',
+			'HIDE CENSUS',    'SHOW CENSUS',   
+			'HIDE CLOCK',     'SHOW CLOCK',
+			'HIDE COCKTAILS', 'SHOW COCKTAILS',
+			'HIDE COWBOY',    'SHOW COWBOY',     for MMM-NOAA
+			'HIDE DARWIN',    'SHOW DARWIN',     for MMM-EOL (The Encyclopedia of Life)
+			'HIDE EARTH',     'SHOW EARTH',
+			'HIDE EYECANDY',  'SHOW EYECANDY',
+			'HIDE EVENTS',    'SHOW EVENTS',
+			'HIDE FORTUNE',   'SHOW FORTUNE',
+			'HIDE JEOPARDY',  'SHOW JEOPARDY',
+			'HIDE LICE',      'SHOW LICE',
+			'HIDE LOTTERY',   'SHOW LOTTERY',
+			'HIDE LUCY',      'SHOW LUCY', 
+			'HIDE MODULES',   'SHOW MODULES',    for ALL modules
+			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
+            'HIDE NASA',      'SHOW NASA',
+			'HIDE NEO',       'SHOW NEO',
+			'HIDE PETFINDER', 'SHOW PETFINDER',
+            'HIDE PILOTS',    'SHOW PILOTS',
+			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
+			'HIDE SUNRISE',   'SHOW SUNRISE',
+            'HIDE TIDES',     'SHOW TIDES',      for MMM-SORT
+			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
+			'HIDE VOICE',     'SHOW VOICE',
+            'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
+			'WAKE UP',        'GO TO SLEEP',
+      //    'OPEN HELP',      'CLOSE HELP',
+
 ## Peace
