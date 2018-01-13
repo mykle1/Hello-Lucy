@@ -10,7 +10,7 @@ Sounds are triggered by notifications between modules.
 
 ## Credit to Strawberry for MMM-voice
 
-This "hack" was only possible because of his fine work.
+This enhancement was only possible because of his fine work.
 
 ## Mykle, this isn't really a module
 
@@ -18,30 +18,39 @@ That's true. I fully admit that but I did take the time to learn what I wanted t
 and then made all the enhancements to the modules. It was tremendously rewarding for
 me and lots of fun and I learned quite a bit doing it. :-)
 
-## Notice!
+## Notice! 
 
 All enhancements and testing were done on an old, Compaq Presario CQ57 Dual Core laptop 
 with 4GB of Ram running ubuntu 16.04 LTS. Will it run on a Pi? Probably, but this old
-dog of a PC runs it without a hitch and the response time is fantastic.
+dog of a PC runs it without a hitch and the response time is fantastic. The Pi may slow
+rendering the animated gif. If so, use a static picture file, or none.
 
-## Works immediately with these modules after replacing module.js files
+## Works immediately with these modules
 
 * **clock**           (default module)
 * **MMM-AfterShip**   (Track all your deliveries in one module)
 * **MMM-Alarm-Clock** (I use this with alert module disabled and click button)
+* **MMM-ATM**         (Another Trivia Module? Really?)
+* **MMM-CARDS**       (Play 5 card stud poker against your mirror)
+* **MMM-Census**      (World Population by age and sex, or by individual country)
 * **MMM-Cocktails**   (How to make all kinds of mixed drinks)
-* **MMM-EARTH**      (Realtime images of Earth from 1,000,000 miles away)
+* **MMM-EARTH**       (Realtime images of Earth from 1,000,000 miles away)
 * **MMM-EasyPix**     (Necessary for animated graphic and sound response)
+* **MMM-EOL**         (The Encyclopedia of Life)
 * **MMM-Events**      (Concerts, Sports, Theatre, comning to your city)
 * **MMM-EyeCandy**    (Pretty damn cool)
+* **MMM-Fortune**     (A fortune cookie on your mirror)
 * **MMM-JEOPARDY**    (The widely popular gameshow on your mirror)
 * **MMM-LICE**        (Live International Currency Exchange)
 * **MMM-Lottery**     (Random Lottery Numbers)
 * **MMM-Lunartic**    (Lunar information and graphics)
 * **MMM-NASA**        (Your universe in a single module)
+* **MMM-NEO**         (Near Earth Objects passing by this week. Be afraid. Be VERY afraid!)
 * **MMM-NOAA**        (MM's most popular weather module)
+* **MMM-PetFinder**   (Pets for adoption in your area. All kinds.)
 * **MMM-PilotWX**     (Conditions and Weather for Pilots)
 * **MMM-SORT**        (Static Or Rotating Tides module, worldwide)
+* **MMM-SunRiseSet**  (Spherical or Day/Night map of planet Earth)
 * **MMM-voice**       (of course)
 * **MMM-WunderGround**
 
@@ -64,16 +73,16 @@ https://github.com/fewieden/MMM-voice
 * Replace the MMM-voice.js and the node helper.js in the MMM-voice module folder.
 I've provided the enhanced files in this repo.
 
-* Install the modules listed above for immediate use with this "hack"
+* Install the modules listed above for immediate use with this enhancement
 
 * Replace respective module.js files with the module.js files in this repo
 
 * Download the cool, female animated face.gif (if you want it) from
 https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclient/face.gif
 and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
-MMM-EasyPix to use it.
+MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag.
 
-## How to add any module for use with this "hack"
+## How to add any module for use with Hello-Lucy
 
 * Open the module.js file that you want to use. Example MMM-EARTH
 
