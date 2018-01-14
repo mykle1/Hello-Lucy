@@ -440,72 +440,21 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_COCKTAILS');
         }
 		
-		else if (/(SHOW)/g.test(data) && /(SHIPPING)/g.test(data)) {
-            this.sendSocketNotification('SHOW_SHIPPING');
-        } else if (/(HIDE)/g.test(data) && /(SHIPPING)/g.test(data)) {
-            this.sendSocketNotification('HIDE_SHIPPING');
+/////////  Pages commands @ Mykle ///////////////////////////		
+		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
+            this.sendSocketNotification('SHOW_PAGE_ONE');
+        } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_ONE');
         }
 		
-		else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
-            this.sendSocketNotification('SHOW_JEOPARDY');
-        } else if (/(HIDE)/g.test(data) && /(JEOPARDY)/g.test(data)) {
-            this.sendSocketNotification('HIDE_JEOPARDY');
+/////////  Pages commands @ Mykle ///////////////////////////
+		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
+            this.sendSocketNotification('SHOW_PAGE_TWO');
+        } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_TWO');
         }
 		
-		else if (/(SHOW)/g.test(data) && /(EVENTS)/g.test(data)) {
-            this.sendSocketNotification('SHOW_EVENTS');
-        } else if (/(HIDE)/g.test(data) && /(EVENTS)/g.test(data)) {
-            this.sendSocketNotification('HIDE_EVENTS');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(DARWIN)/g.test(data)) {
-            this.sendSocketNotification('SHOW_DARWIN');
-        } else if (/(HIDE)/g.test(data) && /(DARWIN)/g.test(data)) {
-            this.sendSocketNotification('HIDE_DARWIN');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(SUNRISE)/g.test(data)) {
-            this.sendSocketNotification('SHOW_SUNRISE');
-        } else if (/(HIDE)/g.test(data) && /(SUNRISE)/g.test(data)) {
-            this.sendSocketNotification('HIDE_SUNRISE');
-        }
         
-		else if (/(SHOW)/g.test(data) && /(PETFINDER)/g.test(data)) {
-            this.sendSocketNotification('SHOW_PETFINDER');
-        } else if (/(HIDE)/g.test(data) && /(PETFINDER)/g.test(data)) {
-            this.sendSocketNotification('HIDE_PETFINDER');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(FORTUNE)/g.test(data)) {
-            this.sendSocketNotification('SHOW_FORTUNE');
-        } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {
-            this.sendSocketNotification('HIDE_FORTUNE');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(CARDS)/g.test(data)) {
-            this.sendSocketNotification('SHOW_CARDS');
-        } else if (/(HIDE)/g.test(data) && /(CARDS)/g.test(data)) {
-            this.sendSocketNotification('HIDE_CARDS');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(TRIVIA)/g.test(data)) {
-            this.sendSocketNotification('SHOW_TRIVIA');
-        } else if (/(HIDE)/g.test(data) && /(TRIVIA)/g.test(data)) {
-            this.sendSocketNotification('HIDE_TRIVIA');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(NEO)/g.test(data)) {
-            this.sendSocketNotification('SHOW_NEO');
-        } else if (/(HIDE)/g.test(data) && /(NEO)/g.test(data)) {
-            this.sendSocketNotification('HIDE_NEO');
-        }
-		
-		else if (/(SHOW)/g.test(data) && /(CENSUS)/g.test(data)) {
-            this.sendSocketNotification('SHOW_CENSUS');
-        } else if (/(HIDE)/g.test(data) && /(CENSUS)/g.test(data)) {
-            this.sendSocketNotification('HIDE_CENSUS');
-        }
-		
         ////////////////////////////////////////////////////////////////////
         
         

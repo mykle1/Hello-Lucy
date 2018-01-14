@@ -52,64 +52,68 @@ Module.register('MMM-voice', {
     voice: {
         mode: 'VOICE',
         sentences: [
-            'HIDE MODULES',
-            'SHOW MODULES',
-            'WAKE UP',
-            'GO TO SLEEP',
-        //    'OPEN HELP',
-        //    'CLOSE HELP',
-            'HIDE LUCY',
-            'SHOW LUCY',
+			'HIDE ALARM',
+			'SHOW ALARM',
 			'HIDE CARDS',
-            'SHOW CARDS',
+			'SHOW CARDS',
 			'HIDE CENSUS',
-            'SHOW CENSUS',
-			'HIDE DARWIN',
-            'SHOW DARWIN',
-            'HIDE ALARM',
-            'SHOW ALARM',
-            'HIDE LICE',
-            'SHOW LICE',
-			'HIDE MOON',
-            'SHOW MOON',
-			'HIDE EVENTS',
-            'SHOW EVENTS',
-            'HIDE COCKTAILS',
-            'SHOW COCKTAILS',
-			'HIDE SHIPPING',
-            'SHOW SHIPPING',
-			'HIDE PETFINDER',
-            'SHOW PETFINDER',
-			'HIDE NASA',
-            'SHOW NASA',
-			'HIDE NEO',
-            'SHOW NEO',
+			'SHOW CENSUS',
+			'HIDE CLOCK',
+			'SHOW CLOCK',
+			'HIDE COCKTAILS',
+			'SHOW COCKTAILS',
+			'HIDE COWBOY',    
+			'SHOW COWBOY',
+			'HIDE DARWIN',    
+			'SHOW DARWIN',
+			'HIDE EARTH',     
+			'SHOW EARTH',
+			'HIDE EYECANDY',  
+			'SHOW EYECANDY',
+			'HIDE EVENTS',    
+			'SHOW EVENTS',
 			'HIDE FORTUNE',
-            'SHOW FORTUNE',
+			'SHOW FORTUNE',
 			'HIDE JEOPARDY',
-            'SHOW JEOPARDY',
-			'HIDE COWBOY',
-            'SHOW COWBOY',
-            'HIDE LOTTERY',
-            'SHOW LOTTERY',
-            'HIDE CLOCK',
-            'SHOW CLOCK',
-            'HIDE EARTH',
-            'SHOW EARTH',
-            'HIDE TIDES',
-            'SHOW TIDES',
-			'HIDE TRIVIA',
-            'SHOW TRIVIA',
-			'HIDE SUNRISE',
-            'SHOW SUNRISE',
-            'HIDE VOICE',
-            'SHOW VOICE',
+			'SHOW JEOPARDY',
+			'HIDE LICE',
+			'SHOW LICE',
+			'HIDE LOTTERY',
+			'SHOW LOTTERY',
+			'HIDE LUCY',
+			'SHOW LUCY',
+			'HIDE MODULES',
+			'SHOW MODULES',
+			'HIDE MOON',
+			'SHOW MOON',
+            'HIDE NASA',
+			'SHOW NASA',
+			'HIDE NEO',
+			'SHOW NEO',
+			'HIDE PETFINDER',
+			'SHOW PETFINDER',
             'HIDE PILOTS',
-            'SHOW PILOTS',
-            'HIDE EYECANDY',
-            'SHOW EYECANDY',
+			'SHOW PILOTS',
+			'HIDE SHIPPING',
+			'SHOW SHIPPING',
+			'HIDE SUNRISE',
+			'SHOW SUNRISE',
+            'HIDE TIDES',
+			'SHOW TIDES',
+			'HIDE TRIVIA',
+			'SHOW TRIVIA',
+			'HIDE VOICE',
+			'SHOW VOICE',
             'HIDE WEATHER',
-            'SHOW WEATHER'
+			'SHOW WEATHER',
+			'HIDE PAGE ONE',
+			'SHOW PAGE ONE',
+			'HIDE PAGE TWO',
+			'SHOW PAGE TWO',
+			'WAKE UP',
+			'GO TO SLEEP',
+            'OPEN HELP',
+			'CLOSE HELP',
         ]
     },
 
@@ -219,7 +223,7 @@ Module.register('MMM-voice', {
     },
     
     
-    
+ /////////// @ Mykle enhancement ////////////////////   
     notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_VOICE') {
             this.hide(1000);
@@ -251,15 +255,16 @@ Module.register('MMM-voice', {
             }
         }
  //   },  // <-- removed }, here when I edited
-    //////// mykle
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+
+/////////// @ Mykle enhancement //////////////////
      if (notification === 'DOM_OBJECTS_CREATED') {
          MM.getModules().enumerate((module) => {
                 module.hide(1000);
             });   
      } 
-    
+/////////// @ Mykle enhancement //////////////////
     if (notification === 'DOM_OBJECTS_CREATED') {
         this.sendNotification('SHOW_LUCY'); // for showing MMM-EasyPix(Lucy) when MM launches
         this.show(1000); // for showing MMM-voice when MM launches
@@ -319,7 +324,51 @@ Module.register('MMM-voice', {
         } else if (notification === 'CLOSE_HELP') {
             this.help = false;
         }
-////////////////////////////////////////////////////////////////////////////////
+
+		
+//////////// PAGES BY VOICE COMMAND @ Mykle  ///////////////////////////////////////	 
+		 else if (notification === 'SHOW_PAGE_ONE') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('SHOW_LOTTERY');
+			 this.sendNotification('SHOW_CLOCK');
+			 this.sendNotification('SHOW_EARTH');
+			 this.sendNotification('SHOW_LICE');
+			 this.sendNotification('SHOW_COWBOY');
+			 this.sendNotification('SHOW_TIDES');
+			 this.sendNotification('SHOW_VOICE');
+			 
+		 } else if (notification === 'HIDE_PAGE_ONE') {
+			 this.sendNotification('HIDE_LOTTERY');
+			 this.sendNotification('HIDE_CLOCK');
+			 this.sendNotification('HIDE_EARTH');
+			 this.sendNotification('HIDE_LICE');
+			 this.sendNotification('HIDE_COWBOY');
+			 this.sendNotification('HIDE_TIDES');
+			 this.sendNotification('HIDE_VOICE');
+			 
+		 } else if (notification === 'SHOW_PAGE_TWO') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('SHOW_PILOTS');
+			 this.sendNotification('SHOW_MOON');
+			 this.sendNotification('SHOW_NASA');
+			 this.sendNotification('SHOW_ALARM');
+			 this.sendNotification('SHOW_COCKTAILS');
+			 this.sendNotification('SHOW_WEATHER');
+			 this.sendNotification('SHOW_VOICE');
+			 
+		} else if (notification === 'HIDE_PAGE_TWO') {
+			 this.sendNotification('HIDE_PILOTS');
+			 this.sendNotification('HIDE_MOON');
+			 this.sendNotification('HIDE_NASA');
+			 this.sendNotification('HIDE_ALARM');
+			 this.sendNotification('HIDE_COCKTAILS');
+			 this.sendNotification('HIDE_WEATHER');
+			 this.sendNotification('HIDE_VOICE');
+       
+		}
+		
+		
+/////////// SINGULAR VOICE COMMANDS @ Mykle ///////////////////////////////////		
 
         // You have to add your UNIQUE commands like this
         
@@ -583,9 +632,9 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Census to SHOW
         else if (notification === 'SHOW_CENSUS') {
              this.sendNotification('SHOW_CENSUS');
-        }
-        
+        }     
 /////////////////////////////////////////////////////////////////////////////////
+		
         else if (notification === 'DEBUG') {
             this.debugInformation = payload;
         }
@@ -600,21 +649,24 @@ Module.register('MMM-voice', {
      */
     appendHelp(appendTo) {
         const title = document.createElement('h1');
-        title.classList.add('medium');
+        title.classList.add('xsmall'); // was medium @ Mykle
         title.innerHTML = `${this.name} - ${this.translate('COMMAND_LIST')}`;
         appendTo.appendChild(title);
 
         const mode = document.createElement('div');
+		mode.classList.add('xsmall'); // added @ Mykle
         mode.innerHTML = `${this.translate('MODE')}: ${this.voice.mode}`;
         appendTo.appendChild(mode);
 
         const listLabel = document.createElement('div');
+		listLabel.classList.add('xsmall'); // added @ Mykle
         listLabel.innerHTML = `${this.translate('VOICE_COMMANDS')}:`;
         appendTo.appendChild(listLabel);
 
         const list = document.createElement('ul');
         for (let i = 0; i < this.voice.sentences.length; i += 1) {
             const item = document.createElement('li');
+			list.classList.add('xsmall'); // added @ Mykle
             item.innerHTML = this.voice.sentences[i];
             list.appendChild(item);
         }
