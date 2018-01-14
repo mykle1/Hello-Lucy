@@ -67,6 +67,7 @@ you want to use, one to the NEW node helper of MMM-voice and two to the new MMM-
 
 You've come to the right place. By default, this enhancement has four page commands.
 * **SHOW PAGE ONE**, **HIDE PAGE ONE**, **SHOW PAGE TWO** and **HIDE PAGE TWO**
+
 These page commands work with the modules listed above if you install and enable them.
 With the pages commands you can have multiple module sets hide and show with a single voice command. 
 Set up your own page commands for everyone you love. Everyone gets their own page commands 
