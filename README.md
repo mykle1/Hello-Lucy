@@ -56,12 +56,25 @@ rendering the animated gif. If so, use a static picture file, or none.
 
 Remember to replace the respective module.js files with the ones provided here.
 
-## Add any module you want to use this with
+## Add any module to work with Hello Lucy!
 
 I've commented the enhanced files, telling you what you need to do
 if you want to use this with any other module. One enhancement for each module
 you want to use, one to the NEW node helper of MMM-voice and two to the new MMM-voice.js 
 (sentences array and notification). See directions below.
+
+## You want pages controlled by voice commands?
+
+You've come to the right place. By default, this enhancement has four page commands.
+* **SHOW PAGE ONE**, **HIDE PAGE ONE**, **SHOW PAGE TWO** and **HIDE PAGE TWO**
+These page commands work with the modules listed above if you install and enable them.
+With the pages commands you can have multiple module sets hide and show with a single voice command. 
+Set up your own page commands for everyone you love. Everyone gets their own page commands 
+that hide and show only the module sets that interest them. How cool is that? :-)
+
+Take a look inside the MMM-voice.js file and the node helper. There is enough information there
+for you to add your own page commands and create your own sets of modules. Or, you can wait until
+I add that information to the directions below. :-) You can do it. I swear! :-)
 
 ## Installation. Pay Attention!
 
@@ -84,7 +97,7 @@ MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag
 
 ## How to add any module for use with Hello-Lucy
 
-* Open the module.js file that you want to use. Example MMM-EARTH
+* Open the module.js file that you want to use. Example MMM-EARTH.js
 
 * After the }, after the return wrapper
 ```
@@ -106,7 +119,7 @@ MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag
 ```
 
 * Now open the new node helper that you put in the MMM-voice folder
-Add this on line 429 (it should be a blank line) and change EARTH(x4) to your word
+Add this at about line 429  (it should be a blank line) and change EARTH(x4) to your word
 
 ```
 else if (/(SHOW)/g.test(data) && /(EARTH)/g.test(data)) {
@@ -124,7 +137,7 @@ Change EARTH (x2) with your command word
 'SHOW EARTH',
 ```
 
-* Now go to line 431 (it should be blank)
+* Now go to about line 431 (it should be blank)
 Add this and change EARTH (x6) to your word
 
 ```
@@ -215,5 +228,6 @@ but only show certain ones at certain times.
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
 			'WAKE UP',        'GO TO SLEEP',
      		  //    'OPEN HELP',      'CLOSE HELP',
+```
 
 ## Peace
