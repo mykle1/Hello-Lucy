@@ -153,6 +153,51 @@ Add this and change EARTH (x6) to your word
         }
 ```
 
+## How to add Pages of modules
+
+At about line 443 in the new node helper of MMM-voice you'll see this:
+```
+/////////  Pages commands @ Mykle ///////////////////////////		
+		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
+            this.sendSocketNotification('SHOW_PAGE_ONE');
+        } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_ONE');
+        }
+```
+
+You have to add one of these for every page your create
+
+At about line 116 in the new MMM-voice.js file you'll need to add your sentence. In this case:
+```
+'HIDE PAGE ONE',
+'SHOW PAGE ONE',
+```
+
+Still in the new MMM-voice.js file at about line 370 you'll need to add your set of modules for
+the page you just created. In this case, it looks like this:
+```
+		 else if (notification === 'SHOW_PAGE_ONE') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('SHOW_LOTTERY');
+			 this.sendNotification('SHOW_CLOCK');
+			 this.sendNotification('SHOW_EARTH');
+			 this.sendNotification('SHOW_LICE');
+			 this.sendNotification('SHOW_COWBOY');
+			 this.sendNotification('SHOW_TIDES');
+			 this.sendNotification('SHOW_VOICE');
+			 
+		 } else if (notification === 'HIDE_PAGE_ONE') {
+			 this.sendNotification('HIDE_LOTTERY');
+			 this.sendNotification('HIDE_CLOCK');
+			 this.sendNotification('HIDE_EARTH');
+			 this.sendNotification('HIDE_LICE');
+			 this.sendNotification('HIDE_COWBOY');
+			 this.sendNotification('HIDE_TIDES');
+			 this.sendNotification('HIDE_VOICE');
+			 
+		 }
+```
+
 ## Set your keyword in your config.js entry for MMM-voice
 
 Mine is `keyword: 'HELLO LUCY',`. When you speak your keyword, the microphone
