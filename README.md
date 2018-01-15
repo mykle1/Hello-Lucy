@@ -73,9 +73,7 @@ With the pages commands you can have multiple module sets hide and show with a s
 Set up your own page commands for everyone you love. Everyone gets their own page commands 
 that hide and show only the module sets that interest them. How cool is that? :-)
 
-Take a look inside the MMM-voice.js file and the node helper. There is enough information there
-for you to add your own page commands and create your own sets of modules. Or, you can wait until
-I add that information to the directions below. :-) You can do it. I swear! :-)
+Directions for creating your own pages of modules can be found below.
 
 ## Installation. Pay Attention!
 
