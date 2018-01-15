@@ -165,7 +165,7 @@ At about line 443 in the new node helper of MMM-voice you'll see this:
         }
 ```
 
-You have to add one of these for every page your create
+You have to add one of these for every page your create. Change the page numbers!
 
 At about line 116 in the new MMM-voice.js file you'll need to add your sentence. In this case:
 ```
