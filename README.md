@@ -94,7 +94,7 @@ https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclie
 and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
 MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag.
 
-## How to add any module for use with Hello-Lucy
+## How to add any module you want for use with Hello-Lucy
 
 * Open the module.js file that you want to use. Example MMM-EARTH.js
 
