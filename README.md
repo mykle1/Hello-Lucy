@@ -85,7 +85,7 @@ https://github.com/fewieden/MMM-voice
 * Replace the MMM-voice.js and the node helper.js in the MMM-voice module folder.
 I've provided the enhanced files in this repo.
 
-* Install the modules listed above for immediate use with this enhancement
+* Install any or all of the modules listed above for immediate use with this enhancement
 
 * Replace respective module.js files with the module.js files in this repo
 
