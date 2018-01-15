@@ -262,6 +262,7 @@ but only show certain ones at certain times.
 			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
             		'HIDE NASA',      'SHOW NASA',
 			'HIDE NEO',       'SHOW NEO',
+			'HIDE PAGE ONE',  'SHOE PAGE ONE',
 			'HIDE PETFINDER', 'SHOW PETFINDER',
             		'HIDE PILOTS',    'SHOW PILOTS',
 			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
@@ -271,7 +272,7 @@ but only show certain ones at certain times.
 			'HIDE VOICE',     'SHOW VOICE',
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
 			'WAKE UP',        'GO TO SLEEP',
-     		  //    'OPEN HELP',      'CLOSE HELP',
+     		        'OPEN HELP',      'CLOSE HELP',
 ```
 
 ## Peace
