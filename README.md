@@ -1,10 +1,10 @@
 ## Hello-Lucy
 
-* A short video of Hello Lucy
+* A short video of Hello Lucy, now with Pages!
 
-https://youtu.be/tPcZlo-kims
+https://youtu.be/bKHEXPzVb2A
 
-A poor man's Alexa. Hide/Show all or individual modules using MMM-voice.
+Hide/Show all or individual modules or pages of modules.
 The sounds you will have to create on your own. It's not that hard.
 Sounds are triggered by notifications between modules.
 
