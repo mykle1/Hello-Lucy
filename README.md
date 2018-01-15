@@ -96,6 +96,8 @@ MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag
 
 ## How to add any module you want for use with Hello-Lucy
 
+The modules listed above work without you changing anything.
+
 * Open the module.js file that you want to use. Example MMM-EARTH.js
 
 * After the }, after the return wrapper
