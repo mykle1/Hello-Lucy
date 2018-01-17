@@ -54,6 +54,8 @@ Module.register('MMM-voice', {
         sentences: [
 			'HIDE ALARM',
 			'SHOW ALARM',
+			'HIDE BACKGROUND',
+			'SHOW BACKGROUND',
 			'HIDE CARDS',
 			'SHOW CARDS',
 			'HIDE CENSUS',
@@ -632,7 +634,17 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Census to SHOW
         else if (notification === 'SHOW_CENSUS') {
              this.sendNotification('SHOW_CENSUS');
-        }     
+        }
+		
+		// MMM-voice sends notification to MMM-Back to HIDE
+		 else if (notification === 'HIDE_BACKGROUND') {
+             this.sendNotification('HIDE_BACKGROUND');
+        }
+    
+        // MMM-voice sends notification to MMM-Back to SHOW
+        else if (notification === 'SHOW_BACKGROUND') {
+             this.sendNotification('SHOW_BACKGROUND');
+        }
 /////////////////////////////////////////////////////////////////////////////////
 		
         else if (notification === 'DEBUG') {
