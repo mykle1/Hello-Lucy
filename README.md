@@ -35,6 +35,7 @@ rendering the animated gif. If so, use a static picture file, or none.
 * **MMM-Census**      (World Population by age and sex, or by individual country)
 * **MMM-Cocktails**   (How to make all kinds of mixed drinks)
 * **MMM-EARTH**       (Realtime images of Earth from 1,000,000 miles away)
+* **MMM-EasyBack**    (The easiest way to use background/desktop pictures on your mirror.)
 * **MMM-EasyPix**     (Necessary for animated graphic and sound response)
 * **MMM-EOL**         (The Encyclopedia of Life)
 * **MMM-Events**      (Concerts, Sports, Theatre, comning to your city)
@@ -246,6 +247,7 @@ but only show certain ones at certain times.
 ## Voice commands for the default modules in Hello-Lucy
 ```
 			'HIDE ALARM',     'SHOW ALARM',      for MMM-Alarm-Clock
+			'HIDE BACKGROUND','SHOW BACKGROUND', for MMM-EasyBack
 			'HIDE CARDS',     'SHOW CARDS',
 			'HIDE CENSUS',    'SHOW CENSUS',   
 			'HIDE CLOCK',     'SHOW CLOCK',
