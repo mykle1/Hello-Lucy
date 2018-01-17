@@ -38,7 +38,7 @@ rendering the animated gif. If so, use a static picture file, or none.
 * **MMM-EasyBack**    (The easiest way to use background/desktop pictures on your mirror.)
 * **MMM-EasyPix**     (Necessary for animated graphic and sound response)
 * **MMM-EOL**         (The Encyclopedia of Life)
-* **MMM-Events**      (Concerts, Sports, Theatre, comning to your city)
+* **MMM-Events**      (Concerts, Sports, Theatre, coming to your city)
 * **MMM-EyeCandy**    (Pretty damn cool)
 * **MMM-Fortune**     (A fortune cookie on your mirror)
 * **MMM-JEOPARDY**    (The widely popular gameshow on your mirror)
