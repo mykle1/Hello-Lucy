@@ -94,6 +94,8 @@ Module.register('MMM-voice', {
 			'SHOW NEO',
 			'HIDE PETFINDER',
 			'SHOW PETFINDER',
+			'HIDE PICTURES',
+			'SHOW PICTURES',
             'HIDE PILOTS',
 			'SHOW PILOTS',
 			'HIDE SHIPPING',
@@ -644,6 +646,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Back to SHOW
         else if (notification === 'SHOW_BACKGROUND') {
              this.sendNotification('SHOW_BACKGROUND');
+        }
+		
+		 // MMM-voice sends notification to MMM-ImageSlideshow to HIDE
+        else if (notification === 'HIDE_PICTURES') {
+             this.sendNotification('HIDE_PICTURES');
+        }
+    
+        // MMM-voice sends notification to MMM-ImageSlideshow to SHOW
+        else if (notification === 'SHOW_PICTURES') {
+             this.sendNotification('SHOW_PICTURES');
         }
 /////////////////////////////////////////////////////////////////////////////////
 		

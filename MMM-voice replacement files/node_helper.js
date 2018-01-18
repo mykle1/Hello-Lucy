@@ -446,6 +446,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_BACKGROUND');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(PICTURES)/g.test(data)) {
+            this.sendSocketNotification('SHOW_PICTURES');
+        } else if (/(HIDE)/g.test(data) && /(PICTURES)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PICTURES');
+        }
+		
 /////////  Pages commands @ Mykle ///////////////////////////		
 		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
             this.sendSocketNotification('SHOW_PAGE_ONE');
