@@ -268,6 +268,7 @@ but only show certain ones at certain times.
 			'HIDE NEO',       'SHOW NEO',
 			'HIDE PAGE ONE',  'SHOE PAGE ONE',
 			'HIDE PETFINDER', 'SHOW PETFINDER',
+			'HIDE PICTURES',  'SHOW PICTURES',   for MMM-ImageSlideshow
             		'HIDE PILOTS',    'SHOW PILOTS',
 			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
 			'HIDE SUNRISE',   'SHOW SUNRISE',
