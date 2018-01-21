@@ -114,10 +114,10 @@ Module.register('MMM-voice', {
 			'SHOW PAGE ONE',
 			'HIDE PAGE TWO',
 			'SHOW PAGE TWO',
-			'WAKE UP',
+			'PLEASE WAKE UP',
 			'GO TO SLEEP',
-            'OPEN HELP',
-			'CLOSE HELP',
+      //      'OPEN HELP',
+	//		'CLOSE HELP',
         ]
     },
 
@@ -212,7 +212,7 @@ Module.register('MMM-voice', {
                 }
             }
         }
-
+/////// Edit help screen to fit all commands TO DO @ Mykle ////////////////////////////////
         if (this.help) {
             voice.classList.add(`${this.name}-blur`);
             const modal = document.createElement('div');
@@ -220,7 +220,7 @@ Module.register('MMM-voice', {
             this.appendHelp(modal);
             wrapper.appendChild(modal);
         }
-
+		
         wrapper.appendChild(voice);
 
         return wrapper;
@@ -239,9 +239,6 @@ Module.register('MMM-voice', {
             
     },
     
-    
-    
-
     /**
      * @function notificationReceived
      * @description Handles incoming broadcasts from other modules or the MagicMirror core.

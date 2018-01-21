@@ -338,12 +338,20 @@ module.exports = NodeHelper.create({
     checkCommands(data) {
         if (bytes.r[0].test(data) && bytes.r[1].test(data)) {
             this.sendSocketNotification('BYTES', bytes.a);
-        } else if (/(WAKE)/g.test(data) && /(UP)/g.test(data)) {
-            exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
-            this.hdmi = true;
+        } else if (/(PLEASE)/g.test(data) && /(WAKE)/g.test(data) && /(UP)/g.test(data)) {
+
+/////////// Turns on laptop display and desktop PC with DVI @ Mykle ///////////////
+			exec('xset dpms force on', null);
+			
+   //         exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
+   //         this.hdmi = true;
         } else if (/(GO)/g.test(data) && /(SLEEP)/g.test(data)) {
-            exec('/opt/vc/bin/tvservice -o', null);
-            this.hdmi = false;
+			
+/////////// Turns off laptop display and desktop PC with DVI  @ Mykle ///////////////
+			exec('xset dpms force off', null);
+			
+    //        exec('/opt/vc/bin/tvservice -o', null);
+     //       this.hdmi = false;
         } 
         
         ///////////////////////////////////////////////////////////////////
