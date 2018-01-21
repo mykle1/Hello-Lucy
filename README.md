@@ -276,8 +276,8 @@ but only show certain ones at certain times.
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
 			'HIDE VOICE',     'SHOW VOICE',
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
-			'WAKE UP',        'GO TO SLEEP',
-     		        'OPEN HELP',      'CLOSE HELP',
+			'PLEASE WAKE UP', 'GO TO SLEEP',     for turning on and off display
+     		   //     'OPEN HELP',      'CLOSE HELP', // Working on fix for these
 ```
 
 ## Peace
