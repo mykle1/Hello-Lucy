@@ -372,7 +372,158 @@ Module.register('MMM-voice', {
 /////////// SINGULAR VOICE COMMANDS @ Mykle ///////////////////////////////////		
 
         // You have to add your UNIQUE commands like this
-        
+		
+		// MMM-voice sends notification to MMM-AlarmClock to HIDE
+        else if (notification === 'HIDE_ALARM') {
+             this.sendNotification('HIDE_ALARM');
+        }
+    
+        // MMM-voice sends notification to MMM-AlarmClock to SHOW
+        else if (notification === 'SHOW_ALARM') {
+             this.sendNotification('SHOW_ALARM');
+        }
+		
+		// MMM-voice sends notification to MMM-Back to HIDE
+		 else if (notification === 'HIDE_BACKGROUND') {
+             this.sendNotification('HIDE_BACKGROUND');
+        }
+    
+        // MMM-voice sends notification to MMM-Back to SHOW
+        else if (notification === 'SHOW_BACKGROUND') {
+             this.sendNotification('SHOW_BACKGROUND');
+        }
+		
+		// MMM-voice sends notification to MMM-CARDS to HIDE
+        else if (notification === 'HIDE_CARDS') {
+             this.sendNotification('HIDE_CARDS');
+        }
+    
+        // MMM-voice sends notification to MMM-CARDS to SHOW
+        else if (notification === 'SHOW_CARDS') {
+             this.sendNotification('SHOW_CARDS');
+        }
+		
+		// MMM-voice sends notification to MMM-Census to HIDE
+        else if (notification === 'HIDE_CENSUS') {
+             this.sendNotification('HIDE_CENSUS');
+        }
+    
+        // MMM-voice sends notification to MMM-Census to SHOW
+        else if (notification === 'SHOW_CENSUS') {
+             this.sendNotification('SHOW_CENSUS');
+        }
+		
+		// MMM-voice sends notification to MMM-CLOCK to HIDE
+        else if (notification === 'HIDE_CLOCK') {
+             this.sendNotification('HIDE_CLOCK');
+        }
+    
+        // MMM-voice sends notification to MMM-CLOCK to SHOW
+        else if (notification === 'SHOW_CLOCK') {
+             this.sendNotification('SHOW_CLOCK');
+        }
+		
+		// MMM-voice sends notification to MMM-COCKTAILS to HIDE
+        else if (notification === 'HIDE_COCKTAILS') {
+             this.sendNotification('HIDE_COCKTAILS');
+        }
+    
+        // MMM-voice sends notification to MMM-COCKTAILS to SHOW
+        else if (notification === 'SHOW_COCKTAILS') {
+             this.sendNotification('SHOW_COCKTAILS');
+        }
+		
+		// MMM-voice sends notification to MMM-NOAA to HIDE
+        else if (notification === 'HIDE_COWBOY') {
+             this.sendNotification('HIDE_COWBOY');
+        }
+    
+        // MMM-voice sends notification to MMM-NOAA to SHOW
+        else if (notification === 'SHOW_COWBOY') {
+             this.sendNotification('SHOW_COWBOY');
+        }
+		
+		// MMM-voice sends notification to MMM-EOL to HIDE
+        else if (notification === 'HIDE_DARWIN') {
+             this.sendNotification('HIDE_DARWIN');
+        }
+    
+        // MMM-voice sends notification to MMM-EOL to SHOW
+        else if (notification === 'SHOW_DARWIN') {
+             this.sendNotification('SHOW_DARWIN');
+        }
+		
+		// MMM-voice sends notification to MMM-EARTH to HIDE
+        else if (notification === 'HIDE_EARTH') {
+             this.sendNotification('HIDE_EARTH');
+        }
+    
+        // MMM-voice sends notification to MMM-EARTH to SHOW
+        else if (notification === 'SHOW_EARTH') {
+             this.sendNotification('SHOW_EARTH');
+        }
+		
+		 // MMM-voice sends notification to MMM-EyeCandy to HIDE
+        else if (notification === 'HIDE_EYECANDY') {
+             this.sendNotification('HIDE_EYECANDY');
+        }
+    
+        // MMM-voice sends notification to MMM-EyeCandy to SHOW
+        else if (notification === 'SHOW_EYECANDY') {
+             this.sendNotification('SHOW_EYECANDY');
+        }
+		
+		// MMM-voice sends notification to MMM-Events to HIDE
+        else if (notification === 'HIDE_EVENTS') {
+             this.sendNotification('HIDE_EVENTS');
+        }
+    
+        // MMM-voice sends notification to MMM-Events to SHOW
+        else if (notification === 'SHOW_EVENTS') {
+             this.sendNotification('SHOW_EVENTS');
+        }
+		
+		// MMM-voice sends notification to MMM-Fortune to HIDE
+        else if (notification === 'HIDE_FORTUNE') {
+             this.sendNotification('HIDE_FORTUNE');
+        }
+    
+        // MMM-voice sends notification to MMM-Fortune to SHOW
+        else if (notification === 'SHOW_FORTUNE') {
+             this.sendNotification('SHOW_FORTUNE');
+        }
+		
+		// MMM-voice sends notification to MMM-JEOPARDY to HIDE
+        else if (notification === 'HIDE_JEOPARDY') {
+             this.sendNotification('HIDE_JEOPARDY');
+        }
+    
+        // MMM-voice sends notification to MMM-JEOPARDY to SHOW
+        else if (notification === 'SHOW_JEOPARDY') {
+             this.sendNotification('SHOW_JEOPARDY');
+        }
+		
+		// MMM-voice sends notification to MMM-LICE to HIDE
+        else if (notification === 'HIDE_LICE') {
+             this.sendNotification('HIDE_LICE');
+        }
+    
+        // MMM-voice sends notification to MMM-LICE to SHOW
+        else if (notification === 'SHOW_LICE') {
+             this.sendNotification('SHOW_LICE');
+        }
+		
+		// MMM-voice sends notification to MMM-Lottery to HIDE
+        else if (notification === 'HIDE_LOTTERY') {
+             this.sendNotification('HIDE_LOTTERY');
+        }
+    
+        // MMM-voice sends notification to MMM-Lottery to SHOW
+        else if (notification === 'SHOW_LOTTERY') {
+             this.sendNotification('SHOW_LOTTERY');
+        }
+		
+
         // MMM-voice sends notification to MMM-EasyPix to HIDE
         else if (notification === 'HIDE_LUCY') {
              this.sendNotification('HIDE_LUCY');
@@ -383,109 +534,7 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_LUCY');
         }
         
-        // MMM-voice sends notification to MMM-Lottery to HIDE
-        else if (notification === 'HIDE_LOTTERY') {
-             this.sendNotification('HIDE_LOTTERY');
-        }
-    
-        // MMM-voice sends notification to MMM-Lottery to SHOW
-        else if (notification === 'SHOW_LOTTERY') {
-             this.sendNotification('SHOW_LOTTERY');
-        }
-        
-        // MMM-voice sends notification to MMM-CLOCK to HIDE
-        else if (notification === 'HIDE_CLOCK') {
-             this.sendNotification('HIDE_CLOCK');
-        }
-    
-        // MMM-voice sends notification to MMM-CLOCK to SHOW
-        else if (notification === 'SHOW_CLOCK') {
-             this.sendNotification('SHOW_CLOCK');
-        }
-        
-        // MMM-voice sends notification to MMM-EARTH to HIDE
-        else if (notification === 'HIDE_EARTH') {
-             this.sendNotification('HIDE_EARTH');
-        }
-    
-        // MMM-voice sends notification to MMM-EARTH to SHOW
-        else if (notification === 'SHOW_EARTH') {
-             this.sendNotification('SHOW_EARTH');
-        }
-        
-        // MMM-voice sends notification to MMM-WEATHER to HIDE
-        else if (notification === 'HIDE_WEATHER') {
-             this.sendNotification('HIDE_WEATHER');
-        }
-    
-        // MMM-voice sends notification to MMM-WEATHER to SHOW
-        else if (notification === 'SHOW_WEATHER') {
-             this.sendNotification('SHOW_WEATHER');
-        }
-        
-         // MMM-voice sends notification to MMM-SORT to HIDE
-        else if (notification === 'HIDE_TIDES') {
-             this.sendNotification('HIDE_TIDES');
-        }
-    
-        // MMM-voice sends notification to MMM-SORT to SHOW
-        else if (notification === 'SHOW_TIDES') {
-             this.sendNotification('SHOW_TIDES');
-        }
-        
-        // MMM-voice sends notification to MMM-PilotWX to HIDE
-        else if (notification === 'HIDE_PILOTS') {
-             this.sendNotification('HIDE_PILOTS');
-        }
-    
-        // MMM-voice sends notification to MMM-PilotWX to SHOW
-        else if (notification === 'SHOW_PILOTS') {
-             this.sendNotification('SHOW_PILOTS');
-        }
-        
-        // MMM-voice sends notification to MMM-EyeCandy to HIDE
-        else if (notification === 'HIDE_EYECANDY') {
-             this.sendNotification('HIDE_EYECANDY');
-        }
-    
-        // MMM-voice sends notification to MMM-EyeCandy to SHOW
-        else if (notification === 'SHOW_EYECANDY') {
-             this.sendNotification('SHOW_EYECANDY');
-        }
-        
-        // MMM-voice sends notification to MMM-LICE to HIDE
-        else if (notification === 'HIDE_LICE') {
-             this.sendNotification('HIDE_LICE');
-        }
-    
-        // MMM-voice sends notification to MMM-LICE to SHOW
-        else if (notification === 'SHOW_LICE') {
-             this.sendNotification('SHOW_LICE');
-        }
-        
-        
-        // MMM-voice sends notification to MMM-AlarmClock to HIDE
-        else if (notification === 'HIDE_ALARM') {
-             this.sendNotification('HIDE_ALARM');
-        }
-    
-        // MMM-voice sends notification to MMM-AlarmClock to SHOW
-        else if (notification === 'SHOW_ALARM') {
-             this.sendNotification('SHOW_ALARM');
-        }
-        
-        
-         // MMM-voice sends notification to MMM-VOICE to HIDE
-        else if (notification === 'HIDE_VOICE') {
-             this.hide(1000);
-        }
-    
-        // MMM-voice sends notification to MMM-VOICE to SHOW
-        else if (notification === 'SHOW_VOICE') {
-             this.show(1000);
-        }
-		
-		// MMM-voice sends notification to MMM-Lunartic to HIDE
+        // MMM-voice sends notification to MMM-Lunartic to HIDE
         else if (notification === 'HIDE_MOON') {
              this.sendNotification('HIDE_MOON');
         }
@@ -505,74 +554,14 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_NASA');
         }
 		
-		// MMM-voice sends notification to MMM-NOAA to HIDE
-        else if (notification === 'HIDE_COWBOY') {
-             this.sendNotification('HIDE_COWBOY');
+		// MMM-voice sends notification to MMM-NEO to HIDE
+        else if (notification === 'HIDE_NEO') {
+             this.sendNotification('HIDE_NEO');
         }
     
-        // MMM-voice sends notification to MMM-NOAA to SHOW
-        else if (notification === 'SHOW_COWBOY') {
-             this.sendNotification('SHOW_COWBOY');
-        }
-        
-        // MMM-voice sends notification to MMM-COCKTAILS to HIDE
-        else if (notification === 'HIDE_COCKTAILS') {
-             this.sendNotification('HIDE_COCKTAILS');
-        }
-    
-        // MMM-voice sends notification to MMM-COCKTAILS to SHOW
-        else if (notification === 'SHOW_COCKTAILS') {
-             this.sendNotification('SHOW_COCKTAILS');
-        }
-		
-		// MMM-voice sends notification to MMM-AfterShip to HIDE
-        else if (notification === 'HIDE_SHIPPING') {
-             this.sendNotification('HIDE_SHIPPING');
-        }
-    
-        // MMM-voice sends notification to MMM-AfterShip to SHOW
-        else if (notification === 'SHOW_SHIPPING') {
-             this.sendNotification('SHOW_SHIPPING');
-        }
-		
-		// MMM-voice sends notification to MMM-JEOPARDY to HIDE
-        else if (notification === 'HIDE_JEOPARDY') {
-             this.sendNotification('HIDE_JEOPARDY');
-        }
-    
-        // MMM-voice sends notification to MMM-JEOPARDY to SHOW
-        else if (notification === 'SHOW_JEOPARDY') {
-             this.sendNotification('SHOW_JEOPARDY');
-        }
-		
-		// MMM-voice sends notification to MMM-Events to HIDE
-        else if (notification === 'HIDE_EVENTS') {
-             this.sendNotification('HIDE_EVENTS');
-        }
-    
-        // MMM-voice sends notification to MMM-Events to SHOW
-        else if (notification === 'SHOW_EVENTS') {
-             this.sendNotification('SHOW_EVENTS');
-        }
-		
-		// MMM-voice sends notification to MMM-EOL to HIDE
-        else if (notification === 'HIDE_DARWIN') {
-             this.sendNotification('HIDE_DARWIN');
-        }
-    
-        // MMM-voice sends notification to MMM-EOL to SHOW
-        else if (notification === 'SHOW_DARWIN') {
-             this.sendNotification('SHOW_DARWIN');
-        }
-		
-		// MMM-voice sends notification to MMM-SunRiseSet to HIDE
-        else if (notification === 'HIDE_SUNRISE') {
-             this.sendNotification('HIDE_SUNRISE');
-        }
-    
-        // MMM-voice sends notification to MMM-SunRiseSet to SHOW
-        else if (notification === 'SHOW_SUNRISE') {
-             this.sendNotification('SHOW_SUNRISE');
+        // MMM-voice sends notification to MMM-NEO to SHOW
+        else if (notification === 'SHOW_NEO') {
+             this.sendNotification('SHOW_NEO');
         }
 		
 		// MMM-voice sends notification to MMM-PETFINDER to HIDE
@@ -585,66 +574,6 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_PETFINDER');
         }
 		
-		// MMM-voice sends notification to MMM-Fortune to HIDE
-        else if (notification === 'HIDE_FORTUNE') {
-             this.sendNotification('HIDE_FORTUNE');
-        }
-    
-        // MMM-voice sends notification to MMM-Fortune to SHOW
-        else if (notification === 'SHOW_FORTUNE') {
-             this.sendNotification('SHOW_FORTUNE');
-        }
-		
-		// MMM-voice sends notification to MMM-CARDS to HIDE
-        else if (notification === 'HIDE_CARDS') {
-             this.sendNotification('HIDE_CARDS');
-        }
-    
-        // MMM-voice sends notification to MMM-CARDS to SHOW
-        else if (notification === 'SHOW_CARDS') {
-             this.sendNotification('SHOW_CARDS');
-        }
-		
-		// MMM-voice sends notification to MMM-ATM to HIDE
-        else if (notification === 'HIDE_TRIVIA') {
-             this.sendNotification('HIDE_TRIVIA');
-        }
-    
-        // MMM-voice sends notification to MMM-ATM to SHOW
-        else if (notification === 'SHOW_TRIVIA') {
-             this.sendNotification('SHOW_TRIVIA');
-        }
-		
-		// MMM-voice sends notification to MMM-NEO to HIDE
-        else if (notification === 'HIDE_NEO') {
-             this.sendNotification('HIDE_NEO');
-        }
-    
-        // MMM-voice sends notification to MMM-NEO to SHOW
-        else if (notification === 'SHOW_NEO') {
-             this.sendNotification('SHOW_NEO');
-        }
-		
-		// MMM-voice sends notification to MMM-Census to HIDE
-        else if (notification === 'HIDE_CENSUS') {
-             this.sendNotification('HIDE_CENSUS');
-        }
-    
-        // MMM-voice sends notification to MMM-Census to SHOW
-        else if (notification === 'SHOW_CENSUS') {
-             this.sendNotification('SHOW_CENSUS');
-        }
-		
-		// MMM-voice sends notification to MMM-Back to HIDE
-		 else if (notification === 'HIDE_BACKGROUND') {
-             this.sendNotification('HIDE_BACKGROUND');
-        }
-    
-        // MMM-voice sends notification to MMM-Back to SHOW
-        else if (notification === 'SHOW_BACKGROUND') {
-             this.sendNotification('SHOW_BACKGROUND');
-        }
-		
 		 // MMM-voice sends notification to MMM-ImageSlideshow to HIDE
         else if (notification === 'HIDE_PICTURES') {
              this.sendNotification('HIDE_PICTURES');
@@ -654,6 +583,78 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_PICTURES') {
              this.sendNotification('SHOW_PICTURES');
         }
+        
+        // MMM-voice sends notification to MMM-PilotWX to HIDE
+        else if (notification === 'HIDE_PILOTS') {
+             this.sendNotification('HIDE_PILOTS');
+        }
+    
+        // MMM-voice sends notification to MMM-PilotWX to SHOW
+        else if (notification === 'SHOW_PILOTS') {
+             this.sendNotification('SHOW_PILOTS');
+        }
+		
+		// MMM-voice sends notification to MMM-AfterShip to HIDE
+        else if (notification === 'HIDE_SHIPPING') {
+             this.sendNotification('HIDE_SHIPPING');
+        }
+    
+        // MMM-voice sends notification to MMM-AfterShip to SHOW
+        else if (notification === 'SHOW_SHIPPING') {
+             this.sendNotification('SHOW_SHIPPING');
+        }
+		
+		// MMM-voice sends notification to MMM-SunRiseSet to HIDE
+        else if (notification === 'HIDE_SUNRISE') {
+             this.sendNotification('HIDE_SUNRISE');
+        }
+    
+        // MMM-voice sends notification to MMM-SunRiseSet to SHOW
+        else if (notification === 'SHOW_SUNRISE') {
+             this.sendNotification('SHOW_SUNRISE');
+        }
+		
+		 // MMM-voice sends notification to MMM-SORT to HIDE
+        else if (notification === 'HIDE_TIDES') {
+             this.sendNotification('HIDE_TIDES');
+        }
+    
+        // MMM-voice sends notification to MMM-SORT to SHOW
+        else if (notification === 'SHOW_TIDES') {
+             this.sendNotification('SHOW_TIDES');
+        }
+		
+        // MMM-voice sends notification to MMM-ATM to HIDE
+        else if (notification === 'HIDE_TRIVIA') {
+             this.sendNotification('HIDE_TRIVIA');
+        }
+    
+        // MMM-voice sends notification to MMM-ATM to SHOW
+        else if (notification === 'SHOW_TRIVIA') {
+             this.sendNotification('SHOW_TRIVIA');
+        }
+		
+		 // MMM-voice sends notification to MMM-VOICE to HIDE
+        else if (notification === 'HIDE_VOICE') {
+             this.hide(1000);
+        }
+    
+        // MMM-voice sends notification to MMM-VOICE to SHOW
+        else if (notification === 'SHOW_VOICE') {
+             this.show(1000);
+        }
+        
+        // MMM-voice sends notification to MMM-WEATHER to HIDE
+        else if (notification === 'HIDE_WEATHER') {
+             this.sendNotification('HIDE_WEATHER');
+        }
+    
+        // MMM-voice sends notification to MMM-WEATHER to SHOW
+        else if (notification === 'SHOW_WEATHER') {
+             this.sendNotification('SHOW_WEATHER');
+        }
+        
+        
 /////////////////////////////////////////////////////////////////////////////////
 		
         else if (notification === 'DEBUG') {
