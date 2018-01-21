@@ -25,6 +25,10 @@ with 4GB of Ram running ubuntu 16.04 LTS. Will it run on a Pi? Probably, but thi
 dog of a PC runs it without a hitch and the response time is fantastic. The Pi may slow
 rendering the animated gif. If so, use a static picture file, or none.
 
+**ATTENTION PI USERS** The digital face file being used in Hello-Lucy was tested on a Pi3 (1/21/18).
+The Pi struggles badly with it, bringing MM to its knees. So, please use a a non animated image, or none.
+I will make an attempt to reduce the size and demands of the digital face file.
+
 ## Works immediately with these modules
 
 * **clock**           (default module)
