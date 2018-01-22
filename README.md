@@ -270,7 +270,7 @@ but only show certain ones at certain times.
 			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
             		'HIDE NASA',      'SHOW NASA',
 			'HIDE NEO',       'SHOW NEO',
-			'HIDE PAGE ONE',  'SHOE PAGE ONE',
+			'HIDE PAGE ONE',  'SHOW PAGE ONE',
 			'HIDE PETFINDER', 'SHOW PETFINDER',
 			'HIDE PICTURES',  'SHOW PICTURES',   for MMM-ImageSlideshow
             		'HIDE PILOTS',    'SHOW PILOTS',
