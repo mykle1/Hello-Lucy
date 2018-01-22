@@ -144,10 +144,12 @@ Module.register('MMM-AlarmClock', {
             if (!this.config.touch) {
                 alert.timer = this.config.timer;
 
-		MM.getModules().enumerate((module) => {
-                module.show(1000);
-            });
-
+//		MM.getModules().enumerate((module) => {
+ //               module.show(1000);
+//            });
+				
+/////////////////// // show AlarmClock when alarm sounds so you can click reset button				
+					this.show(1000); 
             }
             this.sendNotification('SHOW_ALERT', alert);
             this.alarmFired = true;
@@ -160,9 +162,12 @@ Module.register('MMM-AlarmClock', {
                     if (module.name === 'alert') {
 
 
-		MM.getModules().enumerate((module) => {
-                module.show(1000);
-            });
+//		MM.getModules().enumerate((module) => {
+//                module.show(1000);
+//            });
+						
+						
+            	//		this.updateDom(300);
 
 
                         module.alerts['MMM-AlarmClock'].ntf.addEventListener('click', () => {
@@ -280,7 +285,8 @@ Module.register('MMM-AlarmClock', {
     //    const header = document.createElement('header');
     //    header.classList.add('align-left');
 		
-		
+
+//////// Added button so you can click to reset alarm @ Mykle ///////////////
 		var button = document.createElement("button");
 		button.innerHTML = '<button class="button">Click me to reset alarm!</button>';
 	//	button.innerHTML = '<button type="button">Click me to reset alarm!</button>'
