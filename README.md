@@ -94,10 +94,14 @@ I've provided the enhanced files in this repo.
 
 * Replace respective module.js files with the module.js files in this repo
 
-* Download the cool, female animated face.gif (if you want it) from
+* Put the face.gif in the modules/MMM-EasyPix/pix folder. I've provided a 25MB version
+
+* Pi users put the Lucy.png files in the modules/MMM-EasyPix/pix folder
+
+* Original animated gif can be gotten here. It's 60+ MB. 
 https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclient/face.gif
 and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
-MMM-EasyPix to use it. Pi users may want to use a static image to reduce any lag.
+MMM-EasyPix to use it. Pi users should use a static image or a less demanding animated gif.
 
 ## How to add any module you want for use with Hello-Lucy
 
