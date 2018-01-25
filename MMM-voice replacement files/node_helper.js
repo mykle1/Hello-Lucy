@@ -400,6 +400,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_COCKTAILS');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(COMPLIMENTS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_COMPLIMENTS');
+        } else if (/(HIDE)/g.test(data) && /(COMPLIMENTS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_COMPLIMENTS');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(COWBOY)/g.test(data)) {
             this.sendSocketNotification('SHOW_COWBOY');
         } else if (/(HIDE)/g.test(data) && /(COWBOY)/g.test(data)) {
@@ -482,6 +488,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_NEO');
         } else if (/(HIDE)/g.test(data) && /(NEO)/g.test(data)) {
             this.sendSocketNotification('HIDE_NEO');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(NEWS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_NEWS');
+        } else if (/(HIDE)/g.test(data) && /(NEWS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_NEWS');
         }
 		
 		else if (/(SHOW)/g.test(data) && /(PETFINDER)/g.test(data)) {

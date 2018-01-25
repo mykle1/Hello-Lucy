@@ -66,6 +66,8 @@ Module.register('MMM-voice', {
 			'SHOW CLOCK',
 			'HIDE COCKTAILS',
 			'SHOW COCKTAILS',
+			'HIDE COMPLIMENTS',
+			'SHOW COMPLIMENTS',
 			'HIDE COWBOY',    
 			'SHOW COWBOY',
 			'HIDE DARWIN',    
@@ -94,6 +96,8 @@ Module.register('MMM-voice', {
 			'SHOW NASA',
 			'HIDE NEO',
 			'SHOW NEO',
+			'HIDE NEWS',
+			'SHOW NEWS',
 			'HIDE PETFINDER',
 			'SHOW PETFINDER',
 			'HIDE PICTURES',
@@ -445,6 +449,16 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_COCKTAILS');
         }
 		
+		// MMM-voice sends notification to compliments to HIDE
+        else if (notification === 'HIDE_COMPLIMENTS') {
+             this.sendNotification('HIDE_COMPLIMENTS');
+        }
+    
+        // MMM-voice sends notification to compliments to SHOW
+        else if (notification === 'SHOW_COMPLIMENTS') {
+             this.sendNotification('SHOW_COMPLIMENTS');
+        }
+		
 		// MMM-voice sends notification to MMM-NOAA to HIDE
         else if (notification === 'HIDE_COWBOY') {
              this.sendNotification('HIDE_COWBOY');
@@ -574,6 +588,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-NEO to SHOW
         else if (notification === 'SHOW_NEO') {
              this.sendNotification('SHOW_NEO');
+        }
+		
+		// MMM-voice sends notification to newsfeed to HIDE
+        else if (notification === 'HIDE_NEWS') {
+             this.sendNotification('HIDE_NEWS');
+        }
+    
+        // MMM-voice sends notification to newsfeed to SHOW
+        else if (notification === 'SHOW_NEWS') {
+             this.sendNotification('SHOW_NEWS');
         }
 		
 		// MMM-voice sends notification to MMM-PETFINDER to HIDE
