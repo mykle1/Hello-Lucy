@@ -31,7 +31,8 @@ I will make an attempt to reduce the size and demands of the digital face file.
 
 ## Works immediately with these modules
 
-* **clock**           (default module)
+* **calendar**        (default MM module)
+* **clock**           (default MM module)
 * **MMM-AfterShip**   (Track all your deliveries in one module)
 * **MMM-Alarm-Clock** (I use this with alert module disabled and click button)
 * **MMM-ATM**         (Another Trivia Module? Really?)
@@ -256,9 +257,10 @@ but only show certain ones at certain times.
 ```
 			'HIDE ALARM',     'SHOW ALARM',      for MMM-Alarm-Clock
 			'HIDE BACKGROUND','SHOW BACKGROUND', for MMM-EasyBack
+			'HIDE CALENDAR',  'SHOW CALENDAR',   for default MM calendar module
 			'HIDE CARDS',     'SHOW CARDS',
 			'HIDE CENSUS',    'SHOW CENSUS',   
-			'HIDE CLOCK',     'SHOW CLOCK',
+			'HIDE CLOCK',     'SHOW CLOCK',      for default MM clock module
 			'HIDE COCKTAILS', 'SHOW COCKTAILS',
 			'HIDE COWBOY',    'SHOW COWBOY',     for MMM-NOAA
 			'HIDE DARWIN',    'SHOW DARWIN',     for MMM-EOL (The Encyclopedia of Life)
@@ -274,12 +276,13 @@ but only show certain ones at certain times.
 			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
             		'HIDE NASA',      'SHOW NASA',
 			'HIDE NEO',       'SHOW NEO',
-			'HIDE PAGE ONE',  'SHOW PAGE ONE',
+			'HIDE PAGE ONE',  'SHOW PAGE ONE',   for example page
+			'HIDE PAGE TWO',  'SHOW PAGE TWO',   for example page
 			'HIDE PETFINDER', 'SHOW PETFINDER',
 			'HIDE PICTURES',  'SHOW PICTURES',   for MMM-ImageSlideshow
-            		'HIDE PILOTS',    'SHOW PILOTS',
+            		'HIDE PILOTS',    'SHOW PILOTS',     for MMM-PilotWX
 			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
-			'HIDE SUNRISE',   'SHOW SUNRISE',
+			'HIDE SUNRISE',   'SHOW SUNRISE',    for MMM-SunRiseSet
             		'HIDE TIDES',     'SHOW TIDES',      for MMM-SORT
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
 			'HIDE VOICE',     'SHOW VOICE',
