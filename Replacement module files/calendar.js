@@ -285,14 +285,19 @@ Module.register("calendar", {
 		return wrapper;
 	},
 	
+	
 	notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_CALENDAR') {
             this.hide(1000);
+            this.updateDom(300);
         }  else if (notification === 'SHOW_CALENDAR') {
             this.show(1000);
+            this.updateDom(300);
         }
             
     },
+	
+	
 
 	/**
 	 * This function accepts a number (either 12 or 24) and returns a moment.js LocaleSpecification with the
