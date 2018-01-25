@@ -56,6 +56,8 @@ Module.register('MMM-voice', {
 			'SHOW ALARM',
 			'HIDE BACKGROUND',
 			'SHOW BACKGROUND',
+			'HIDE CALENDAR',
+			'SHOW CALENDAR',
 			'HIDE CARDS',
 			'SHOW CARDS',
 			'HIDE CENSUS',
