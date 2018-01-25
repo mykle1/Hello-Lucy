@@ -205,7 +205,7 @@ Module.register("newsfeed",{
 		return wrapper;
 	},
 	
-	
+/*	
 	notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_NEWS') {
             this.hide(1000);
@@ -216,7 +216,7 @@ Module.register("newsfeed",{
         }
             
     },
-	
+*/	
 
 	/* registerFeeds()
 	 * registers the feeds to be used by the backend.
@@ -376,6 +376,14 @@ Module.register("newsfeed",{
 		} else {
 			Log.info(this.name + " - unknown notification, ignoring: " + notification);
 		}
+		
+		if (notification === 'HIDE_NEWS') {
+            this.hide(1000);
+            this.updateDom(300);
+        }  else if (notification === 'SHOW_NEWS') {
+            this.show(1000);
+            this.updateDom(300);
+        }
 	},
 
 });

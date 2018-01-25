@@ -158,7 +158,7 @@ Module.register("compliments", {
 		return wrapper;
 	},
 	
-	
+/*	
 	notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_COMPLIMENTS') {
             this.hide(1000);
@@ -169,7 +169,7 @@ Module.register("compliments", {
         }
             
     },
-
+*/
 
 	// From data currentweather set weather type
 	setCurrentWeatherType: function(data) {
@@ -202,6 +202,14 @@ Module.register("compliments", {
 		if (notification == "CURRENTWEATHER_DATA") {
 			this.setCurrentWeatherType(payload.data);
 		}
+		
+		if (notification === 'HIDE_COMPLIMENTS') {
+            this.hide(1000);
+            this.updateDom(300);
+        }  else if (notification === 'SHOW_COMPLIMENTS') {
+            this.show(1000);
+            this.updateDom(300);
+        }
 	},
 
 });
