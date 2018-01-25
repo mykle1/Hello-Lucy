@@ -33,6 +33,8 @@ I will make an attempt to reduce the size and demands of the digital face file.
 
 * **calendar**        (default MM module)
 * **clock**           (default MM module)
+* **compliments**     (default MM module)
+* **newsfeed**        (default MM module)
 * **MMM-AfterShip**   (Track all your deliveries in one module)
 * **MMM-Alarm-Clock** (I use this with alert module disabled and click button)
 * **MMM-ATM**         (Another Trivia Module? Really?)
@@ -262,6 +264,7 @@ but only show certain ones at certain times.
 			'HIDE CENSUS',    'SHOW CENSUS',   
 			'HIDE CLOCK',     'SHOW CLOCK',      for default MM clock module
 			'HIDE COCKTAILS', 'SHOW COCKTAILS',
+			'HIDE COMPLIMENTS', 'SHOW COCKTAILS',
 			'HIDE COWBOY',    'SHOW COWBOY',     for MMM-NOAA
 			'HIDE DARWIN',    'SHOW DARWIN',     for MMM-EOL (The Encyclopedia of Life)
 			'HIDE EARTH',     'SHOW EARTH',
@@ -276,6 +279,7 @@ but only show certain ones at certain times.
 			'HIDE MOON',      'SHOW MOON',       for MMM-Lunartic
             		'HIDE NASA',      'SHOW NASA',
 			'HIDE NEO',       'SHOW NEO',
+			'HIDE NEWS',      'SHOW NEWS',
 			'HIDE PAGE ONE',  'SHOW PAGE ONE',   for example page
 			'HIDE PAGE TWO',  'SHOW PAGE TWO',   for example page
 			'HIDE PETFINDER', 'SHOW PETFINDER',
