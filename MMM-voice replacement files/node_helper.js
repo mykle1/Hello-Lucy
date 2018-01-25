@@ -368,7 +368,13 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_BACKGROUND');
         } else if (/(HIDE)/g.test(data) && /(BACKGROUND)/g.test(data)) {
             this.sendSocketNotification('HIDE_BACKGROUND');
-		}	
+		}
+	    
+	    else if (/(SHOW)/g.test(data) && /(CALENDAR)/g.test(data)) {
+            this.sendSocketNotification('SHOW_CALENDAR');
+        } else if (/(HIDE)/g.test(data) && /(CALENDAR)/g.test(data)) {
+            this.sendSocketNotification('HIDE_CALENDAR');
+        }
 			
 		else if (/(SHOW)/g.test(data) && /(CARDS)/g.test(data)) {
             this.sendSocketNotification('SHOW_CARDS');
