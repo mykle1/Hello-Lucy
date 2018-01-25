@@ -90,7 +90,7 @@ Module.register('MMM-voice', {
 			'SHOW MODULES',
 			'HIDE MOON',
 			'SHOW MOON',
-            'HIDE NASA',
+            		'HIDE NASA',
 			'SHOW NASA',
 			'HIDE NEO',
 			'SHOW NEO',
@@ -98,19 +98,19 @@ Module.register('MMM-voice', {
 			'SHOW PETFINDER',
 			'HIDE PICTURES',
 			'SHOW PICTURES',
-            'HIDE PILOTS',
+            		'HIDE PILOTS',
 			'SHOW PILOTS',
 			'HIDE SHIPPING',
 			'SHOW SHIPPING',
 			'HIDE SUNRISE',
 			'SHOW SUNRISE',
-            'HIDE TIDES',
+            		'HIDE TIDES',
 			'SHOW TIDES',
 			'HIDE TRIVIA',
 			'SHOW TRIVIA',
 			'HIDE VOICE',
 			'SHOW VOICE',
-            'HIDE WEATHER',
+            		'HIDE WEATHER',
 			'SHOW WEATHER',
 			'HIDE PAGE ONE',
 			'SHOW PAGE ONE',
@@ -118,7 +118,7 @@ Module.register('MMM-voice', {
 			'SHOW PAGE TWO',
 			'PLEASE WAKE UP',
 			'GO TO SLEEP',
-      //      'OPEN HELP',
+      //      		'OPEN HELP',
 	//		'CLOSE HELP',
         ]
     },
@@ -393,6 +393,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Back to SHOW
         else if (notification === 'SHOW_BACKGROUND') {
              this.sendNotification('SHOW_BACKGROUND');
+        }
+	    
+	// MMM-voice sends notification to calendar to HIDE
+        else if (notification === 'HIDE_CALENDAR') {
+             this.sendNotification('HIDE_CALENDAR');
+        }
+    
+        // MMM-voice sends notification to calendar to SHOW
+        else if (notification === 'SHOW_CALENDAR') {
+             this.sendNotification('SHOW_CALENDAR');
         }
 		
 		// MMM-voice sends notification to MMM-CARDS to HIDE
