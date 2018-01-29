@@ -282,6 +282,7 @@ but only show certain ones at certain times.
 			'HIDE NEWS',      'SHOW NEWS',
 			'HIDE PAGE ONE',  'SHOW PAGE ONE',   for example page
 			'HIDE PAGE TWO',  'SHOW PAGE TWO',   for example page
+			'HIDE PAGE THREE','SHOW PAGE THREE', for example page
 			'HIDE PETFINDER', 'SHOW PETFINDER',
 			'HIDE PICTURES',  'SHOW PICTURES',   for MMM-ImageSlideshow
             		'HIDE PILOTS',    'SHOW PILOTS',     for MMM-PilotWX
@@ -291,8 +292,8 @@ but only show certain ones at certain times.
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
 			'HIDE VOICE',     'SHOW VOICE',
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
-			'PLEASE WAKE UP', 'GO TO SLEEP',     for turning on and off display
-     		   //     'OPEN HELP',      'CLOSE HELP', // Working on fix for these
+			'PLEASE WAKE UP', 'GO TO SLEEP',     for turning on and off display (standby)
+     		        'OPEN HELP',      'CLOSE HELP',      Now working thanks to Cowboysdude
 ```
 
 ## Peace
