@@ -90,7 +90,7 @@ https://github.com/fewieden/MMM-voice
 
 * Clone this repo
 
-* Replace the MMM-voice.js and the node helper.js in the MMM-voice module folder.
+* Replace the MMM-voice.js, MMM-voice.css and the node helper.js in the MMM-voice module folder.
 I've provided the enhanced files in this repo.
 
 * Install any or all of the modules listed above for immediate use with this enhancement
