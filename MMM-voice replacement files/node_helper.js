@@ -436,6 +436,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_EVENTS');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(FLIPPER)/g.test(data)) {
+            this.sendSocketNotification('SHOW_FLIPPER');
+        } else if (/(HIDE)/g.test(data) && /(FLIPPER)/g.test(data)) {
+            this.sendSocketNotification('HIDE_FLIPPER');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('SHOW_FORTUNE');
         } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {
@@ -551,29 +557,43 @@ module.exports = NodeHelper.create({
         }
         
 /////////  Pages commands @ Mykle ///////////////////////////		
+		 /////////  Page 1 commands ///////////////////////////		
 		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
-            this.sendSocketNotification('SHOW_PAGE_ONE');
+			   this.sendSocketNotification('HIDE_PAGE_TWO');
+			   this.sendSocketNotification('HIDE_PAGE_THREE');
+            this.sendSocketNotification('SHOW_PAGE_ONE'); 
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_ONE');
         }
 		
-/////////  Pages commands @ Mykle ///////////////////////////
+       /////////  Page 2 commands ///////////////////////////
 		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
-            this.sendSocketNotification('SHOW_PAGE_TWO');
+            this.sendSocketNotification('HIDE_PAGE_ONE');
+            this.sendSocketNotification('HIDE_PAGE_THREE');
+            this.sendSocketNotification('SHOW_PAGE_TWO');            
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_TWO');
         }
+        
+       /////////  Page 3 commands ///////////////////////////
+		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_ONE');
+            this.sendSocketNotification('HIDE_PAGE_TWO');
+            this.sendSocketNotification('SHOW_PAGE_THREE');            
+        } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_THREE');
+        }  
 		
         
-////////////  TO DO! FIX HELP TO FIT ALL COMMANDS  /////////////////////////////////////////
-//         else if (/(HELP)/g.test(data)) {
-//            if (/(CLOSE)/g.test(data) || (this.help && !/(OPEN)/g.test(data))) {
-//                this.sendSocketNotification('CLOSE_HELP');
-//                this.help = false;
-//            } else if (/(OPEN)/g.test(data) || (!this.help && !/(CLOSE)/g.test(data))) {
-//                this.sendSocketNotification('OPEN_HELP');
-//                this.help = true;
-//            }
-//        }
+
+         else if (/(HELP)/g.test(data)) {
+            if (/(CLOSE)/g.test(data) || (this.help && !/(OPEN)/g.test(data))) {
+                this.sendSocketNotification('CLOSE_HELP');
+                this.help = false;
+            } else if (/(OPEN)/g.test(data) || (!this.help && !/(CLOSE)/g.test(data))) {
+                this.sendSocketNotification('OPEN_HELP');
+                this.help = true;
+            }
+        }
     }
 });

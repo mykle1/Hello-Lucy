@@ -78,6 +78,8 @@ Module.register('MMM-voice', {
 			'SHOW EYECANDY',
 			'HIDE EVENTS',    
 			'SHOW EVENTS',
+			'HIDE FLIPPER',  
+			'SHOW FLIPPER',
 			'HIDE FORTUNE',
 			'SHOW FORTUNE',
 			'HIDE JEOPARDY',
@@ -120,10 +122,12 @@ Module.register('MMM-voice', {
 			'SHOW PAGE ONE',
 			'HIDE PAGE TWO',
 			'SHOW PAGE TWO',
+			'HIDE PAGE THREE',
+			'SHOW PAGE THREE',
 			'PLEASE WAKE UP',
 			'GO TO SLEEP',
-      //      		'OPEN HELP',
-	//		'CLOSE HELP',
+            		'OPEN HELP',
+			'CLOSE HELP',
         ]
     },
 
@@ -236,11 +240,9 @@ Module.register('MMM-voice', {
  /////////// @ Mykle enhancement ////////////////////   
     notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_VOICE') {
-            this.hide(1000);
-            this.updateDom(300);
+            this.hide();
         }  else if (notification === 'SHOW_VOICE') {
             this.show(1000);
-            this.updateDom(300);
         }
             
     },
@@ -331,30 +333,46 @@ Module.register('MMM-voice', {
         } else if (notification === 'CLOSE_HELP') {
             this.help = false;
         }
-
+/*
+		
+		if (notification === 'DOM_OBJECTS_CREATED') {
+         MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });   
+     } 
+		
+			
+*/		
 		
 //////////// PAGES BY VOICE COMMAND @ Mykle  ///////////////////////////////////////	 
 		 else if (notification === 'SHOW_PAGE_ONE') {
 			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_PAGE_TWO');
+			 this.sendNotification('HIDE_PAGE_THREE');
 			 this.sendNotification('SHOW_LOTTERY');
 			 this.sendNotification('SHOW_CLOCK');
 			 this.sendNotification('SHOW_EARTH');
+			 this.sendNotification('SHOW_EYECANDY');
 			 this.sendNotification('SHOW_LICE');
 			 this.sendNotification('SHOW_COWBOY');
 			 this.sendNotification('SHOW_TIDES');
 			 this.sendNotification('SHOW_VOICE');
 			 
 		 } else if (notification === 'HIDE_PAGE_ONE') {
+			 this.sendNotification('HIDE_LUCY');
 			 this.sendNotification('HIDE_LOTTERY');
 			 this.sendNotification('HIDE_CLOCK');
 			 this.sendNotification('HIDE_EARTH');
+			 this.sendNotification('HIDE_EYECANDY');
 			 this.sendNotification('HIDE_LICE');
 			 this.sendNotification('HIDE_COWBOY');
 			 this.sendNotification('HIDE_TIDES');
 			 this.sendNotification('HIDE_VOICE');
-			 
+///////////////////////////////////////////////////////////////////////////////////////////////			 
 		 } else if (notification === 'SHOW_PAGE_TWO') {
 			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_PAGE_ONE');
+			 this.sendNotification('HIDE_PAGE_THREE');
 			 this.sendNotification('SHOW_PILOTS');
 			 this.sendNotification('SHOW_MOON');
 			 this.sendNotification('SHOW_NASA');
@@ -364,6 +382,7 @@ Module.register('MMM-voice', {
 			 this.sendNotification('SHOW_VOICE');
 			 
 		} else if (notification === 'HIDE_PAGE_TWO') {
+			 this.sendNotification('HIDE_LUCY');
 			 this.sendNotification('HIDE_PILOTS');
 			 this.sendNotification('HIDE_MOON');
 			 this.sendNotification('HIDE_NASA');
@@ -371,7 +390,28 @@ Module.register('MMM-voice', {
 			 this.sendNotification('HIDE_COCKTAILS');
 			 this.sendNotification('HIDE_WEATHER');
 			 this.sendNotification('HIDE_VOICE');
-       
+////////////////////////////////////////////////////////////////////////////////////////////////       
+		} else if (notification === 'SHOW_PAGE_THREE') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_PAGE_ONE');
+			 this.sendNotification('HIDE_PAGE_TWO');
+			 this.sendNotification('SHOW_BACKGROUND');
+			 this.sendNotification('SHOW_CALENDAR');
+			 this.sendNotification('SHOW_COMPLIMENTS');
+			 this.sendNotification('SHOW_DARWIN');
+			 this.sendNotification('SHOW_FLIPPER');
+			 this.sendNotification('SHOW_NEWS');
+			 this.sendNotification('SHOW_PICTURES');
+
+		} else if (notification === 'HIDE_PAGE_THREE') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_BACKGROUND');
+			 this.sendNotification('HIDE_CALENDAR');
+			 this.sendNotification('HIDE_COMPLIMENTS');
+			 this.sendNotification('HIDE_DARWIN');
+			 this.sendNotification('HIDE_FLIPPER');
+			 this.sendNotification('HIDE_NEWS');
+			 this.sendNotification('HIDE_PICTURES');
 		}
 		
 		
@@ -507,6 +547,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Events to SHOW
         else if (notification === 'SHOW_EVENTS') {
              this.sendNotification('SHOW_EVENTS');
+        }
+		
+		 // MMM-voice sends notification to MMM-Glock to HIDE
+        else if (notification === 'HIDE_FLIPPER') {
+             this.sendNotification('HIDE_FLIPPER');
+        }
+    
+        // MMM-voice sends notification to MMM-Glock to SHOW
+        else if (notification === 'SHOW_FLIPPER') {
+             this.sendNotification('SHOW_FLIPPER');
         }
 		
 		// MMM-voice sends notification to MMM-Fortune to HIDE
