@@ -1,0 +1,7 @@
+After you have downloaded and installed MMM-voice and got it working:
+
+Option: In your MMM-voice folder, rename the MMM-voice.js, MMM-voice.css and node_helper files.
+
+Why? Because the next step will overwrite them. If something goes wrong you'll have a backup.
+
+Take the three files from this folder and move or copy them into your MMM-voice folder.
