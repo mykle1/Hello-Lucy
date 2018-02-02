@@ -55,6 +55,7 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-NASA**        (Your universe in a single module)
 * **MMM-NEO**         (Near Earth Objects passing by this week. Be afraid. Be VERY afraid!)
 * **MMM-NOAA**        (MM's most popular weather module)
+* **MMM-PC-Stats**    (For PC boards running MM. Works with ubuntu)
 * **MMM-PetFinder**   (Pets for adoption in your area. All kinds.)
 * **MMM-PilotWX**     (Conditions and Weather for Pilots)
 * **MMM-SORT**        (Static Or Rotating Tides module, worldwide)
@@ -287,6 +288,7 @@ but only show certain ones at certain times.
 			'HIDE PICTURES',  'SHOW PICTURES',   for MMM-ImageSlideshow
             		'HIDE PILOTS',    'SHOW PILOTS',     for MMM-PilotWX
 			'HIDE SHIPPING',  'SHOW SHIPPING',   for MMM-AfterShip
+			'HIDE STATS',     'SHOW STATS',      for MMM-PC-Stats
 			'HIDE SUNRISE',   'SHOW SUNRISE',    for MMM-SunRiseSet
             		'HIDE TIDES',     'SHOW TIDES',      for MMM-SORT
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
