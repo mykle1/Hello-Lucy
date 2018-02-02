@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 @-webkit-keyframes MMM-voice-pulse {
     0% { color: #999; }
     50% { color: #000; }
@@ -14,19 +16,23 @@
 }
 
 .MMM-voice-blur {
-    -webkit-filter: blur(2px) brightness(50%);
-    filter: blur(2px) brightness(50%);
+    -webkit-filter: blur(4px) brightness(10%);
+    filter: blur(4px) brightness(10%);
 }
 
 .MMM-voice .modal {
-   columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  position: fixed; /* or absolute */
-  top: 30%;
-  left: 30%;
+   columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+   position: fixed; /* or absolute */
+  top: 40%;
+  left: 20%;
 }
 
 .MMM-voice .modal ul {
-    margin: 0;
+    margin: 0;     
+    font-size: 17px;
+    list-style-type: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: yellow;
 }
