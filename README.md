@@ -58,6 +58,7 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-PC-Stats**    (For PC boards running MM. Works with ubuntu)
 * **MMM-PetFinder**   (Pets for adoption in your area. All kinds.)
 * **MMM-PilotWX**     (Conditions and Weather for Pilots)
+* **MMM-rfacts**      (Random Facts module. Informative and fun!)
 * **MMM-SORT**        (Static Or Rotating Tides module, worldwide)
 * **MMM-SunRiseSet**  (Spherical or Day/Night map of planet Earth)
 * **MMM-voice**       (of course)
@@ -122,11 +123,9 @@ The modules listed above work without you changing anything.
 
     notificationReceived: function(notification, payload) {
         if (notification === 'HIDE_EARTH') {
-            this.hide(1000);
-            this.updateDom(300);
+            this.hide();
         }  else if (notification === 'SHOW_EARTH') {
             this.show(1000);
-            this.updateDom(300);
         }
             
     },
