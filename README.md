@@ -270,6 +270,7 @@ but only show certain ones at certain times.
 			'HIDE EARTH',     'SHOW EARTH',
 			'HIDE EYECANDY',  'SHOW EYECANDY',
 			'HIDE EVENTS',    'SHOW EVENTS',
+			'HIDE FAX',       'SHOW FAX',        for MMM-rfacts
 			'HIDE FORTUNE',   'SHOW FORTUNE',
 			'HIDE JEOPARDY',  'SHOW JEOPARDY',
 			'HIDE LICE',      'SHOW LICE',
