@@ -103,6 +103,8 @@ I've provided the enhanced files in this repo.
 
 * Pi users put the Lucy.png files in the modules/MMM-EasyPix/pix folder
 
+* Put your own custom sound files in the modules/MMM-EasyPix/sounds folder and name them in the config.js
+
 * Original animated gif can be gotten here. It's 60+ MB. 
 https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclient/face.gif
 and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
