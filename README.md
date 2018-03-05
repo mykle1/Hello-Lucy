@@ -46,8 +46,10 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-EasyPix**     (Necessary for animated graphic and sound response)
 * **MMM-EOL**         (The Encyclopedia of Life)
 * **MMM-Events**      (Concerts, Sports, Theatre, coming to your city)
+* **MMM-EventHorizon**(Countdown timer for any occasion)
 * **MMM-EyeCandy**    (Pretty damn cool)
 * **MMM-Fortune**     (A fortune cookie on your mirror)
+* **MMM-ISS**         (Know when the International Space Station can be seen at your location)
 * **MMM-JEOPARDY**    (The widely popular gameshow on your mirror)
 * **MMM-LICE**        (Live International Currency Exchange)
 * **MMM-Lottery**     (Random Lottery Numbers)
@@ -60,7 +62,9 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-PilotWX**     (Conditions and Weather for Pilots)
 * **MMM-rfacts**      (Random Facts module. Informative and fun!)
 * **MMM-SORT**        (Static Or Rotating Tides module, worldwide)
+* **MMM-Sudoku**      (Play Sudoku on your mirror. For use with keyboard and mouse)
 * **MMM-SunRiseSet**  (Spherical or Day/Night map of planet Earth)
+* **MMM-URHere**      (Displays map with your location, IP Address, Internet Provider and National Flag)
 * **MMM-voice**       (of course)
 * **MMM-WunderGround**
 
@@ -298,6 +302,10 @@ but only show certain ones at certain times.
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
 			'PLEASE WAKE UP', 'GO TO SLEEP',     for turning on and off display (standby)
      		        'OPEN HELP',      'CLOSE HELP',      Now working thanks to Cowboysdude
+			'HIDE STATION',   'SHOW STATION',    MMM-ISS
+			'HIDE SUDOKU',    'SHOW SUDOKU',     MMM-Sudoku
+			'HIDE TIMER',     'SHOW TIMER',      MMM-EventHorizon
+			'HIDE LOCATION',  'SHOW LOCATION',   MMM-URHere
 ```
 
 ## Peace
