@@ -436,6 +436,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_EVENTS');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(FAX)/g.test(data)) {
+            this.sendSocketNotification('SHOW_FAX');
+        } else if (/(HIDE)/g.test(data) && /(FAX)/g.test(data)) {
+            this.sendSocketNotification('HIDE_FAX');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(FLIPPER)/g.test(data)) {
             this.sendSocketNotification('SHOW_FLIPPER');
         } else if (/(HIDE)/g.test(data) && /(FLIPPER)/g.test(data)) {
@@ -458,6 +464,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_LICE');
         } else if (/(HIDE)/g.test(data) && /(LICE)/g.test(data)) {
             this.sendSocketNotification('HIDE_LICE');
+        }
+		
+		 else if (/(SHOW)/g.test(data) && /(LOCATION)/g.test(data)) {
+            this.sendSocketNotification('SHOW_LOCATION');
+        } else if (/(HIDE)/g.test(data) && /(LOCATION)/g.test(data)) {
+            this.sendSocketNotification('HIDE_LOCATION');
         }
 		
 		else if (/(SHOW)/g.test(data) && /(LOTTERY)/g.test(data)) {
@@ -526,6 +538,24 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_SHIPPING');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(STATION)/g.test(data)) {
+            this.sendSocketNotification('SHOW_STATION');
+        } else if (/(HIDE)/g.test(data) && /(STATION)/g.test(data)) {
+            this.sendSocketNotification('HIDE_STATION');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(STATS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_STATS');
+        } else if (/(HIDE)/g.test(data) && /(STATS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_STATS');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(SUDOKU)/g.test(data)) {
+            this.sendSocketNotification('SHOW_SUDOKU');
+        } else if (/(HIDE)/g.test(data) && /(SUDOKU)/g.test(data)) {
+            this.sendSocketNotification('HIDE_SUDOKU');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(SUNRISE)/g.test(data)) {
             this.sendSocketNotification('SHOW_SUNRISE');
         } else if (/(HIDE)/g.test(data) && /(SUNRISE)/g.test(data)) {
@@ -536,6 +566,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_TIDES');
         } else if (/(HIDE)/g.test(data) && /(TIDES)/g.test(data)) {
             this.sendSocketNotification('HIDE_TIDES');
+        }
+		
+		else if (/(SHOW)/g.test(data) && /(TIMER)/g.test(data)) {
+            this.sendSocketNotification('SHOW_TIMER');
+        } else if (/(HIDE)/g.test(data) && /(TIMER)/g.test(data)) {
+            this.sendSocketNotification('HIDE_TIMER');
         }
 		
 		else if (/(SHOW)/g.test(data) && /(TRIVIA)/g.test(data)) {
@@ -582,6 +618,16 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_PAGE_THREE');            
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_THREE');
+        }
+		
+		/////////  Page 4 commands ///////////////////////////
+		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(FOUR)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_ONE');
+            this.sendSocketNotification('HIDE_PAGE_TWO');
+            this.sendSocketNotification('HIDE_PAGE_THREE');
+			this.sendSocketNotification('SHOW_PAGE_FOUR');
+        } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(FOUR)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PAGE_FOUR');
         }  
 		
         

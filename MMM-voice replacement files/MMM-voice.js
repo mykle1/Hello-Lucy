@@ -78,6 +78,8 @@ Module.register('MMM-voice', {
 			'SHOW EYECANDY',
 			'HIDE EVENTS',    
 			'SHOW EVENTS',
+			'HIDE FAX',
+			'SHOW FAX',
 			'HIDE FLIPPER',  
 			'SHOW FLIPPER',
 			'HIDE FORTUNE',
@@ -86,6 +88,8 @@ Module.register('MMM-voice', {
 			'SHOW JEOPARDY',
 			'HIDE LICE',
 			'SHOW LICE',
+			'HIDE LOCATION',
+			'SHOW LOCATION',
 			'HIDE LOTTERY',
 			'SHOW LOTTERY',
 			'HIDE LUCY',
@@ -94,7 +98,7 @@ Module.register('MMM-voice', {
 			'SHOW MODULES',
 			'HIDE MOON',
 			'SHOW MOON',
-            		'HIDE NASA',
+            'HIDE NASA',
 			'SHOW NASA',
 			'HIDE NEO',
 			'SHOW NEO',
@@ -104,19 +108,27 @@ Module.register('MMM-voice', {
 			'SHOW PETFINDER',
 			'HIDE PICTURES',
 			'SHOW PICTURES',
-            		'HIDE PILOTS',
+            'HIDE PILOTS',
 			'SHOW PILOTS',
 			'HIDE SHIPPING',
 			'SHOW SHIPPING',
+			'HIDE STATION',
+			'SHOW STATION',
+			'HIDE STATS',
+			'SHOW STATS',
 			'HIDE SUNRISE',
 			'SHOW SUNRISE',
-            		'HIDE TIDES',
+			'HIDE SUDOKU',
+			'SHOW SUDOKU',
+            'HIDE TIDES',
 			'SHOW TIDES',
+			'HIDE TIMER',
+			'SHOW TIMER',
 			'HIDE TRIVIA',
 			'SHOW TRIVIA',
 			'HIDE VOICE',
 			'SHOW VOICE',
-            		'HIDE WEATHER',
+            'HIDE WEATHER',
 			'SHOW WEATHER',
 			'HIDE PAGE ONE',
 			'SHOW PAGE ONE',
@@ -124,9 +136,11 @@ Module.register('MMM-voice', {
 			'SHOW PAGE TWO',
 			'HIDE PAGE THREE',
 			'SHOW PAGE THREE',
+			'HIDE PAGE FOUR',
+			'SHOW PAGE FOUR',
 			'PLEASE WAKE UP',
 			'GO TO SLEEP',
-            		'OPEN HELP',
+            'OPEN HELP',
 			'CLOSE HELP',
         ]
     },
@@ -412,6 +426,29 @@ Module.register('MMM-voice', {
 			 this.sendNotification('HIDE_FLIPPER');
 			 this.sendNotification('HIDE_NEWS');
 			 this.sendNotification('HIDE_PICTURES');
+			///////////////////////////////////////////////////////////////////////////////////////////////			 
+		 } else if (notification === 'SHOW_PAGE_FOUR') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_PAGE_ONE');
+			 this.sendNotification('HIDE_PAGE_THREE');
+			 this.sendNotification('SHOW_STATS');
+			 this.sendNotification('SHOW_FAX');
+			 this.sendNotification('SHOW_NASA');
+			 this.sendNotification('SHOW_ALARM');
+			 this.sendNotification('SHOW_COCKTAILS');
+			 this.sendNotification('SHOW_WEATHER');
+			 this.sendNotification('SHOW_VOICE');
+			 
+		} else if (notification === 'HIDE_PAGE_FOUR') {
+			 this.sendNotification('HIDE_LUCY');
+			 this.sendNotification('HIDE_STATS');
+			 this.sendNotification('HIDE_FAX');
+			 this.sendNotification('HIDE_NASA');
+			 this.sendNotification('HIDE_ALARM');
+			 this.sendNotification('HIDE_COCKTAILS');
+			 this.sendNotification('HIDE_WEATHER');
+			 this.sendNotification('HIDE_VOICE');
+////////////////////////////////////////////////////////////////////////////////////////////////       
 		}
 		
 		
@@ -549,6 +586,16 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_EVENTS');
         }
 		
+		// MMM-voice sends notification to MMM-rfacts to HIDE
+        else if (notification === 'HIDE_FAX') {
+             this.sendNotification('HIDE_FAX');
+        }
+    
+        // MMM-voice sends notification to MMM-rfacts to SHOW
+        else if (notification === 'SHOW_FAX') {
+             this.sendNotification('SHOW_FAX');
+        }
+		
 		 // MMM-voice sends notification to MMM-Glock to HIDE
         else if (notification === 'HIDE_FLIPPER') {
              this.sendNotification('HIDE_FLIPPER');
@@ -587,6 +634,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-LICE to SHOW
         else if (notification === 'SHOW_LICE') {
              this.sendNotification('SHOW_LICE');
+        }
+		
+		// MMM-voice sends notification to MMM-URHere to HIDE
+        else if (notification === 'HIDE_LOCATION') {
+             this.sendNotification('HIDE_LOCATION');
+        }
+    
+        // MMM-voice sends notification to MMM-URHere to SHOW
+        else if (notification === 'SHOW_LOCATION') {
+             this.sendNotification('SHOW_LOCATION');
         }
 		
 		// MMM-voice sends notification to MMM-Lottery to HIDE
@@ -690,6 +747,36 @@ Module.register('MMM-voice', {
              this.sendNotification('SHOW_SHIPPING');
         }
 		
+		// MMM-voice sends notification to MMM-ISS to HIDE
+        else if (notification === 'HIDE_STATION') {
+             this.sendNotification('HIDE_STATION');
+        }
+    
+        // MMM-voice sends notification to MMM-ISS to SHOW
+        else if (notification === 'SHOW_STATION') {
+             this.sendNotification('SHOW_STATION');
+        }
+		
+		// MMM-voice sends notification to MMM-PC-Stats to HIDE
+        else if (notification === 'HIDE_STATS') {
+             this.sendNotification('HIDE_STATS');
+        }
+    
+        // MMM-voice sends notification to MMM-PC-Stats to SHOW
+        else if (notification === 'SHOW_STATS') {
+             this.sendNotification('SHOW_STATS');
+        }
+		
+		// MMM-voice sends notification to MMM-Sudoku to HIDE
+        else if (notification === 'HIDE_SUDOKU') {
+             this.sendNotification('HIDE_SUDOKU');
+        }
+    
+        // MMM-voice sends notification to MMM-Sudoku to SHOW
+        else if (notification === 'SHOW_SUDOKU') {
+             this.sendNotification('SHOW_SUDOKU');
+        }
+		
 		// MMM-voice sends notification to MMM-SunRiseSet to HIDE
         else if (notification === 'HIDE_SUNRISE') {
              this.sendNotification('HIDE_SUNRISE');
@@ -708,6 +795,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-SORT to SHOW
         else if (notification === 'SHOW_TIDES') {
              this.sendNotification('SHOW_TIDES');
+        }
+		
+		// MMM-voice sends notification to MMM-EventHorizon to HIDE
+        else if (notification === 'HIDE_TIMER') {
+             this.sendNotification('HIDE_TIMER');
+        }
+    
+        // MMM-voice sends notification to MMM-EventHorizon to SHOW
+        else if (notification === 'SHOW_TIMER') {
+             this.sendNotification('SHOW_TIMER');
         }
 		
         // MMM-voice sends notification to MMM-ATM to HIDE
