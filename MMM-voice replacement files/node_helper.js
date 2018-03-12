@@ -448,6 +448,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('HIDE_FLIPPER');
         }
 		
+		else if (/(SHOW)/g.test(data) && /(FLIGHTS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_FLIGHTS');
+        } else if (/(HIDE)/g.test(data) && /(FLIGHTS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_FLIGHTS');
+        }
+		
 		else if (/(SHOW)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('SHOW_FORTUNE');
         } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {

@@ -82,6 +82,8 @@ Module.register('MMM-voice', {
 			'SHOW FAX',
 			'HIDE FLIPPER',  
 			'SHOW FLIPPER',
+			'HIDE FLIGHTS',  
+			'SHOW FLIGHTS',
 			'HIDE FORTUNE',
 			'SHOW FORTUNE',
 			'HIDE JEOPARDY',
@@ -604,6 +606,16 @@ Module.register('MMM-voice', {
         // MMM-voice sends notification to MMM-Glock to SHOW
         else if (notification === 'SHOW_FLIPPER') {
              this.sendNotification('SHOW_FLIPPER');
+        }
+		
+		 // MMM-voice sends notification to MMM-FlightsAbove to HIDE
+        else if (notification === 'HIDE_FLIGHTS') {
+             this.sendNotification('HIDE_FLIGHTS');
+        }
+    
+        // MMM-voice sends notification to MMM-FlightsAbove to SHOW
+        else if (notification === 'SHOW_FLIGHTS') {
+             this.sendNotification('SHOW_FLIGHTS');
         }
 		
 		// MMM-voice sends notification to MMM-Fortune to HIDE
