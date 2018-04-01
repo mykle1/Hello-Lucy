@@ -48,6 +48,7 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-Events**      (Concerts, Sports, Theatre, coming to your city)
 * **MMM-EventHorizon**(Countdown timer for any occasion)
 * **MMM-EyeCandy**    (Pretty damn cool)
+* **MMM-FMI**         (Finds your iPhone. Gives location and distance. Beeps iPhone)
 * **MMM-Fortune**     (A fortune cookie on your mirror)
 * **MMM-ISS**         (Know when the International Space Station can be seen at your location)
 * **MMM-JEOPARDY**    (The widely popular gameshow on your mirror)
@@ -278,6 +279,7 @@ but only show certain ones at certain times.
 			'HIDE EVENTS',    'SHOW EVENTS',
 			'HIDE FAX',       'SHOW FAX',        for MMM-rfacts
 			'HIDE FORTUNE',   'SHOW FORTUNE',
+			'HIDE IPHONE',   'SHOW IPHONE',      for MMM-FMI
 			'HIDE JEOPARDY',  'SHOW JEOPARDY',
 			'HIDE LICE',      'SHOW LICE',
 			'HIDE LOTTERY',   'SHOW LOTTERY',
