@@ -271,7 +271,7 @@ but only show certain ones at certain times.
 			'HIDE CENSUS',    'SHOW CENSUS',   
 			'HIDE CLOCK',     'SHOW CLOCK',      for default MM clock module
 			'HIDE COCKTAILS', 'SHOW COCKTAILS',
-			'HIDE COMPLIMENTS', 'SHOW COCKTAILS',
+			'HIDE COMPLIMENTS', 'SHOW COMPLIMENTS',
 			'HIDE COWBOY',    'SHOW COWBOY',     for MMM-NOAA
 			'HIDE DARWIN',    'SHOW DARWIN',     for MMM-EOL (The Encyclopedia of Life)
 			'HIDE EARTH',     'SHOW EARTH',
@@ -279,7 +279,7 @@ but only show certain ones at certain times.
 			'HIDE EVENTS',    'SHOW EVENTS',
 			'HIDE FAX',       'SHOW FAX',        for MMM-rfacts
 			'HIDE FORTUNE',   'SHOW FORTUNE',
-			'HIDE IPHONE',   'SHOW IPHONE',      for MMM-FMI
+			'HIDE PHONE',   'SHOW PHONE',      for MMM-FMI
 			'HIDE JEOPARDY',  'SHOW JEOPARDY',
 			'HIDE LICE',      'SHOW LICE',
 			'HIDE LOTTERY',   'SHOW LOTTERY',
