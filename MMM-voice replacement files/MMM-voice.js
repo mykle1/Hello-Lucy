@@ -288,13 +288,13 @@ Module.register('MMM-voice', {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////// @ Mykle enhancement //////////////////
-		 if(this.config.startHidden){		 
-	     if (notification === 'DOM_OBJECTS_CREATED') {
-  	       MM.getModules().enumerate((module) => {
-    	          module.hide(1000);
-      	      });   
+     if(this.config.startHidden){		 
+       if (notification === 'DOM_OBJECTS_CREATED') {
+          MM.getModules().enumerate((module) => {
+               module.hide(1000);
+          });   
      	 } 
-		 }
+     }
 /////////// @ Mykle enhancement //////////////////
     if (notification === 'DOM_OBJECTS_CREATED') {
         this.sendNotification('SHOW_LUCY'); // for showing MMM-EasyPix(Lucy) when MM launches
@@ -346,17 +346,16 @@ Module.register('MMM-voice', {
             MM.getModules().enumerate((module) => {
                 module.hide(1000);
             });
-						this.sendNotification('NOW_ASLEEP','[]')
+            // tell other modules all hidden
+            this.sendNotification('NOW_ASLEEP','[]')
         } else if (notification === 'SHOW_MODULES') {
             MM.getModules().enumerate((module) => {
                 module.show(1000);
             });
+            // tell other modules all shown
             this.sendNotification('NOW_AWAKE')
-        } else if (notification === 'OPEN_HELP') {
-            this.help = true;
-        } else if (notification === 'CLOSE_HELP') {
-            this.help = false;
-        } else if (notification === 'SLEEP_HIDE') {
+				} else if (notification === 'SLEEP_HIDE') {
+						// sleep by hiding (energyStar monitors)
             let self=this;
             let list=[];
             MM.getModules().enumerate((module) => {
@@ -373,6 +372,7 @@ Module.register('MMM-voice', {
             // tell other modules
             this.sendNotification('NOW_ASLEEP', JSON.stringify(list))
         } else if (notification === 'SLEEP_WAKE') {
+					// wake by unhiding (energyStar monitors)
           let self=this;
           MM.getModules().enumerate((module) => {
              // if this module was NOT in the previously hidden list
@@ -386,10 +386,12 @@ Module.register('MMM-voice', {
           // tell other modules
           this.sendNotification('NOW_AWAKE')
         } else if (notification === 'HW_ASLEEP') {
+					// not hiding, but asleep, inform others
           this.sendNotification('NOW_ASLEEP', '[]')
+					// not hiding, but awake, inform others
         } else if (notification === 'HW_AWAKE') {
           this.sendNotification('NOW_AWAKE')
-        }
+				}
 /*
 		
 		if (notification === 'DOM_OBJECTS_CREATED') {

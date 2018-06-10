@@ -338,7 +338,7 @@ module.exports = NodeHelper.create({
     checkCommands(data) {
         if (bytes.r[0].test(data) && bytes.r[1].test(data)) {
             this.sendSocketNotification('BYTES', bytes.a);
-        } else if (/(WAKE)/g.test(data)){// && /(UP)/g.test(data)) {
+        } else if (/(PLEASE)/g.test(data)) && /(WAKE)/g.test(data)) && /(UP)/g.test(data)) {
 						switch(this.config.mode.toLowerCase()){
 							case 'pi':
 								exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
@@ -354,7 +354,8 @@ module.exports = NodeHelper.create({
 								break;
 						}		
 						if(this.config.mode.toLowerCase()!=='hide')
-							this.sendSocketNotification('HW_AWAKE')			
+							// tell the module we are awake
+							this.sendSocketNotification('HW_AWAKE')
         } else if (/(GO)/g.test(data) && /(SLEEP)/g.test(data)) {
 						switch(this.config.mode.toLowerCase()){
 							case 'pi':
@@ -371,8 +372,8 @@ module.exports = NodeHelper.create({
 								break;
 						}
 						if(this.config.mode.toLowerCase()!=='hide')
+							// tell the module we are asleep
 							this.sendSocketNotification('HW_ASLEEP')
-				}
         ///////////////////////////////////////////////////////////////////
         
         // You have to add these for your words (example LUCY)
