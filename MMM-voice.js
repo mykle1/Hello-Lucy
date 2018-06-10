@@ -151,7 +151,7 @@ Module.register('MMM-voice', {
 
     /** @member {Object[]} modules - Set of all modules with mode and commands. */
     modules: [],
-
+		previously_hidden: [],
     /**
      * @member {Object} defaults - Defines the default config values.
      * @property {int} timeout - Seconds to active listen for commands.
@@ -161,7 +161,9 @@ Module.register('MMM-voice', {
     defaults: {
         timeout: 15,
         keyword: 'MAGIC MIRROR',
-        debug: false
+        debug: false,
+				mode: 'pi',
+				startHidden:  true,
     },
 
     /**
@@ -286,11 +288,13 @@ Module.register('MMM-voice', {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////// @ Mykle enhancement //////////////////
-     if (notification === 'DOM_OBJECTS_CREATED') {
-         MM.getModules().enumerate((module) => {
-                module.hide(1000);
-            });   
-     } 
+		 if(this.config.startHidden){		 
+	     if (notification === 'DOM_OBJECTS_CREATED') {
+  	       MM.getModules().enumerate((module) => {
+    	          module.hide(1000);
+      	      });   
+     	 } 
+		 }
 /////////// @ Mykle enhancement //////////////////
     if (notification === 'DOM_OBJECTS_CREATED') {
         this.sendNotification('SHOW_LUCY'); // for showing MMM-EasyPix(Lucy) when MM launches
@@ -342,14 +346,49 @@ Module.register('MMM-voice', {
             MM.getModules().enumerate((module) => {
                 module.hide(1000);
             });
+						this.sendNotification('NOW_ASLEEP','[]')
         } else if (notification === 'SHOW_MODULES') {
             MM.getModules().enumerate((module) => {
                 module.show(1000);
             });
+            this.sendNotification('NOW_AWAKE')
         } else if (notification === 'OPEN_HELP') {
             this.help = true;
         } else if (notification === 'CLOSE_HELP') {
             this.help = false;
+        } else if (notification === 'SLEEP_HIDE') {
+            let self=this;
+            let list=[];
+            MM.getModules().enumerate((module) => {
+               // if the module is already hidden
+               if(module.hidden==true){
+                  // save it for wake up
+                  self.previously_hidden.push(module)
+                  list.push(module.name);
+               }
+               else
+                  // hide this module
+                  module.hide(1000);
+            });
+            // tell other modules
+            this.sendNotification('NOW_ASLEEP', JSON.stringify(list))
+        } else if (notification === 'SLEEP_WAKE') {
+          let self=this;
+          MM.getModules().enumerate((module) => {
+             // if this module was NOT in the previously hidden list
+             if(self.previously_hidden.indexOf(module)==-1){
+                  // show it
+                  module.show(1000);
+              }
+          });
+          // clear the list, if any
+          this.previously_hidden = [];
+          // tell other modules
+          this.sendNotification('NOW_AWAKE')
+        } else if (notification === 'HW_ASLEEP') {
+          this.sendNotification('NOW_ASLEEP', '[]')
+        } else if (notification === 'HW_AWAKE') {
+          this.sendNotification('NOW_AWAKE')
         }
 /*
 		

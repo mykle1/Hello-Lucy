@@ -338,22 +338,41 @@ module.exports = NodeHelper.create({
     checkCommands(data) {
         if (bytes.r[0].test(data) && bytes.r[1].test(data)) {
             this.sendSocketNotification('BYTES', bytes.a);
-        } else if (/(PLEASE)/g.test(data) && /(WAKE)/g.test(data) && /(UP)/g.test(data)) {
-
-/////////// Turns on laptop display and desktop PC with DVI @ Mykle ///////////////
-			exec('xset dpms force on', null);
-			
-   //         exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
-   //         this.hdmi = true;
+        } else if (/(WAKE)/g.test(data)){// && /(UP)/g.test(data)) {
+						switch(this.config.mode.toLowerCase()){
+							case 'pi':
+								exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
+								this.hdmi = true;
+								break;
+							case 'hide':
+							  // tell the module so it can unhide the others
+							  this.sendSocketNotification('SLEEP_WAKE');
+								break;
+							case 'dpms':
+							  /////////// Turns on laptop display and desktop PC with DVI @ Mykle ///////////////
+							  exec('xset dpms force on', null);
+								break;
+						}		
+						if(this.config.mode.toLowerCase()!=='hide')
+							this.sendSocketNotification('HW_AWAKE')			
         } else if (/(GO)/g.test(data) && /(SLEEP)/g.test(data)) {
-			
-/////////// Turns off laptop display and desktop PC with DVI  @ Mykle ///////////////
-			exec('xset dpms force off', null);
-			
-    //        exec('/opt/vc/bin/tvservice -o', null);
-     //       this.hdmi = false;
-        } 
-        
+						switch(this.config.mode.toLowerCase()){
+							case 'pi':
+							  exec('/opt/vc/bin/tvservice -o', null);
+								this.hdmi = false;
+								break;
+							case 'hide':
+							  // tell the module so it can hide the others
+								this.sendSocketNotification('SLEEP_HIDE');
+								break;
+							case 'dpms':
+							  /////////// Turns off laptop display and desktop PC with DVI  @ Mykle ///////////////
+							  exec('xset dpms force off', null);
+								break;
+						}
+						if(this.config.mode.toLowerCase()!=='hide')
+							this.sendSocketNotification('HW_ASLEEP')
+				}
         ///////////////////////////////////////////////////////////////////
         
         // You have to add these for your words (example LUCY)
@@ -459,7 +478,7 @@ module.exports = NodeHelper.create({
         } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('HIDE_FORTUNE');
         }
-		
+        
 		else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
             this.sendSocketNotification('SHOW_JEOPARDY');
         } else if (/(HIDE)/g.test(data) && /(JEOPARDY)/g.test(data)) {
@@ -524,6 +543,12 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification('SHOW_PETFINDER');
         } else if (/(HIDE)/g.test(data) && /(PETFINDER)/g.test(data)) {
             this.sendSocketNotification('HIDE_PETFINDER');
+        }
+        
+        else if (/(SHOW)/g.test(data) && /(PHONE)/g.test(data)) {
+            this.sendSocketNotification('SHOW_PHONE');
+        } else if (/(HIDE)/g.test(data) && /(PHONE)/g.test(data)) {
+            this.sendSocketNotification('HIDE_PHONE');
         }
 		
 		else if (/(SHOW)/g.test(data) && /(PICTURES)/g.test(data)) {
