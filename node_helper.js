@@ -338,331 +338,334 @@ module.exports = NodeHelper.create({
     checkCommands(data) {
         if (bytes.r[0].test(data) && bytes.r[1].test(data)) {
             this.sendSocketNotification('BYTES', bytes.a);
-        } else if (/(PLEASE)/g.test(data)) && /(WAKE)/g.test(data)) && /(UP)/g.test(data)) {
-						switch(this.config.mode.toLowerCase()){
-							case 'pi':
-								exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
-								this.hdmi = true;
-								break;
-							case 'hide':
-							  // tell the module so it can unhide the others
-							  this.sendSocketNotification('SLEEP_WAKE');
-								break;
-							case 'dpms':
-							  /////////// Turns on laptop display and desktop PC with DVI @ Mykle ///////////////
-							  exec('xset dpms force on', null);
-								break;
-						}		
-						if(this.config.mode.toLowerCase()!=='hide')
-							// tell the module we are awake
-							this.sendSocketNotification('HW_AWAKE')
+        } else if (/(PLEASE)/g.test(data) && /(WAKE)/g.test(data) && /(UP)/g.test(data)) {
+            const status = { 'hiding': false };
+            switch (this.config.standByMethod.toUpperCase()) {
+            case 'PI':
+                exec('/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7', null);
+                this.hdmi = true;
+                break;
+            case 'HIDE':
+                // tell the module so it can unhide the others
+                status.hiding = true;
+                break;
+            case 'DPMS':
+                //  Turns on laptop display and desktop PC with DVI @ Mykle
+                exec('xset dpms force on', null);
+                break;
+            default:
+                break;
+            }
+            // tell the module we are awake
+            this.sendSocketNotification('SLEEP_WAKE',status);
         } else if (/(GO)/g.test(data) && /(SLEEP)/g.test(data)) {
-						switch(this.config.mode.toLowerCase()){
-							case 'pi':
-							  exec('/opt/vc/bin/tvservice -o', null);
-								this.hdmi = false;
-								break;
-							case 'hide':
-							  // tell the module so it can hide the others
-								this.sendSocketNotification('SLEEP_HIDE');
-								break;
-							case 'dpms':
-							  /////////// Turns off laptop display and desktop PC with DVI  @ Mykle ///////////////
-							  exec('xset dpms force off', null);
-								break;
-						}
-						if(this.config.mode.toLowerCase()!=='hide')
-							// tell the module we are asleep
-							this.sendSocketNotification('HW_ASLEEP')
-        ///////////////////////////////////////////////////////////////////
-        
+            const status = { 'hiding': false };
+            switch (this.config.standByMethod.toUpperCase()) {
+            case 'PI':
+                exec('/opt/vc/bin/tvservice -o', null);
+                this.hdmi = false;
+                break;
+            case 'HIDE':
+                // tell the module so it can hide the others
+                status.hiding = true;
+                break;
+            case 'DPMS':
+                // Turns off laptop display and desktop PC with DVI  @ Mykle
+                exec('xset dpms force off', null);
+                break;
+            default:
+                break;
+            }
+            this.sendSocketNotification('SLEEP_START',status);
+        }        ///////////////////////////////////////////////////////////////////
+
         // You have to add these for your words (example LUCY)
-		
-		else if (/(SHOW)/g.test(data) && /(ALARM)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(ALARM)/g.test(data)) {
             this.sendSocketNotification('SHOW_ALARM');
         } else if (/(HIDE)/g.test(data) && /(ALARM)/g.test(data)) {
             this.sendSocketNotification('HIDE_ALARM');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(BACKGROUND)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(BACKGROUND)/g.test(data)) {
             this.sendSocketNotification('SHOW_BACKGROUND');
         } else if (/(HIDE)/g.test(data) && /(BACKGROUND)/g.test(data)) {
             this.sendSocketNotification('HIDE_BACKGROUND');
-		}
-	    
-	    else if (/(SHOW)/g.test(data) && /(CALENDAR)/g.test(data)) {
+    }
+  
+      else if (/(SHOW)/g.test(data) && /(CALENDAR)/g.test(data)) {
             this.sendSocketNotification('SHOW_CALENDAR');
         } else if (/(HIDE)/g.test(data) && /(CALENDAR)/g.test(data)) {
             this.sendSocketNotification('HIDE_CALENDAR');
         }
-			
-		else if (/(SHOW)/g.test(data) && /(CARDS)/g.test(data)) {
+      
+    else if (/(SHOW)/g.test(data) && /(CARDS)/g.test(data)) {
             this.sendSocketNotification('SHOW_CARDS');
         } else if (/(HIDE)/g.test(data) && /(CARDS)/g.test(data)) {
             this.sendSocketNotification('HIDE_CARDS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(CENSUS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(CENSUS)/g.test(data)) {
             this.sendSocketNotification('SHOW_CENSUS');
         } else if (/(HIDE)/g.test(data) && /(CENSUS)/g.test(data)) {
             this.sendSocketNotification('HIDE_CENSUS');
         }
-		
-		 else if (/(SHOW)/g.test(data) && /(CLOCK)/g.test(data)) {
+    
+     else if (/(SHOW)/g.test(data) && /(CLOCK)/g.test(data)) {
             this.sendSocketNotification('SHOW_CLOCK');
         } else if (/(HIDE)/g.test(data) && /(CLOCK)/g.test(data)) {
             this.sendSocketNotification('HIDE_CLOCK');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(COCKTAILS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(COCKTAILS)/g.test(data)) {
             this.sendSocketNotification('SHOW_COCKTAILS');
         } else if (/(HIDE)/g.test(data) && /(COCKTAILS)/g.test(data)) {
             this.sendSocketNotification('HIDE_COCKTAILS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(COMPLIMENTS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(COMPLIMENTS)/g.test(data)) {
             this.sendSocketNotification('SHOW_COMPLIMENTS');
         } else if (/(HIDE)/g.test(data) && /(COMPLIMENTS)/g.test(data)) {
             this.sendSocketNotification('HIDE_COMPLIMENTS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(COWBOY)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(COWBOY)/g.test(data)) {
             this.sendSocketNotification('SHOW_COWBOY');
         } else if (/(HIDE)/g.test(data) && /(COWBOY)/g.test(data)) {
             this.sendSocketNotification('HIDE_COWBOY');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(DARWIN)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(DARWIN)/g.test(data)) {
             this.sendSocketNotification('SHOW_DARWIN');
         } else if (/(HIDE)/g.test(data) && /(DARWIN)/g.test(data)) {
             this.sendSocketNotification('HIDE_DARWIN');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(EARTH)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(EARTH)/g.test(data)) {
             this.sendSocketNotification('SHOW_EARTH');
         } else if (/(HIDE)/g.test(data) && /(EARTH)/g.test(data)) {
             this.sendSocketNotification('HIDE_EARTH');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(EYECANDY)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(EYECANDY)/g.test(data)) {
             this.sendSocketNotification('SHOW_EYECANDY');
         } else if (/(HIDE)/g.test(data) && /(EYECANDY)/g.test(data)) {
             this.sendSocketNotification('HIDE_EYECANDY');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(EVENTS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(EVENTS)/g.test(data)) {
             this.sendSocketNotification('SHOW_EVENTS');
         } else if (/(HIDE)/g.test(data) && /(EVENTS)/g.test(data)) {
             this.sendSocketNotification('HIDE_EVENTS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(FAX)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(FAX)/g.test(data)) {
             this.sendSocketNotification('SHOW_FAX');
         } else if (/(HIDE)/g.test(data) && /(FAX)/g.test(data)) {
             this.sendSocketNotification('HIDE_FAX');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(FLIPPER)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(FLIPPER)/g.test(data)) {
             this.sendSocketNotification('SHOW_FLIPPER');
         } else if (/(HIDE)/g.test(data) && /(FLIPPER)/g.test(data)) {
             this.sendSocketNotification('HIDE_FLIPPER');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(FLIGHTS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(FLIGHTS)/g.test(data)) {
             this.sendSocketNotification('SHOW_FLIGHTS');
         } else if (/(HIDE)/g.test(data) && /(FLIGHTS)/g.test(data)) {
             this.sendSocketNotification('HIDE_FLIGHTS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(FORTUNE)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('SHOW_FORTUNE');
         } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('HIDE_FORTUNE');
         }
-        
-		else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
+
+    else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
             this.sendSocketNotification('SHOW_JEOPARDY');
         } else if (/(HIDE)/g.test(data) && /(JEOPARDY)/g.test(data)) {
             this.sendSocketNotification('HIDE_JEOPARDY');
         }
-		
-		 else if (/(SHOW)/g.test(data) && /(LICE)/g.test(data)) {
+    
+     else if (/(SHOW)/g.test(data) && /(LICE)/g.test(data)) {
             this.sendSocketNotification('SHOW_LICE');
         } else if (/(HIDE)/g.test(data) && /(LICE)/g.test(data)) {
             this.sendSocketNotification('HIDE_LICE');
         }
-		
-		 else if (/(SHOW)/g.test(data) && /(LOCATION)/g.test(data)) {
+    
+     else if (/(SHOW)/g.test(data) && /(LOCATION)/g.test(data)) {
             this.sendSocketNotification('SHOW_LOCATION');
         } else if (/(HIDE)/g.test(data) && /(LOCATION)/g.test(data)) {
             this.sendSocketNotification('HIDE_LOCATION');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(LOTTERY)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(LOTTERY)/g.test(data)) {
             this.sendSocketNotification('SHOW_LOTTERY');
         } else if (/(HIDE)/g.test(data) && /(LOTTERY)/g.test(data)) {
             this.sendSocketNotification('HIDE_LOTTERY');
         }
-        
+
         else if (/(SHOW)/g.test(data) && /(LUCY)/g.test(data)) {
             this.sendSocketNotification('SHOW_LUCY');
         } else if (/(HIDE)/g.test(data) && /(LUCY)/g.test(data)) {
             this.sendSocketNotification('HIDE_LUCY');
         }
-        
+
         else if (/(SHOW)/g.test(data) && /(MODULES)/g.test(data)) {
             this.sendSocketNotification('SHOW_MODULES');
         } else if (/(HIDE)/g.test(data) && /(MODULES)/g.test(data)) {
             this.sendSocketNotification('HIDE_MODULES');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(MOON)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(MOON)/g.test(data)) {
             this.sendSocketNotification('SHOW_MOON');
         } else if (/(HIDE)/g.test(data) && /(MOON)/g.test(data)) {
             this.sendSocketNotification('HIDE_MOON');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(NASA)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(NASA)/g.test(data)) {
             this.sendSocketNotification('SHOW_NASA');
         } else if (/(HIDE)/g.test(data) && /(NASA)/g.test(data)) {
             this.sendSocketNotification('HIDE_NASA');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(NEO)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(NEO)/g.test(data)) {
             this.sendSocketNotification('SHOW_NEO');
         } else if (/(HIDE)/g.test(data) && /(NEO)/g.test(data)) {
             this.sendSocketNotification('HIDE_NEO');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(NEWS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(NEWS)/g.test(data)) {
             this.sendSocketNotification('SHOW_NEWS');
         } else if (/(HIDE)/g.test(data) && /(NEWS)/g.test(data)) {
             this.sendSocketNotification('HIDE_NEWS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(PETFINDER)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(PETFINDER)/g.test(data)) {
             this.sendSocketNotification('SHOW_PETFINDER');
         } else if (/(HIDE)/g.test(data) && /(PETFINDER)/g.test(data)) {
             this.sendSocketNotification('HIDE_PETFINDER');
         }
-        
+
         else if (/(SHOW)/g.test(data) && /(PHONE)/g.test(data)) {
             this.sendSocketNotification('SHOW_PHONE');
         } else if (/(HIDE)/g.test(data) && /(PHONE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PHONE');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(PICTURES)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(PICTURES)/g.test(data)) {
             this.sendSocketNotification('SHOW_PICTURES');
         } else if (/(HIDE)/g.test(data) && /(PICTURES)/g.test(data)) {
             this.sendSocketNotification('HIDE_PICTURES');
         }
-        
+
          else if (/(SHOW)/g.test(data) && /(PILOTS)/g.test(data)) {
             this.sendSocketNotification('SHOW_PILOTS');
         } else if (/(HIDE)/g.test(data) && /(PILOTS)/g.test(data)) {
             this.sendSocketNotification('HIDE_PILOTS');
         }
-		
-		 else if (/(SHOW)/g.test(data) && /(SHIPPING)/g.test(data)) {
+    
+     else if (/(SHOW)/g.test(data) && /(SHIPPING)/g.test(data)) {
             this.sendSocketNotification('SHOW_SHIPPING');
         } else if (/(HIDE)/g.test(data) && /(SHIPPING)/g.test(data)) {
             this.sendSocketNotification('HIDE_SHIPPING');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(STATION)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(STATION)/g.test(data)) {
             this.sendSocketNotification('SHOW_STATION');
         } else if (/(HIDE)/g.test(data) && /(STATION)/g.test(data)) {
             this.sendSocketNotification('HIDE_STATION');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(STATS)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(STATS)/g.test(data)) {
             this.sendSocketNotification('SHOW_STATS');
         } else if (/(HIDE)/g.test(data) && /(STATS)/g.test(data)) {
             this.sendSocketNotification('HIDE_STATS');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(SUDOKU)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(SUDOKU)/g.test(data)) {
             this.sendSocketNotification('SHOW_SUDOKU');
         } else if (/(HIDE)/g.test(data) && /(SUDOKU)/g.test(data)) {
             this.sendSocketNotification('HIDE_SUDOKU');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(SUNRISE)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(SUNRISE)/g.test(data)) {
             this.sendSocketNotification('SHOW_SUNRISE');
         } else if (/(HIDE)/g.test(data) && /(SUNRISE)/g.test(data)) {
             this.sendSocketNotification('HIDE_SUNRISE');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(TIDES)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(TIDES)/g.test(data)) {
             this.sendSocketNotification('SHOW_TIDES');
         } else if (/(HIDE)/g.test(data) && /(TIDES)/g.test(data)) {
             this.sendSocketNotification('HIDE_TIDES');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(TIMER)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(TIMER)/g.test(data)) {
             this.sendSocketNotification('SHOW_TIMER');
         } else if (/(HIDE)/g.test(data) && /(TIMER)/g.test(data)) {
             this.sendSocketNotification('HIDE_TIMER');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(TRIVIA)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(TRIVIA)/g.test(data)) {
             this.sendSocketNotification('SHOW_TRIVIA');
         } else if (/(HIDE)/g.test(data) && /(TRIVIA)/g.test(data)) {
             this.sendSocketNotification('HIDE_TRIVIA');
         }
-		
-		else if (/(SHOW)/g.test(data) && /(VOICE)/g.test(data)) {
+    
+    else if (/(SHOW)/g.test(data) && /(VOICE)/g.test(data)) {
             this.sendSocketNotification('SHOW_VOICE');
         } else if (/(HIDE)/g.test(data) && /(VOICE)/g.test(data)) {
             this.sendSocketNotification('HIDE_VOICE');
         }
-		
+    
          else if (/(SHOW)/g.test(data) && /(WEATHER)/g.test(data)) {
             this.sendSocketNotification('SHOW_WEATHER');
         } else if (/(HIDE)/g.test(data) && /(WEATHER)/g.test(data)) {
             this.sendSocketNotification('HIDE_WEATHER');
         }
-        
+
 /////////  Pages commands @ Mykle ///////////////////////////		
-		 /////////  Page 1 commands ///////////////////////////		
-		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
-			   this.sendSocketNotification('HIDE_PAGE_TWO');
-			   this.sendSocketNotification('HIDE_PAGE_THREE');
-            this.sendSocketNotification('SHOW_PAGE_ONE'); 
+     /////////  Page 1 commands ///////////////////////////		
+    else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
+         this.sendSocketNotification('HIDE_PAGE_TWO');
+         this.sendSocketNotification('HIDE_PAGE_THREE');
+            this.sendSocketNotification('SHOW_PAGE_ONE');
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(ONE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_ONE');
         }
-		
+    
        /////////  Page 2 commands ///////////////////////////
-		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
+    else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_ONE');
             this.sendSocketNotification('HIDE_PAGE_THREE');
-            this.sendSocketNotification('SHOW_PAGE_TWO');            
+            this.sendSocketNotification('SHOW_PAGE_TWO');
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(TWO)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_TWO');
         }
-        
+
        /////////  Page 3 commands ///////////////////////////
-		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
+    else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_ONE');
             this.sendSocketNotification('HIDE_PAGE_TWO');
-            this.sendSocketNotification('SHOW_PAGE_THREE');            
+            this.sendSocketNotification('SHOW_PAGE_THREE');
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(THREE)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_THREE');
         }
-		
-		/////////  Page 4 commands ///////////////////////////
-		else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(FOUR)/g.test(data)) {
+    
+    /////////  Page 4 commands ///////////////////////////
+    else if (/(SHOW)/g.test(data) && /(PAGE)/g.test(data) && /(FOUR)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_ONE');
             this.sendSocketNotification('HIDE_PAGE_TWO');
             this.sendSocketNotification('HIDE_PAGE_THREE');
-			this.sendSocketNotification('SHOW_PAGE_FOUR');
+      this.sendSocketNotification('SHOW_PAGE_FOUR');
         } else if (/(HIDE)/g.test(data) && /(PAGE)/g.test(data) && /(FOUR)/g.test(data)) {
             this.sendSocketNotification('HIDE_PAGE_FOUR');
-        }  
-		
-        
+        }
+    
+
 
          else if (/(HELP)/g.test(data)) {
             if (/(CLOSE)/g.test(data) || (this.help && !/(OPEN)/g.test(data))) {
