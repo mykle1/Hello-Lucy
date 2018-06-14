@@ -251,7 +251,7 @@ Module.register('MMM-voice', {
             this.appendHelp(modal);
             wrapper.appendChild(modal);
         }
-    
+
         wrapper.appendChild(voice);
 
         return wrapper;
@@ -371,7 +371,7 @@ Module.register('MMM-voice', {
                         module.hide(1000);
                     }
                 });
-            } 
+            }
             this.sendNotification('NOW_ASLEEP', JSON.stringify(list));
         } else if (notification === 'SLEEP_WAKE') {
             if (payload.hiding === true) {
@@ -388,18 +388,18 @@ Module.register('MMM-voice', {
                 this.previouslyHidden = [];
             }
             this.sendNotification('NOW_AWAKE');
-        } 
+        }
 /*
-    
+
     if (notification === 'DOM_OBJECTS_CREATED') {
          MM.getModules().enumerate((module) => {
                 module.hide(1000);
             });
      }
-    
-      
-*/		
-    
+
+
+*/
+
 //////////// PAGES BY VOICE COMMAND @ Mykle  ///////////////////////////////////////	
      else if (notification === 'SHOW_PAGE_ONE') {
        this.sendNotification('HIDE_LUCY');
@@ -413,7 +413,7 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_COWBOY');
        this.sendNotification('SHOW_TIDES');
        this.sendNotification('SHOW_VOICE');
-      
+
      } else if (notification === 'HIDE_PAGE_ONE') {
        this.sendNotification('HIDE_LUCY');
        this.sendNotification('HIDE_LOTTERY');
@@ -436,7 +436,7 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_COCKTAILS');
        this.sendNotification('SHOW_WEATHER');
        this.sendNotification('SHOW_VOICE');
-      
+
     } else if (notification === 'HIDE_PAGE_TWO') {
        this.sendNotification('HIDE_LUCY');
        this.sendNotification('HIDE_PILOTS');
@@ -480,7 +480,7 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_COCKTAILS');
        this.sendNotification('SHOW_WEATHER');
        this.sendNotification('SHOW_VOICE');
-      
+
     } else if (notification === 'HIDE_PAGE_FOUR') {
        this.sendNotification('HIDE_LUCY');
        this.sendNotification('HIDE_STATS');
@@ -492,12 +492,12 @@ Module.register('MMM-voice', {
        this.sendNotification('HIDE_VOICE');
 ////////////////////////////////////////////////////////////////////////////////////////////////
     }
-    
-    
+
+
 /////////// SINGULAR VOICE COMMANDS @ Mykle ///////////////////////////////////		
 
         // You have to add your UNIQUE commands like this
-    
+
     // MMM-voice sends notification to MMM-AlarmClock to HIDE
         else if (notification === 'HIDE_ALARM') {
              this.sendNotification('HIDE_ALARM');
@@ -507,7 +507,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_ALARM') {
              this.sendNotification('SHOW_ALARM');
         }
-    
+
     // MMM-voice sends notification to MMM-Back to HIDE
      else if (notification === 'HIDE_BACKGROUND') {
              this.sendNotification('HIDE_BACKGROUND');
@@ -517,7 +517,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_BACKGROUND') {
              this.sendNotification('SHOW_BACKGROUND');
         }
-  
+
   // MMM-voice sends notification to calendar to HIDE
         else if (notification === 'HIDE_CALENDAR') {
              this.sendNotification('HIDE_CALENDAR');
@@ -527,7 +527,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_CALENDAR') {
              this.sendNotification('SHOW_CALENDAR');
         }
-    
+
     // MMM-voice sends notification to MMM-CARDS to HIDE
         else if (notification === 'HIDE_CARDS') {
              this.sendNotification('HIDE_CARDS');
@@ -537,7 +537,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_CARDS') {
              this.sendNotification('SHOW_CARDS');
         }
-    
+
     // MMM-voice sends notification to MMM-Census to HIDE
         else if (notification === 'HIDE_CENSUS') {
              this.sendNotification('HIDE_CENSUS');
@@ -547,7 +547,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_CENSUS') {
              this.sendNotification('SHOW_CENSUS');
         }
-    
+
     // MMM-voice sends notification to MMM-CLOCK to HIDE
         else if (notification === 'HIDE_CLOCK') {
              this.sendNotification('HIDE_CLOCK');
@@ -557,7 +557,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_CLOCK') {
              this.sendNotification('SHOW_CLOCK');
         }
-    
+
     // MMM-voice sends notification to MMM-COCKTAILS to HIDE
         else if (notification === 'HIDE_COCKTAILS') {
              this.sendNotification('HIDE_COCKTAILS');
@@ -567,7 +567,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_COCKTAILS') {
              this.sendNotification('SHOW_COCKTAILS');
         }
-    
+
     // MMM-voice sends notification to compliments to HIDE
         else if (notification === 'HIDE_COMPLIMENTS') {
              this.sendNotification('HIDE_COMPLIMENTS');
@@ -577,7 +577,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_COMPLIMENTS') {
              this.sendNotification('SHOW_COMPLIMENTS');
         }
-    
+
     // MMM-voice sends notification to MMM-NOAA to HIDE
         else if (notification === 'HIDE_COWBOY') {
              this.sendNotification('HIDE_COWBOY');
@@ -587,7 +587,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_COWBOY') {
              this.sendNotification('SHOW_COWBOY');
         }
-    
+
     // MMM-voice sends notification to MMM-EOL to HIDE
         else if (notification === 'HIDE_DARWIN') {
              this.sendNotification('HIDE_DARWIN');
@@ -597,7 +597,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_DARWIN') {
              this.sendNotification('SHOW_DARWIN');
         }
-    
+
     // MMM-voice sends notification to MMM-EARTH to HIDE
         else if (notification === 'HIDE_EARTH') {
              this.sendNotification('HIDE_EARTH');
@@ -607,7 +607,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_EARTH') {
              this.sendNotification('SHOW_EARTH');
         }
-    
+
      // MMM-voice sends notification to MMM-EyeCandy to HIDE
         else if (notification === 'HIDE_EYECANDY') {
              this.sendNotification('HIDE_EYECANDY');
@@ -617,7 +617,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_EYECANDY') {
              this.sendNotification('SHOW_EYECANDY');
         }
-    
+
     // MMM-voice sends notification to MMM-Events to HIDE
         else if (notification === 'HIDE_EVENTS') {
              this.sendNotification('HIDE_EVENTS');
@@ -627,7 +627,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_EVENTS') {
              this.sendNotification('SHOW_EVENTS');
         }
-    
+
     // MMM-voice sends notification to MMM-rfacts to HIDE
         else if (notification === 'HIDE_FAX') {
              this.sendNotification('HIDE_FAX');
@@ -637,7 +637,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_FAX') {
              this.sendNotification('SHOW_FAX');
         }
-    
+
      // MMM-voice sends notification to MMM-Glock to HIDE
         else if (notification === 'HIDE_FLIPPER') {
              this.sendNotification('HIDE_FLIPPER');
@@ -647,7 +647,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_FLIPPER') {
              this.sendNotification('SHOW_FLIPPER');
         }
-    
+
      // MMM-voice sends notification to MMM-FlightsAbove to HIDE
         else if (notification === 'HIDE_FLIGHTS') {
              this.sendNotification('HIDE_FLIGHTS');
@@ -657,7 +657,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_FLIGHTS') {
              this.sendNotification('SHOW_FLIGHTS');
         }
-    
+
     // MMM-voice sends notification to MMM-Fortune to HIDE
         else if (notification === 'HIDE_FORTUNE') {
              this.sendNotification('HIDE_FORTUNE');
@@ -677,7 +677,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_JEOPARDY') {
              this.sendNotification('SHOW_JEOPARDY');
         }
-    
+
     // MMM-voice sends notification to MMM-LICE to HIDE
         else if (notification === 'HIDE_LICE') {
              this.sendNotification('HIDE_LICE');
@@ -687,7 +687,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_LICE') {
              this.sendNotification('SHOW_LICE');
         }
-    
+
     // MMM-voice sends notification to MMM-URHere to HIDE
         else if (notification === 'HIDE_LOCATION') {
              this.sendNotification('HIDE_LOCATION');
@@ -697,7 +697,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_LOCATION') {
              this.sendNotification('SHOW_LOCATION');
         }
-    
+
     // MMM-voice sends notification to MMM-Lottery to HIDE
         else if (notification === 'HIDE_LOTTERY') {
              this.sendNotification('HIDE_LOTTERY');
@@ -707,7 +707,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_LOTTERY') {
              this.sendNotification('SHOW_LOTTERY');
         }
-    
+
 
         // MMM-voice sends notification to MMM-EasyPix to HIDE
         else if (notification === 'HIDE_LUCY') {
@@ -728,7 +728,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_MOON') {
              this.sendNotification('SHOW_MOON');
         }
-    
+
     // MMM-voice sends notification to MMM-NASA to HIDE
         else if (notification === 'HIDE_NASA') {
              this.sendNotification('HIDE_NASA');
@@ -738,7 +738,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_NASA') {
              this.sendNotification('SHOW_NASA');
         }
-    
+
     // MMM-voice sends notification to MMM-NEO to HIDE
         else if (notification === 'HIDE_NEO') {
              this.sendNotification('HIDE_NEO');
@@ -748,7 +748,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_NEO') {
              this.sendNotification('SHOW_NEO');
         }
-    
+
     // MMM-voice sends notification to newsfeed to HIDE
         else if (notification === 'HIDE_NEWS') {
              this.sendNotification('HIDE_NEWS');
@@ -758,7 +758,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_NEWS') {
              this.sendNotification('SHOW_NEWS');
         }
-    
+
     // MMM-voice sends notification to MMM-PETFINDER to HIDE
         else if (notification === 'HIDE_PETFINDER') {
              this.sendNotification('HIDE_PETFINDER');
@@ -778,7 +778,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_PHONE') {
              this.sendNotification('SHOW_PHONE');
         }
-    
+
      // MMM-voice sends notification to MMM-ImageSlideshow to HIDE
         else if (notification === 'HIDE_PICTURES') {
              this.sendNotification('HIDE_PICTURES');
@@ -798,7 +798,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_PILOTS') {
              this.sendNotification('SHOW_PILOTS');
         }
-    
+
     // MMM-voice sends notification to MMM-AfterShip to HIDE
         else if (notification === 'HIDE_SHIPPING') {
              this.sendNotification('HIDE_SHIPPING');
@@ -808,7 +808,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_SHIPPING') {
              this.sendNotification('SHOW_SHIPPING');
         }
-    
+
     // MMM-voice sends notification to MMM-ISS to HIDE
         else if (notification === 'HIDE_STATION') {
              this.sendNotification('HIDE_STATION');
@@ -818,7 +818,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_STATION') {
              this.sendNotification('SHOW_STATION');
         }
-    
+
     // MMM-voice sends notification to MMM-PC-Stats to HIDE
         else if (notification === 'HIDE_STATS') {
              this.sendNotification('HIDE_STATS');
@@ -828,7 +828,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_STATS') {
              this.sendNotification('SHOW_STATS');
         }
-    
+
     // MMM-voice sends notification to MMM-Sudoku to HIDE
         else if (notification === 'HIDE_SUDOKU') {
              this.sendNotification('HIDE_SUDOKU');
@@ -838,7 +838,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_SUDOKU') {
              this.sendNotification('SHOW_SUDOKU');
         }
-    
+
     // MMM-voice sends notification to MMM-SunRiseSet to HIDE
         else if (notification === 'HIDE_SUNRISE') {
              this.sendNotification('HIDE_SUNRISE');
@@ -848,7 +848,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_SUNRISE') {
              this.sendNotification('SHOW_SUNRISE');
         }
-    
+
      // MMM-voice sends notification to MMM-SORT to HIDE
         else if (notification === 'HIDE_TIDES') {
              this.sendNotification('HIDE_TIDES');
@@ -858,7 +858,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_TIDES') {
              this.sendNotification('SHOW_TIDES');
         }
-    
+
     // MMM-voice sends notification to MMM-EventHorizon to HIDE
         else if (notification === 'HIDE_TIMER') {
              this.sendNotification('HIDE_TIMER');
@@ -868,7 +868,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_TIMER') {
              this.sendNotification('SHOW_TIMER');
         }
-    
+
         // MMM-voice sends notification to MMM-ATM to HIDE
         else if (notification === 'HIDE_TRIVIA') {
              this.sendNotification('HIDE_TRIVIA');
@@ -878,7 +878,7 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_TRIVIA') {
              this.sendNotification('SHOW_TRIVIA');
         }
-    
+
      // MMM-voice sends notification to MMM-VOICE to HIDE
         else if (notification === 'HIDE_VOICE') {
              this.hide(1000);
@@ -901,7 +901,7 @@ Module.register('MMM-voice', {
 
 
 /////////////////////////////////////////////////////////////////////////////////
-    
+
         else if (notification === 'DEBUG') {
             this.debugInformation = payload;
         }
