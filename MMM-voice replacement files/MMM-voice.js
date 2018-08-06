@@ -86,6 +86,8 @@ Module.register('MMM-voice', {
       'SHOW FLIGHTS',
       'HIDE FORTUNE',
       'SHOW FORTUNE',
+      'HIDE GAS',
+	  'SHOW GAS',
       'HIDE JEOPARDY',
       'SHOW JEOPARDY',
       'HIDE LICE',
@@ -666,6 +668,16 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_FORTUNE') {
              this.sendNotification('SHOW_FORTUNE');
         }
+        
+     // MMM-voice sends notification to MMM-Gas to HIDE
+        else if (notification === 'HIDE_GAS') {
+             this.sendNotification('HIDE_GAS');
+        }
+    
+        // MMM-voice sends notification to MMM-Gas to SHOW
+        else if (notification === 'SHOW_GAS') {
+             this.sendNotification('SHOW_GAS');
+        }   
 
     // MMM-voice sends notification to MMM-JEOPARDY to HIDE
         else if (notification === 'HIDE_JEOPARDY') {
