@@ -482,6 +482,12 @@ module.exports = NodeHelper.create({
         } else if (/(HIDE)/g.test(data) && /(FORTUNE)/g.test(data)) {
             this.sendSocketNotification('HIDE_FORTUNE');
         }
+        
+        else if (/(SHOW)/g.test(data) && /(GAS)/g.test(data)) {
+            this.sendSocketNotification('SHOW_GAS');
+        } else if (/(HIDE)/g.test(data) && /(GAS)/g.test(data)) {
+            this.sendSocketNotification('HIDE_GAS');
+        }
 
     else if (/(SHOW)/g.test(data) && /(JEOPARDY)/g.test(data)) {
             this.sendSocketNotification('SHOW_JEOPARDY');
