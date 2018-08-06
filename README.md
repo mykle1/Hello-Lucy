@@ -18,15 +18,6 @@ That's true. I fully admit that but I did take the time to learn what I wanted t
 and then made all the enhancements to the modules. It was tremendously rewarding for
 me and lots of fun and I learned quite a bit doing it. :-)
 
-## New Config options 
-| **Option** | **Default** | **Description** | **info** |
-| --- | --- | --- | --- |
-| `standByMethod` | OPTIONAL | | |
-|        |          |'PI' |  use the tvservice command available on Raspberry pi to turn off the HDMI monitor source |
-|  |  | 'DPMS' |  use the exec DMPS command to turn off the monitor source (not on pi, or not hdmi) (default) |
-|  |  | 'HIDE' |  hide all module content, if display is on EnergyStar device that shows ugly 'no signal' screen for the other two choices |
-| `startHidden` | true/false | whether at MagciMirror startup to hide all modules and show image | default=true |
-
 ## Notice! 
 
 All enhancements and testing were done on an old, Compaq Presario CQ57 Dual Core laptop 
@@ -124,6 +115,16 @@ I've provided the enhanced files in this repo.
 https://github.com/HackerHouseYT/AI-Smart-Mirror/blob/master/magic_mirror/aiclient/face.gif
 and place it in the modules/MMM-EasyPix/pix folder and change your config entry for
 MMM-EasyPix to use it. Pi users should use a static image or a less demanding animated gif.
+
+## New Config options 
+| **Option** | **Default** | **Description** | **info** |
+| --- | --- | --- | --- |
+| `standByMethod` | OPTIONAL | | |
+|        |          |'PI' |  use the tvservice command available on Raspberry pi to turn off the HDMI monitor source |
+|  |  | 'DPMS' |  use the exec DMPS command to turn off the monitor source (not on pi, or not hdmi) (default) |
+|  |  | 'HIDE' |  hide all module content, if display is on EnergyStar device that shows ugly 'no signal' screen for the other two choices |
+| `startHidden` | true/false | whether at MagciMirror startup to hide all modules and show image | default=true |
+
 
 ## How to add any module you want for use with Hello-Lucy
 
