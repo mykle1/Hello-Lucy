@@ -50,7 +50,7 @@ Module.register('MMM-voice', {
 
 ///////////// Add your commands to the sentences array below ///////////////////
     voice: {
-        mode: 'VOICE',
+        mode: 'Say, "Hello Lucy"',
         sentences: [
       'HIDE ALARM',
       'SHOW ALARM',
@@ -87,7 +87,7 @@ Module.register('MMM-voice', {
       'HIDE FORTUNE',
       'SHOW FORTUNE',
       'HIDE GAS',
-	  'SHOW GAS',
+	    'SHOW GAS',
       'HIDE JEOPARDY',
       'SHOW JEOPARDY',
       'HIDE LICE',
@@ -102,7 +102,7 @@ Module.register('MMM-voice', {
       'SHOW MODULES',
       'HIDE MOON',
       'SHOW MOON',
-            'HIDE NASA',
+      'HIDE NASA',
       'SHOW NASA',
       'HIDE NEO',
       'SHOW NEO',
@@ -110,11 +110,11 @@ Module.register('MMM-voice', {
       'SHOW NEWS',
       'HIDE PETFINDER',
       'SHOW PETFINDER',
-            'HIDE PHONE',
+      'HIDE PHONE',
       'SHOW PHONE',
       'HIDE PICTURES',
       'SHOW PICTURES',
-            'HIDE PILOTS',
+      'HIDE PILOTS',
       'SHOW PILOTS',
       'HIDE SHIPPING',
       'SHOW SHIPPING',
@@ -126,7 +126,7 @@ Module.register('MMM-voice', {
       'SHOW SUNRISE',
       'HIDE SUDOKU',
       'SHOW SUDOKU',
-            'HIDE TIDES',
+      'HIDE TIDES',
       'SHOW TIDES',
       'HIDE TIMER',
       'SHOW TIMER',
@@ -134,8 +134,10 @@ Module.register('MMM-voice', {
       'SHOW TRIVIA',
       'HIDE VOICE',
       'SHOW VOICE',
-            'HIDE WEATHER',
+      'HIDE WEATHER',
       'SHOW WEATHER',
+      'HIDE WIND',
+      'SHOW WIND',
       'HIDE PAGE ONE',
       'SHOW PAGE ONE',
       'HIDE PAGE TWO',
@@ -146,7 +148,7 @@ Module.register('MMM-voice', {
       'SHOW PAGE FOUR',
       'PLEASE WAKE UP',
       'GO TO SLEEP',
-            'OPEN HELP',
+      'OPEN HELP',
       'CLOSE HELP',
         ]
     },
@@ -291,7 +293,7 @@ Module.register('MMM-voice', {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////// @ Mykle enhancement //////////////////
-     if(this.config.startHidden) {		
+     if(this.config.startHidden) {
        if (notification === 'DOM_OBJECTS_CREATED') {
           MM.getModules().enumerate((module) => {
                module.hide(1000);
@@ -306,6 +308,11 @@ Module.register('MMM-voice', {
             this.sendNotification('HELLO_LUCY');
         }
     }
+        // Alarm clock rings, sends SHOW_ALERT,
+        // receive it here and send SHOW_PAGE_ONE to node_helper of MMM-voice
+     if (notification === 'SHOW_ALERT') {
+         this.sendSocketNotification('SHOW_PAGE_ONE');
+     }
 
 
     },
@@ -401,11 +408,13 @@ Module.register('MMM-voice', {
 
 */
 
-//////////// PAGES BY VOICE COMMAND @ Mykle  ///////////////////////////////////////	
+//////////// PAGES BY VOICE COMMAND @ Mykle  ///////////////////////////////////////
      else if (notification === 'SHOW_PAGE_ONE') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_PAGE_TWO');
-       this.sendNotification('HIDE_PAGE_THREE');
+
+         MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
        this.sendNotification('SHOW_LOTTERY');
        this.sendNotification('SHOW_CLOCK');
        this.sendNotification('SHOW_EARTH');
@@ -416,20 +425,18 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_VOICE');
 
      } else if (notification === 'HIDE_PAGE_ONE') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_LOTTERY');
-       this.sendNotification('HIDE_CLOCK');
-       this.sendNotification('HIDE_EARTH');
-       this.sendNotification('HIDE_EYECANDY');
-       this.sendNotification('HIDE_LICE');
-       this.sendNotification('HIDE_COWBOY');
-       this.sendNotification('HIDE_TIDES');
-       this.sendNotification('HIDE_VOICE');
-///////////////////////////////////////////////////////////////////////////////////////////////			
+
+         MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
+///////////////////////////////////////////////////////////////////////////////////////////////
      } else if (notification === 'SHOW_PAGE_TWO') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_PAGE_ONE');
-       this.sendNotification('HIDE_PAGE_THREE');
+
+         MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
        this.sendNotification('SHOW_PILOTS');
        this.sendNotification('SHOW_MOON');
        this.sendNotification('SHOW_NASA');
@@ -439,19 +446,18 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_VOICE');
 
     } else if (notification === 'HIDE_PAGE_TWO') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_PILOTS');
-       this.sendNotification('HIDE_MOON');
-       this.sendNotification('HIDE_NASA');
-       this.sendNotification('HIDE_ALARM');
-       this.sendNotification('HIDE_COCKTAILS');
-       this.sendNotification('HIDE_WEATHER');
-       this.sendNotification('HIDE_VOICE');
+
+        MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
     } else if (notification === 'SHOW_PAGE_THREE') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_PAGE_ONE');
-       this.sendNotification('HIDE_PAGE_TWO');
+
+        MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
        this.sendNotification('SHOW_BACKGROUND');
        this.sendNotification('SHOW_CALENDAR');
        this.sendNotification('SHOW_COMPLIMENTS');
@@ -459,21 +465,21 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_FLIPPER');
        this.sendNotification('SHOW_NEWS');
        this.sendNotification('SHOW_PICTURES');
+        this.sendNotification('SHOW_VOICE');
 
     } else if (notification === 'HIDE_PAGE_THREE') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_BACKGROUND');
-       this.sendNotification('HIDE_CALENDAR');
-       this.sendNotification('HIDE_COMPLIMENTS');
-       this.sendNotification('HIDE_DARWIN');
-       this.sendNotification('HIDE_FLIPPER');
-       this.sendNotification('HIDE_NEWS');
-       this.sendNotification('HIDE_PICTURES');
-      ///////////////////////////////////////////////////////////////////////////////////////////////			
+
+        MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////
      } else if (notification === 'SHOW_PAGE_FOUR') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_PAGE_ONE');
-       this.sendNotification('HIDE_PAGE_THREE');
+
+         MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
+
        this.sendNotification('SHOW_STATS');
        this.sendNotification('SHOW_FAX');
        this.sendNotification('SHOW_NASA');
@@ -483,19 +489,15 @@ Module.register('MMM-voice', {
        this.sendNotification('SHOW_VOICE');
 
     } else if (notification === 'HIDE_PAGE_FOUR') {
-       this.sendNotification('HIDE_LUCY');
-       this.sendNotification('HIDE_STATS');
-       this.sendNotification('HIDE_FAX');
-       this.sendNotification('HIDE_NASA');
-       this.sendNotification('HIDE_ALARM');
-       this.sendNotification('HIDE_COCKTAILS');
-       this.sendNotification('HIDE_WEATHER');
-       this.sendNotification('HIDE_VOICE');
+
+       MM.getModules().enumerate((module) => {
+                module.hide(1000);
+            });
 ////////////////////////////////////////////////////////////////////////////////////////////////
     }
 
 
-/////////// SINGULAR VOICE COMMANDS @ Mykle ///////////////////////////////////		
+/////////// SINGULAR VOICE COMMANDS @ Mykle ///////////////////////////////////
 
         // You have to add your UNIQUE commands like this
 
@@ -668,16 +670,16 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_FORTUNE') {
              this.sendNotification('SHOW_FORTUNE');
         }
-        
+
      // MMM-voice sends notification to MMM-Gas to HIDE
         else if (notification === 'HIDE_GAS') {
              this.sendNotification('HIDE_GAS');
         }
-    
+
         // MMM-voice sends notification to MMM-Gas to SHOW
         else if (notification === 'SHOW_GAS') {
              this.sendNotification('SHOW_GAS');
-        }   
+        }
 
     // MMM-voice sends notification to MMM-JEOPARDY to HIDE
         else if (notification === 'HIDE_JEOPARDY') {
@@ -900,14 +902,24 @@ Module.register('MMM-voice', {
              this.show(1000);
         }
 
-        // MMM-voice sends notification to MMM-WEATHER to HIDE
+        // MMM-voice sends notification to MMM-BMW-DS to HIDE
         else if (notification === 'HIDE_WEATHER') {
              this.sendNotification('HIDE_WEATHER');
         }
 
-        // MMM-voice sends notification to MMM-WEATHER to SHOW
+        // MMM-voice sends notification to MMM-BMW-DS to SHOW
         else if (notification === 'SHOW_WEATHER') {
              this.sendNotification('SHOW_WEATHER');
+        }
+
+        // MMM-voice sends notification to MMM-EarthWinds to HIDE
+        else if (notification === 'HIDE_WIND') {
+             this.sendNotification('HIDE_WIND');
+        }
+
+        // MMM-voice sends notification to MMM-EarthWinds to SHOW
+        else if (notification === 'SHOW_WIND') {
+             this.sendNotification('SHOW_WIND');
         }
 
 
