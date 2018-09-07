@@ -42,6 +42,7 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **MMM-Census**      (World Population by age and sex, or by individual country)
 * **MMM-Cocktails**   (How to make all kinds of mixed drinks)
 * **MMM-EARTH**       (Realtime images of Earth from 1,000,000 miles away)
+* **MMM-EarthWinds**  (Real time winds on our planet as a live background)
 * **MMM-EasyBack**    (The easiest way to use background/desktop pictures on your mirror.)
 * **MMM-EasyPix**     (Necessary for animated graphic and sound response)
 * **MMM-EOL**         (The Encyclopedia of Life)
@@ -313,6 +314,7 @@ but only show certain ones at certain times.
 			'HIDE TRIVIA',    'SHOW TRIVIA',     for MMM-ATM
 			'HIDE VOICE',     'SHOW VOICE',
             		'HIDE WEATHER',   'SHOW WEATHER',    for MMM-WunderGround
+			'HIDE WIND',      'SHOW WIND',       for MMM-EarthWinds
 			'PLEASE WAKE UP', 'GO TO SLEEP',     for turning on and off display (standby)
      		        'OPEN HELP',      'CLOSE HELP',      Now working thanks to Cowboysdude
 			'HIDE STATION',   'SHOW STATION',    MMM-ISS
