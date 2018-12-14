@@ -130,6 +130,8 @@ Module.register('MMM-voice', {
       'SHOW TIDES',
       'HIDE TIMER',
       'SHOW TIMER',
+      'HIDE TRAFFIC',
+      'SHOW TRAFFIC',
       'HIDE TRIVIA',
       'SHOW TRIVIA',
       'HIDE VOICE',
@@ -881,6 +883,17 @@ Module.register('MMM-voice', {
         else if (notification === 'SHOW_TIMER') {
              this.sendNotification('SHOW_TIMER');
         }
+	   
+	    // MMM-voice sends notification to MMM-GoogleMapsTraffic to HIDE
+        else if (notification === 'HIDE_TRAFFIC') {
+             this.sendNotification('HIDE_TRAFFIC');
+        }
+
+        // MMM-voice sends notification to MMM-GoogleMapsTraffic to SHOW
+        else if (notification === 'SHOW_TRAFFIC') {
+             this.sendNotification('SHOW_TRAFFIC');
+        }
+	    
 
         // MMM-voice sends notification to MMM-ATM to HIDE
         else if (notification === 'HIDE_TRIVIA') {
