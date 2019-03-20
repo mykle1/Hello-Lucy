@@ -36,7 +36,7 @@ I will make an attempt to reduce the size and demands of the digital face file.
 * **compliments**     (default MM module)
 * **newsfeed**        (default MM module)
 * **MMM-AfterShip**   (Track all your deliveries in one module)
-* **MMM-Alarm-Clock** (I use this with alert module disabled and click button)
+* **MMM-AlarmClock** (I use this with alert module disabled and click button)
 * **MMM-ATM**         (Another Trivia Module? Really?)
 * **MMM-CARDS**       (Play 5 card stud poker against your mirror)
 * **MMM-Census**      (World Population by age and sex, or by individual country)
