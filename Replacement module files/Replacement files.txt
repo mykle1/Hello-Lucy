@@ -1,1 +1,0 @@
-Replace your respective module.js files with these
