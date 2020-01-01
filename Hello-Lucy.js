@@ -60,7 +60,8 @@ Module.register(ModuleName, {
     		pageEightModules: [],                       // modules to show on page two
     		pageNineModules: [],                        // modules to show on page two
     		pageTenModules: [],                          // modules to show on page two
-		    sounds: [ "a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"],
+		    sounds: [ "a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"], // randomized greeting sounds
+				confirmationSound: "ding.mp3",               // when command is accepted. use your own or default
 				debug: false,                               // get debug information in console
 	},
 
@@ -221,7 +222,7 @@ Module.register(ModuleName, {
 			// audible confirmation sound that Lucy understood the command
 			var audio_files = this.config.sounds;
 			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/ding.mp3");
+			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
 			audio.play();
 
 			MM.getModules().enumerate((module) => {
@@ -232,7 +233,7 @@ Module.register(ModuleName, {
 			// audible confirmation sound that Lucy understood the command
 			var audio_files = this.config.sounds;
 			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/ding.mp3");
+			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
 			audio.play();
 
 			MM.getModules().enumerate((module) => {
@@ -246,7 +247,7 @@ Module.register(ModuleName, {
 			// audible confirmation sound that single or pages of modules was issued a Hide or show command
 			var audio_files = this.config.sounds;
 			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/ding.mp3"); //"+random_file);
+			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
 			audio.play();
 
 

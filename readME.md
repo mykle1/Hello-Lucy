@@ -40,6 +40,7 @@ config: {
   defaultOnStartup: 'Hello-Lucy',
   standByMethod: 'DPMS',              // 'DPMS' = anything else than RPi or 'PI'
   sounds: ["1.mp3", "11.mp3"],        // welcome sound at startup. Add several for a random choice of welcome sound
+  confirmationSound: "ding.mp3",      // when command is accepted. use your own or default, name and extension of sound file
   startHideAll: true,                 // if true, all modules start as hidden
   pageOneModules: ["Hello-Lucy", "MMM-Insults"],    // default modules to show on page one/startup
   pageTwoModules: ["MMM-BMW-DS", "MMM-Events"],     // modules to show on page two
@@ -89,22 +90,33 @@ Example: Add your commands to the modOp array:
 ### Note: I can add modules for you. Usually, in less than 24 hours.
 
 * alert
-* MMM-EasyBack
+* clock
 * calendar
+* compliments
+* newsfeed
+
+* Hello-Lucy
+* MMM-AfterShip
+* MMM-Astro
+* MMM-ATM
+* MMM-BMW-DS
 * MMM-CARDS
 * MMM-Census
-* clock
-* MMM-Glock
 * MMM-Cocktails
-* compliments
+* MMM-DailyQuotes
 * MMM-EARTH
 * MMM-EarthWinds
+* MMM-EasyBack
+* MMM-EventHorizon
 * MMM-Events
 * MMM-EyeCandy
+* MMM-FMI
 * MMM-Fortune
 * MMM-Gas
+* MMM-Glock
 * MMM-History
-* MMM-Astro
+* MMM-ISS
+* MMM-ISS-Live
 * MMM-Insults
 * MMM-JEOPARDY
 * MMM-LICE
@@ -113,21 +125,16 @@ Example: Add your commands to the modOp array:
 * MMM-MARS
 * MMM-Lunartic
 * MMM-NASA
-* newsfeed
+* MMM-NOAA3
+* MMM-PC-Stats
 * MMM-PetFinder
 * MMM-PilotWX
-* MMM-FMI
-* MMM-DailyQuotes
-* MMM-ToDoLive
-* MMM-AfterShip
-* MMM-ISS
-* MMM-ISS-Live
-* MMM-PC-Stats
+* MMM-SORT
 * MMM-SoundMachine
 * MMM-SunRiseSet
-* MMM-SORT
-* MMM-EventHorizon
-* MMM-ATM
-* Hello-Lucy
-* MMM-BMW-DS
-* MMM-NOAA3
+* MMM-ToDoLive
+
+
+
+
+
