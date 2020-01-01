@@ -1,0 +1,80 @@
+1. You can ask me and I'll do it for you, especially if you are not comfortable making code modifications.
+
+2. Again, you can ask me and I'll gladly do it for you.
+
+3. You want to do it yourself? Alrighty then! You'll still have to tell me so I can add it to the repo.
+
+4. Open the sentences.json file in a code editor
+
+You'll see that most of the commands come in pairs.
+The easiest way to add your commands would be to copy a pair of HIDE and SHOW commmands.
+That's two complete lines including the comma.
+Example:
+
+"HIDE ALARM",
+"SHOW ALARM",
+
+Now paste it in between an existing pair and the next existing pair. Alphabetically would be nice. :-)
+Example:
+
+"HIDE CARDS",
+"SHOW CARDS",
+"HIDE ALARM",
+"SHOW ALARM",
+"HIDE CENSUS",
+"SHOW CENSUS",
+
+Now edit the one you pasted with the command of your choice so it looks like this.
+In this example "CATERING" would be your command.
+
+"HIDE CARDS",
+"SHOW CARDS",
+"HIDE CATERING",
+"SHOW CATERING",
+"HIDE CENSUS",
+"SHOW CENSUS",
+
+Save the sentences.json file and close.
+
+
+
+5. Open the checkCommands.json file in a code editor.
+
+You'll see that the commands come in pairs.
+The easiest way to add your commands would be to copy an existing pair.
+That's two complete lines including the comma.
+Example:
+
+{"wordOne":"SHOW","wordTwo":"ALARM","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-AlarmClock","sendNoti":""},
+{"wordOne":"HIDE","wordTwo":"ALARM","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-AlarmClock","sendNoti":""},
+
+Now paste it in between an existing pair and the next existing pair. Alphabetically would be nice. :-)
+"wordTwo" MUST match the command you made in the sentences.json file. In this case, CATERING.
+Also, you have to change the "moduleName" to the module you want to control, exactly! It is case sensitive.
+Example:
+
+{"wordOne":"SHOW","wordTwo":"CARDS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-CARDS","sendNoti":""},
+{"wordOne":"HIDE","wordTwo":"CARDS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-CARDS","sendNoti":""},
+
+{"wordOne":"SHOW","wordTwo":"CATERING","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-CATERING","sendNoti":""},
+{"wordOne":"HIDE","wordTwo":"CATERING","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-CATERING","sendNoti":""},
+
+{"wordOne":"SHOW","wordTwo":"CENSUS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Census","sendNoti":""},
+{"wordOne":"HIDE","wordTwo":"CENSUS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Census","sendNoti":""},
+
+Save and close.
+
+
+6. You should have let me do it for you. :-)
+
+7. Tell me the command and module name and I will add it to the repo. Thanks!
+
+
+
+
+
+
+
+
+
+
