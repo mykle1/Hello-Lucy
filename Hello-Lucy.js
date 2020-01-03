@@ -94,16 +94,18 @@ Module.register(ModuleName, {
 		const lucy = document.createElement("div");
 		lucy.classList.add("small", "align-left");
 
+		const modeSpan = document.createElement("span");
 		const icon = document.createElement("i");
 		icon.classList.add("fa", this.icon, "icon");
 		if (this.pulsing) {
 			icon.classList.add("pulse");
+			modeSpan.innerHTML = "Command Please:"
 		}
+		else
+			modeSpan.innerHTML = this.mode;
 		lucy.appendChild(icon);
-
-		const modeSpan = document.createElement("span");
-		modeSpan.innerHTML = this.mode;
 		lucy.appendChild(modeSpan);
+		
 		if (this.config.debug) {
 			const debug = document.createElement("div");
 			debug.innerHTML = this.debugInformation;
