@@ -68,21 +68,7 @@ config: {
 * You can ask me to add them for you or follow the example directions below.
 * If you are not comfortable modifying files it's best that I do it. :-)
 
-As of right now you have to make additions to 2 files in the Hello-Lucy folder.
-(1) sentences.json file.
-Example: Add your commands to the sentences array:
-```
-"HIDE ALARM",
-"SHOW ALARM",
-```
-(2) checkCommands.json file.
-Example: Add your commands to the modOp array:
-```
-{"wordOne":"SHOW","wordTwo":"ALARM","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-AlarmClock","sendNoti":""},
-{"wordOne":"HIDE","wordTwo":"ALARM","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-AlarmClock","sendNoti":""},
-```
-* The command word after HIDE or SHOW can be any word you like.
-* The module you name in "moduleName" will now be controlled by Hello-LUCY
+* Otherwise, please read the "How to add modules to Hello-Lucy" file included with this repo.
 
 ### Future upgrades for Hello_Lucy will eliminate the need for any modifications by the user (That's you)
 
