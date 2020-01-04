@@ -49,7 +49,7 @@ Module.register(ModuleName, {
 		startHideAll: false,                        // if true, all modules start as hidden
 		microphone: "default",  // Do * NOT * change, is read from ~/.asoundrc
 		speed: 1000,                                // transition speed between show/no-show/show in milliseconds
-		    defaultOnStartup: "Hello-Lucy",
+	//	    defaultOnStartup: "Hello-Lucy",
 	    	pageOneModules: ["Hello-Lucy"],         // default modules to show on page one/startup
 		    pageTwoModules: [],                         // modules to show on page two
     		pageThreeModules: [],                       // modules to show on page two
@@ -60,7 +60,7 @@ Module.register(ModuleName, {
     		pageEightModules: [],                       // modules to show on page two
     		pageNineModules: [],                        // modules to show on page two
     		pageTenModules: [],                          // modules to show on page two
-		    sounds: [ "a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"], // randomized greeting sounds
+		    greetingSounds: [ "a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"], // randomized greeting sounds
 				confirmationSound: "ding.mp3",               // when command is accepted. use your own or default
 				debug: false,                               // get debug information in console
 	},
@@ -88,6 +88,18 @@ Module.register(ModuleName, {
 		};
 	},
 
+	playConfirmationSound() {
+		var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
+		audio.play();
+	},
+
+	playGreetingSound() {
+		// var audio_files = this.config.sounds;
+		var random_file = this.config.sounds[Math.floor(Math.random() * this.config.sounds.length)];
+		var audio = new Audio(localPath+"/sounds/"+random_file);
+		audio.play();
+	},
+
 	getDom() {
 		Log.log("lucy entered getDom")
 		const wrapper = document.createElement("div");
@@ -105,7 +117,7 @@ Module.register(ModuleName, {
 			modeSpan.innerHTML = this.mode;
 		lucy.appendChild(icon);
 		lucy.appendChild(modeSpan);
-		
+
 		if (this.config.debug) {
 			const debug = document.createElement("div");
 			debug.innerHTML = this.debugInformation;
@@ -149,10 +161,7 @@ Module.register(ModuleName, {
 		}
        // randomly chosen startup greeting
 		if (notification === "DOM_OBJECTS_CREATED") {
-				 var audio_files = this.config.sounds;
-				 var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-				 var audio = new Audio(localPath+"/sounds/"+random_file);
-				 audio.play();
+			this.playGreetingSound();
 		}
 
 		// @TheStigh to manage hide/show modules on startup
@@ -222,10 +231,7 @@ Module.register(ModuleName, {
 
 		} else if (notification === "HIDE_MODULES") {
 			// audible confirmation sound that Lucy understood the command
-			var audio_files = this.config.sounds;
-			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
-			audio.play();
+			this.playConfirmationSound();
 
 			MM.getModules().enumerate((module) => {
 				module.hide(1000);
@@ -233,10 +239,7 @@ Module.register(ModuleName, {
 
 		} else if (notification === "SHOW_MODULES") {
 			// audible confirmation sound that Lucy understood the command
-			var audio_files = this.config.sounds;
-			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
-			audio.play();
+			this.playConfirmationSound();
 
 			MM.getModules().enumerate((module) => {
 				module.show(1000);
@@ -247,11 +250,7 @@ Module.register(ModuleName, {
 
 		} else if (notification === "MODULE_STATUS") {
 			// audible confirmation sound that single or pages of modules was issued a Hide or show command
-			var audio_files = this.config.sounds;
-			var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
-			var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
-			audio.play();
-
+			this.playConfirmationSound();
 
 			var hide = MM.getModules().withClass(payload.hide);
 			hide.enumerate(function(module) {
