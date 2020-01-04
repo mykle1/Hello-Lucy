@@ -1,88 +1,135 @@
 {
 "modOp":[
-  {"wordOne":"SHOW","wordTwo":"VOICE","wordThree":"","wordFour":"","toShow":"true","moduleName":"Hello-Lucy","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"VOICE","wordThree":"","wordFour":"","toShow":"false","moduleName":"Hello-Lucy","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"LUCY","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EasyPix","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"LUCY","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EasyPix","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"CALENDAR","wordThree":"","wordFour":"","toShow":"true","moduleName":"calendar","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"CALENDAR","wordThree":"","wordFour":"","toShow":"false","moduleName":"calendar","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"INSULTS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Insults","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"INSULTS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Insults","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"COMPLIMENTS","wordThree":"","wordFour":"","toShow":"true","moduleName":"compliments","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"COMPLIMENTS","wordThree":"","wordFour":"","toShow":"false","moduleName":"compliments","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"ALERT","wordThree":"","wordFour":"","toShow":"true","moduleName":"alert","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"ALERT","wordThree":"","wordFour":"","toShow":"false","moduleName":"alert","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"CLOCK","wordThree":"","wordFour":"","toShow":"true","moduleName":"clock","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"CLOCK","wordThree":"","wordFour":"","toShow":"false","moduleName":"clock","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"EARTHWIND","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EarthWinds","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"EARTHWIND","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EarthWinds","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"MOON","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Lunartic","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"MOON","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Lunartic","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"CLOCK","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Glock","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"CLOCK","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Glock","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"NEWSFEED","wordThree":"","wordFour":"","toShow":"true","moduleName":"newsfeed","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"NEWSFEED","wordThree":"","wordFour":"","toShow":"false","moduleName":"newsfeed","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"SHIPPING","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-AfterShip","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"SHIPPING","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-AfterShip","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"TRIVIA","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-ATM","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"TRIVIA","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-ATM","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"CARDS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-CARDS","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"CARDS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-CARDS","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"CENSUS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Census","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"CENSUS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Census","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"COCKTAILS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Cocktails","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"COCKTAILS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Cocktails","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"EARTH","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EARTH","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"EARTH","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EARTH","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"BACKGROUND","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EasyBack","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"BACKGROUND","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EasyBack","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"EVENTS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Events","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"EVENTS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Events","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"TIMER","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EventHorizon","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"TIMER","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EventHorizon","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"EYECANDY","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-EyeCandy","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"EYECANDY","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-EyeCandy","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"PHONE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-FMI","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"PHONE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-FMI","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"FORTUNE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Fortune","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"FORTUNE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Fortune","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"GAS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Gas","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"GAS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Gas","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"STATION","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-ISS","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"STATION","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-ISS","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"JEOPARDY","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-JEOPARDY","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"JEOPARDY","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-JEOPARDY","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"LICE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-LICE","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"LICE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-LICE","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"LOTTERY","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Lottery","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"LOTTERY","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Lottery","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"NASA","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-NASA","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"NASA","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-NASA","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"STATS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-PC-Stats","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"STATS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-PC-Stats","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"PETS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-PetFinder","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"PETS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-PetFinder","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"PILOTS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-PilotWX","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"PILOTS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-PilotWX","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"TIDE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-SORT","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"TIDE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-SORT","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"SUNRISE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-SunRiseSet","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"SUNRISE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-SunRiseSet","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"REMINDER","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-ToDoLive","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"REMINDER","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-ToDoLive","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"MARS","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-MARS","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"MARS","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-MARS","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"SOUNDMACHINE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-SoundMachine","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"SOUNDMACHINE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-SoundMachine","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"HISTORY","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-History","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"HISTORY","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-History","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"HOROSCOPE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-Astro","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"HOROSCOPE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-Astro","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"QUOTE","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-DailyQuotes","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"QUOTE","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-DailyQuotes","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"WEATHER","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-BMW-DS","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"WEATHER","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-BMW-DS","sendNoti":""},
-  {"wordOne":"SHOW","wordTwo":"WEATHER","wordThree":"","wordFour":"","toShow":"true","moduleName":"MMM-NOAA3","sendNoti":""},
-  {"wordOne":"HIDE","wordTwo":"WEATHER","wordThree":"","wordFour":"","toShow":"false","moduleName":"MMM-NOAA3","sendNoti":""}
+
+  ["SHOW","ALERT","","","true","alert",""],
+  ["HIDE","ALERT","","","false","alert",""],
+
+  ["SHOW","BACKGROUND","","","true","MMM-EasyBack",""],
+  ["HIDE","BACKGROUND","","","false","MMM-EasyBack",""],
+
+  ["SHOW","CALENDAR","","","true","calendar",""],
+  ["HIDE","CALENDAR","","","false","calendar",""],
+
+  ["SHOW","CARDS","","","true","MMM-CARDS",""],
+  ["HIDE","CARDS","","","false","MMM-CARDS",""],
+
+  ["SHOW","CENSUS","","","true","MMM-Census",""],
+  ["HIDE","CENSUS","","","false","MMM-Census",""],
+
+  ["SHOW","CLOCK","","","true","clock",""],
+  ["HIDE","CLOCK","","","false","clock",""],
+
+  ["SHOW","CLOCK","","","true","MMM-Glock",""],
+  ["HIDE","CLOCK","","","false","MMM-Glock",""],
+
+  ["SHOW","COCKTAILS","","","true","MMM-Cocktails",""],
+  ["HIDE","COCKTAILS","","","false","MMM-Cocktails",""],
+
+  ["SHOW","COMPLIMENTS","","","true","compliments",""],
+  ["HIDE","COMPLIMENTS","","","false","compliments",""],
+
+  ["SHOW","EARTH","","","true","MMM-EARTH",""],
+  ["HIDE","EARTH","","","false","MMM-EARTH",""],
+
+  ["SHOW","EARTHWIND","","","true","MMM-EarthWinds",""],
+  ["HIDE","EARTHWIND","","","false","MMM-EarthWinds",""],
+
+  ["SHOW","EVENTS","","","true","MMM-Events",""],
+  ["HIDE","EVENTS","","","false","MMM-Events",""],
+
+  ["SHOW","EYECANDY","","","true","MMM-EyeCandy",""],
+  ["HIDE","EYECANDY","","","false","MMM-EyeCandy",""],
+
+  ["SHOW","FORTUNE","","","true","MMM-Fortune",""],
+  ["HIDE","FORTUNE","","","false","MMM-Fortune",""],
+
+  ["SHOW","GAS","","","true","MMM-Gas",""],
+  ["HIDE","GAS","","","false","MMM-Gas",""],
+
+  ["SHOW","HISTORY","","","true","MMM-History",""],
+  ["HIDE","HISTORY","","","false","MMM-History",""],
+
+  ["SHOW","HOROSCOPE","","","true","MMM-Astro",""],
+  ["HIDE","HOROSCOPE","","","false","MMM-Astro",""],
+
+  ["SHOW","INSULTS","","","true","MMM-Insults",""],
+  ["HIDE","INSULTS","","","false","MMM-Insults",""],
+
+  ["SHOW","JEOPARDY","","","true","MMM-JEOPARDY",""],
+  ["HIDE","JEOPARDY","","","false","MMM-JEOPARDY",""],
+
+  ["SHOW","LICE","","","true","MMM-LICE",""],
+  ["HIDE","LICE","","","false","MMM-LICE",""],
+
+  ["SHOW","LOTTERY","","","true","MMM-Lottery",""],
+  ["HIDE","LOTTERY","","","false","MMM-Lottery",""],
+
+  ["SHOW","EASYPIX","","","true","MMM-EasyPix",""],
+  ["HIDE","EASYPIX","","","false","MMM-EasyPix",""],
+
+  ["SHOW","MARS","","","true","MMM-MARS",""],
+  ["HIDE","MARS","","","false","MMM-MARS",""],
+
+  ["SHOW","MOON","","","true","MMM-Lunartic",""],
+  ["HIDE","MOON","","","false","MMM-Lunartic",""],
+
+  ["SHOW","NASA","","","true","MMM-NASA",""],
+  ["HIDE","NASA","","","false","MMM-NASA",""],
+
+  ["SHOW","NEWSFEED","","","true","newsfeed",""],
+  ["HIDE","NEWSFEED","","","false","newsfeed",""],
+
+  ["SHOW","PETS","","","true","MMM-PetFinder",""],
+  ["HIDE","PETS","","","false","MMM-PetFinder",""],
+
+  ["SHOW","PILOTS","","","true","MMM-PilotWX",""],
+  ["HIDE","PILOTS","","","false","MMM-PilotWX",""],
+
+  ["SHOW","PHONE","","","true","MMM-FMI",""],
+  ["HIDE","PHONE","","","false","MMM-FMI",""],
+
+  ["SHOW","QUOTE","","","true","MMM-DailyQuotes",""],
+  ["HIDE","QUOTE","","","false","MMM-DailyQuotes",""],
+
+  ["SHOW","REMINDER","","","true","MMM-ToDoLive",""],
+  ["HIDE","REMINDER","","","false","MMM-ToDoLive",""],
+
+  ["SHOW","SEARCHLIGHT","","","true","MMM-Searchlight",""],
+  ["HIDE","SEARCHLIGHT","","","false","MMM-Searchlight",""],
+
+  ["SHOW","SHIPPING","","","true","MMM-AfterShip",""],
+  ["HIDE","SHIPPING","","","false","MMM-AfterShip",""],
+
+  ["SHOW","STATION","","","true","MMM-ISS",""],
+  ["HIDE","STATION","","","false","MMM-ISS",""],
+
+  ["SHOW","SPACE","","","true","MMM-ISS-Live",""],
+  ["HIDE","SPACE","","","false","MMM-ISS-Live",""],
+
+  ["SHOW","STATS","","","true","MMM-PC-Stats",""],
+  ["HIDE","STATS","","","false","MMM-PC-Stats",""],
+
+  ["SHOW","SOUNDMACHINE","","","true","MMM-SoundMachine",""],
+  ["HIDE","SOUNDMACHINE","","","false","MMM-SoundMachine",""],
+
+  ["SHOW","SUNRISE","","","true","MMM-SunRiseSet",""],
+  ["HIDE","SUNRISE","","","false","MMM-SunRiseSet",""],
+
+  ["SHOW","TIDE","","","true","MMM-SORT",""],
+  ["HIDE","TIDE","","","false","MMM-SORT",""],
+
+  ["SHOW","TIMER","","","true","MMM-EventHorizon",""],
+  ["HIDE","TIMER","","","false","MMM-EventHorizon",""],
+
+  ["SHOW","TRIVIA","","","true","MMM-ATM",""],
+  ["HIDE","TRIVIA","","","false","MMM-ATM",""],
+
+  ["SHOW","LUCY","","","true","Hello-Lucy",""],
+  ["HIDE","LUCY","","","false","Hello-Lucy",""],
+
+  ["SHOW","WEATHER","","","true","MMM-BMW-DS",""],
+  ["HIDE","WEATHER","","","false","MMM-BMW-DS",""],
+  ["SHOW","WEATHER","","","true","MMM-NOAA3",""],
+  ["HIDE","WEATHER","","","false","MMM-NOAA3",""]
   ]
 }
