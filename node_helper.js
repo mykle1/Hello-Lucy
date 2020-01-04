@@ -29,7 +29,7 @@ var firstWord, secWord, thirdWord, fourthWord, modName, trueFalse, sendNoti;
 module.exports = NodeHelper.create({
 
 	listening: false,
-	mode: false, // was false,
+	mode: false,
 	words: [],
 
 	start() {
@@ -46,16 +46,16 @@ module.exports = NodeHelper.create({
 			this.checkFiles();
 
 		} else if(notification === "ACTIVATE_MONITOR") {
-			if(this.config.standByMethod === "DPMS") // Turns on laptop display and desktop PC with DVI @ Mykle1
+			if(this.config.standByMethod === "DPMS")
 			{exec("xset dpms force on", null);}
-			if(this.config.standByMethod === "PI") // Turns off HDMI on Pi
+			if(this.config.standByMethod === "PI") // Turns off HDMI on Pi by @sdetweil
 			{exec("/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7", null);}
 			this.hdmi = true;
 
 		} else if(notification === "DEACTIVATE_MONITOR") {
-			if(this.config.standByMethod === "DPMS") // Turns off laptop display and desktop PC with DVI @ Mykle1
+			if(this.config.standByMethod === "DPMS")
 			{exec("xset dpms force off", null);}
-			if(this.config.standByMethod === "PI") // Turns off HDMI on Pi
+			if(this.config.standByMethod === "PI") // Turns off HDMI on Pi by @sdetweil
 			{exec("/opt/vc/bin/tvservice -o", null);}
 			this.hdmi = false;
 
@@ -186,13 +186,6 @@ module.exports = NodeHelper.create({
 				this.sendSocketNotification("DEBUG", data);
 			}
 			if (data.includes(this.config.keyword) || this.listening) {
-				// if hotword only, go directly online
-				// if (this.config.onlyHotword) {
-				// 	if(this.ps.isListening())
-				// 	{this.ps.stop();}
-				// 	console.log("sending socket notification, have released mic");
-				// 	this.sendSocketNotification("SUSPENDED", {ASSISTANT:this.config.onOnlyHotword});
-				// }
 				this.listening = true;
 				this.sendSocketNotification("LISTENING");
 				if (this.timer) {
@@ -264,16 +257,16 @@ module.exports = NodeHelper.create({
 	checkCommands(data) {
 
 		if (/(PLEASE)/g.test(data) && /(WAKE)/g.test(data) && /(UP)/g.test(data)) {
-			if(this.config.standByMethod === "DPMS")		/////////// Turns on laptop display and desktop PC with DVI @ Mykle1
+			if(this.config.standByMethod === "DPMS")
 			{exec("xset dpms force on", null);}
-			if(this.config.standByMethod === "PI")  		/////////// Turns on HDMI on Pi @sdetweil
+			if(this.config.standByMethod === "PI")  /////////// Turns on HDMI on Pi @sdetweil
 			{exec("/opt/vc/bin/tvservice -p && sudo chvt 6 && sudo chvt 7", null);}
 			this.hdmi = true;
 
 		} else if (/(GO)/g.test(data) && /(TO)/g.test(data) && /(SLEEP)/g.test(data)) {
-			if(this.config.standByMethod === "DPMS")  		/////////// Turns off laptop display and desktop PC with DVI @ Mykle1
+			if(this.config.standByMethod === "DPMS")
 			{exec("xset dpms force off", null);}
-			if(this.config.standByMethod === "PI")  		/////////// Turns off HDMI on Pi @sdetweil
+			if(this.config.standByMethod === "PI")  /////////// Turns off HDMI on Pi @sdetweil
 			{exec("/opt/vc/bin/tvservice -o", null);}
 			this.hdmi = false;
 
@@ -375,28 +368,26 @@ module.exports = NodeHelper.create({
 			this.sendSocketNotification("HIDE_MODULES");
 
 		} else {
-			for (var xx = 0, l = importedWords.modOp.length; xx < l;) {
-				var firstW = JSON.stringify(importedWords.modOp[xx].wordOne);
-				var secW = JSON.stringify(importedWords.modOp[xx].wordTwo);
-				var thirdW = JSON.stringify(importedWords.modOp[xx].wordThree);
-				var fourthW = JSON.stringify(importedWords.modOp[xx].wordFour);
-				var modN = JSON.stringify(importedWords.modOp[xx].moduleName);
-				var Tf = JSON.stringify(importedWords.modOp[xx].toShow);
-				var sN = JSON.stringify(importedWords.modOp[xx].sendNoti);
-				firstWord = firstW.replace(/"/g, "");
-				secWord = secW.replace(/"/g, "");
-				thirdWord = thirdW.replace(/"/g, "");
-				fourthWord = fourthW.replace(/"/g, "");
-				modName = modN.replace(/"/g, "");
-				trueFalse = Tf.replace(/"/g, "");
-				sendNoti = sN.replace(/"/g, "");
+      for (let row of importedWords.modOp){
+
+// These vars ARE used in the .test(data) below
+        // refactored
+				firstWord = row[0];
+				secWord = row[1];
+				thirdWord = row[2];
+				fourthWord = row[3];
+				trueFalse = row[4];
+				modName = row[5];
+				sendNoti = row[6];
+
 				this.firstWord = RegExp(firstWord);
 				this.secWord = RegExp(secWord);
 				this.thirdWord = RegExp(thirdWord);
 				this.fourthWord = RegExp(fourthWord);
-				this.modName = modName;
 				this.trueFalse = trueFalse;
+				this.modName = modName;
 				this.sendNoti = sendNoti;
+
 				if (this.firstWord.test(data) && this.secWord.test(data) && this.thirdWord.test(data) && this.fourthWord.test(data)) {
 					console.log(">>> modName & sendNoti : "+this.modName+" "+this.sendNoti);
 					if (this.modName != "") {
@@ -408,8 +399,8 @@ module.exports = NodeHelper.create({
 					} else {
 						this.sendSocketNotification("MODULE_UPDATE",this.sendNoti);
 					}
-				};xx++;
-			};
+				}
+			}
 		}
 	}
 
