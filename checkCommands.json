@@ -1,8 +1,8 @@
 {
 "modOp":[
 
-  ["SHOW","ALERT","","","true","alert",""],
-  ["HIDE","ALERT","","","false","alert",""],
+  ["SHOW","COMMAND","","","true","MMM-ModuleName",""],
+  ["HIDE","COMMAND","","","false","MMM-ModuleName",""],
 
   ["SHOW","BACKGROUND","","","true","MMM-EasyBack",""],
   ["HIDE","BACKGROUND","","","false","MMM-EasyBack",""],
