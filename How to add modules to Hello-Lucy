@@ -45,15 +45,15 @@ The easiest way to add your commands would be to copy and paste an existing pair
 That's two complete lines including the commas.
 Example:
 
-["SHOW","CARDS","","","true","MMM-CARDS",""],
-["HIDE","CARDS","","","false","MMM-CARDS",""],
-         ^^^^^                 ^^^^^^^^^
+["SHOW","COMMAND","","","true","MMM-ModuleName",""],
+["HIDE","COMMAND","","","false","MMM-ModuleName",""],
+         ^^^^^^^                 ^^^^^^^^^^^^^^
 
-1. Now change "CARDS" in both lines to the command word you would like to use.
+1. Now change "COMMAND" in both lines to the command word you would like to use.
    It MUST be in double quotes and it MUST be CAPITALS. See example.
 
 
-2. Now change "MMM-CARDS" in both lines to the EXACT module name you would like to use.
+2. Now change "MMM-ModuleName" in both lines to the EXACT module name you would like to use.
    Module name MUST be in double quotes. Module names are case sensitive.
 
 Save and close.
