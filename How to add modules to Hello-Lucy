@@ -38,12 +38,12 @@ Save the sentences.json file and close.
 
 
 
-5. Open the checkCommands.json file in a code editor.
+5. Open the checkCommands.json file in a code editor to avoid syntax problems. (known quote issue)
 
-You'll see that the commands come in pairs.
-The easiest way to add your commands would be to copy and paste an existing pair between two existing pairs.
-That's two complete lines including the commas.
-Example:
+Copy lines 4 and 5 entirely, including the commas. These are your template for adding your module to the array.
+Paste on line 6. Create a blank line above and below your pasted line.
+
+You now see this on lines 7 and 8. You'll only be changing "COMMAND" (twice) and "MMM-ModuleName" (twice).
 
 ["SHOW","COMMAND","","","true","MMM-ModuleName",""],
 ["HIDE","COMMAND","","","false","MMM-ModuleName",""],
