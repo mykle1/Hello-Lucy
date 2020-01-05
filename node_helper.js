@@ -1,3 +1,4 @@
+
 const Psc = require("pocketsphinx-continuous");
 const fs = require("fs");
 const exec = require("child_process").exec;
@@ -19,7 +20,7 @@ function readTextFile(file, callback) {
 }
 
 const localPath= __dirname.substring(__dirname.indexOf('modules'))
-console.log("localPath="+localPath);
+//console.log("localPath="+localPath);
 
 var loadingRules=fs.readFileSync(localPath+"/checkCommands.json", "utf8");
 var importedWords = JSON.parse(loadingRules);
@@ -37,7 +38,7 @@ module.exports = NodeHelper.create({
 	},
 
 	socketNotificationReceived(notification, payload) {
-		console.log("Lucy received notification="+notification);
+		//console.log("Lucy received notification="+notification);
 		if (notification === "START") {
 			this.config = payload.config;
 			this.time = this.config.timeout * 1000;
@@ -86,7 +87,7 @@ module.exports = NodeHelper.create({
 	},
 
 	checkFiles() {
-		console.log(`${this.name}: Checking files.`);
+		//console.log(`${this.name}: Checking files.`);
 		fs.stat(localPath+"/words.json", (error, stats) => {
 			if (!error && stats.isFile()) {
 				fs.readFile(localPath+"/words.json", "utf8", (err, data) => {
@@ -157,7 +158,7 @@ module.exports = NodeHelper.create({
 
 	// Starts Pocketsphinx binary.
 	startPocketsphinx() {
-		console.log(`${this.name}: Starting pocketsphinx.`);
+		//console.log(`${this.name}: Starting pocketsphinx.`);
 
 		this.ps = new Psc({
 			setId: this.name,
@@ -389,7 +390,7 @@ module.exports = NodeHelper.create({
 				this.sendNoti = sendNoti;
 
 				if (this.firstWord.test(data) && this.secWord.test(data) && this.thirdWord.test(data) && this.fourthWord.test(data)) {
-					console.log(">>> modName & sendNoti : "+this.modName+" "+this.sendNoti);
+					//console.log(">>> modName & sendNoti : "+this.modName+" "+this.sendNoti);
 					if (this.modName != "") {
 						if (this.trueFalse === "true") {
 							this.sendSocketNotification("MODULE_STATUS",{hide: [], show: [this.modName], toggle:[]});

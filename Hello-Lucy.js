@@ -15,30 +15,29 @@ function readTextFile(file, callback) {
 const sfn=document.currentScript.src.substring(7,document.currentScript.src.lastIndexOf(document.currentScript.src.includes('//')?'//':'/'))
 const localPath= sfn.substring(sfn.indexOf('modules'))
 const ModuleName=localPath.substring(localPath.lastIndexOf("/")+1)
-console.log("localPath="+localPath+" modulename="+ModuleName);
+//console.log("localPath="+localPath+" modulename="+ModuleName);
 
 readTextFile(localPath+"/sentences.json", function(text){
 	var tempImport = JSON.parse(text);
 	importedSentences = tempImport;
-	console.log("SENTENCE: "+importedSentences);
+	// console.log("SENTENCE: "+importedSentences);
 });
 
 ////////////////////////////////////////////////////
 
 Module.register(ModuleName, {
 
-	icon: "fa-microphone-slash",                    /** @member {string} icon - Microphone icon. */
-	pulsing: true,                                  /** @member {boolean} pulsing - Flag to indicate listening state. */
-	help: false,                                    /** @member {boolean} help - Flag to switch between render help or not. */
-	timeout: null,                                  /** Done by @sdetweil to release mic from PocketSphinx */
-
-	lucy: {                                        /** @member {Object} lucy - Defines the default mode and commands of this module. */
-		mode: "Say, 'Hello Lucy'",                                  /** @property {string} mode - Voice mode of this module. */
-		sentences: []                                   /** @property {string[]} sentences - List of lucy commands of this module. */
+	icon: "fa-microphone-slash",
+	pulsing: true,
+	help: false,
+	timeout: null,
+	lucy: {
+		mode: "Say, 'Hello Lucy'",
+		sentences: []
 	},
 
-	modules: [],                                    /** @member {Object[]} modules - Set of all modules with mode and commands. */
-	previouslyHidden: [],                           /** @member - keep list of modules already hidden when sleep occurs */
+	modules: [],
+	previouslyHidden: [],
 
 	defaults: {
 		timeout: 15,                                // time listening for a command/sentence when mic pulsing
@@ -49,7 +48,6 @@ Module.register(ModuleName, {
 		startHideAll: false,                        // if true, all modules start as hidden
 		microphone: "default",  // Do * NOT * change, is read from ~/.asoundrc
 		speed: 1000,                                // transition speed between show/no-show/show in milliseconds
-	//	    defaultOnStartup: "Hello-Lucy",
 	    	pageOneModules: ["Hello-Lucy"],         // default modules to show on page one/startup
 		    pageTwoModules: [],                         // modules to show on page two
     		pageThreeModules: [],                       // modules to show on page two
@@ -59,7 +57,7 @@ Module.register(ModuleName, {
     		pageSevenModules: [],                       // modules to show on page two
     		pageEightModules: [],                       // modules to show on page two
     		pageNineModules: [],                        // modules to show on page two
-    		pageTenModules: [],                          // modules to show on page two
+    		pageTenModules: [],                         // modules to show on page two
 		    greetingSounds: [ "a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"], // randomized greeting sounds
 				confirmationSound: "ding.mp3",               // when command is accepted. use your own or default
 				debug: false,                               // get debug information in console
@@ -70,10 +68,10 @@ Module.register(ModuleName, {
 	start() {
 		var combinedSentences = importedSentences.concat(this.lucy.sentences);
 		this.lucy.sentences = combinedSentences;
-		Log.info(`Starting module: ${this.name}`);
+		//Log.info(`Starting module: ${this.name}`);
 		this.mode = this.translate("INIT");
 		this.modules.push(this.lucy);
-		Log.info(`${this.name} is waiting for lucy command registrations.`);
+		//Log.info(`${this.name} is waiting for lucy command registrations.`);
 	},
 
 	getStyles() {
@@ -88,20 +86,21 @@ Module.register(ModuleName, {
 		};
 	},
 
+  // audible confirmation sound that Lucy understood the command
 	playConfirmationSound() {
 		var audio = new Audio(localPath+"/sounds/" + this.config.confirmationSound);
 		audio.play();
 	},
 
+  // randomized greeting sounds
 	playGreetingSound() {
-		// var audio_files = this.config.sounds;
 		var random_file = this.config.sounds[Math.floor(Math.random() * this.config.sounds.length)];
 		var audio = new Audio(localPath+"/sounds/"+random_file);
 		audio.play();
 	},
 
 	getDom() {
-		Log.log("lucy entered getDom")
+		//Log.log("lucy entered getDom")
 		const wrapper = document.createElement("div");
 		const lucy = document.createElement("div");
 		lucy.classList.add("small", "align-left");
@@ -149,10 +148,10 @@ Module.register(ModuleName, {
 	},
 
 	notificationReceived(notification, payload, sender) {
-		Log.log("lucy module notification received="+notification)
+		//Log.log("lucy module notification received="+notification)
 		var self=this;
 		if (notification === "DOM_OBJECTS_CREATED") {
-			Log.log("lucy module sending start")
+			//Log.log("lucy module sending start")
 			this.sendSocketNotification("START", { config: this.config, modules: this.modules });
 		} else if (notification === "REGISTER_LUCY_MODULE") {
 			if (Object.prototype.hasOwnProperty.call(payload, "mode") && Object.prototype.hasOwnProperty.call(payload, "sentences")) {
@@ -202,7 +201,7 @@ Module.register(ModuleName, {
 	socketNotificationReceived(notification, payload) {
 		if (notification === "READY") {
 			this.icon = "fa-microphone";
-			this.mode = this.translate("NO_MODE")+ "'Hello Lucy'" // this.config.keyword;
+			this.mode = this.translate("NO_MODE")+ "'Hello Lucy'";
 			this.pulsing = false;
 
 		} else if (notification === "LISTENING") {
@@ -230,7 +229,6 @@ Module.register(ModuleName, {
 			}
 
 		} else if (notification === "HIDE_MODULES") {
-			// audible confirmation sound that Lucy understood the command
 			this.playConfirmationSound();
 
 			MM.getModules().enumerate((module) => {
@@ -238,7 +236,6 @@ Module.register(ModuleName, {
 			});
 
 		} else if (notification === "SHOW_MODULES") {
-			// audible confirmation sound that Lucy understood the command
 			this.playConfirmationSound();
 
 			MM.getModules().enumerate((module) => {
@@ -249,26 +246,25 @@ Module.register(ModuleName, {
 			this.debugInformation = payload;
 
 		} else if (notification === "MODULE_STATUS") {
-			// audible confirmation sound that single or pages of modules was issued a Hide or show command
 			this.playConfirmationSound();
 
 			var hide = MM.getModules().withClass(payload.hide);
 			hide.enumerate(function(module) {
-				Log.log("Hide "+ module.name);
+				//Log.log("Hide "+ module.name);
 				var callback = function(){};
 				module.hide(self.config.speed, callback);
 			});
 
 			var show = MM.getModules().withClass(payload.show);
 			show.enumerate(function(module) {
-				Log.log("Show "+ module.name);
+				//Log.log("Show "+ module.name);
 				var callback = function(){};
 				module.show(self.config.speed, callback);
 			});
 
 		} else if (notification === "MODULE_UPDATE") {
 			this.sendNotification(payload);
-			console.log("sendNoti received :"+payload);
+			//console.log("sendNoti received :"+payload);
 
 		} else if (notification === "CLOSE_HELP") {
 			this.help = false;
