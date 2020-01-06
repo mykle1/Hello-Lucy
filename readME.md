@@ -21,7 +21,8 @@
 ## Add any module to work with Hello-Lucy!
 * Simplified process. See below.
 
-## Installation
+## 3 Step Installation
+### Please complete all 3
 
 * `git clone https://github.com/mykle1/Hello-Lucy` into the ~/MagicMirror/modules directory
 * `cd modules/Hello-Lucy/installers`
