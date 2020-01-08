@@ -21,6 +21,10 @@
 ## Add any module to work with Hello-Lucy!
 * Simplified process. See below.
 
+## Very important Pi users!
+* Read and perform the steps in the piAudioSetup.md file to set up your microphone.
+* Your microphone should be working BEFORE the installation.
+
 ## 3 Step Installation
 ### Please complete all 3
 
@@ -83,6 +87,7 @@ config: {
 * newsfeed
 
 * Hello-Lucy
+* MMM-Advice
 * MMM-AfterShip
 * MMM-Astro
 * MMM-ATM
@@ -94,6 +99,7 @@ config: {
 * MMM-EARTH
 * MMM-EarthWinds
 * MMM-EasyBack
+* MMM-EasyPix
 * MMM-EventHorizon
 * MMM-Events
 * MMM-EyeCandy
@@ -102,20 +108,27 @@ config: {
 * MMM-Gas
 * MMM-Glock
 * MMM-History
+* MMM-Holiday
 * MMM-ISS
 * MMM-ISS-Live
 * MMM-Insults
 * MMM-JEOPARDY
 * MMM-LICE
 * MMM-Lottery
-* MMM-EasyPix
-* MMM-MARS
 * MMM-Lunartic
+* MMM-MARS
+* MMM-MLB
+* MMM-MLBStandings
+* MMM-MusicCharts
 * MMM-NASA
+* MMM-NHL
+* MMM-NiceThings
 * MMM-NOAA3
 * MMM-PC-Stats
 * MMM-PetFinder
 * MMM-PilotWX
+* MMM-Recipe
+* MMM-rfacts
 * MMM-SORT
 * MMM-SoundMachine
 * MMM-SunRiseSet
