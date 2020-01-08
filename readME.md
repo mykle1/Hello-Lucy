@@ -29,8 +29,8 @@
 ### Please complete all 3
 
 * `git clone https://github.com/mykle1/Hello-Lucy` into the ~/MagicMirror/modules directory
-* `cd modules/Hello-Lucy/installers`
-* `bash dependencies.sh`
+* `cd Hello-Lucy/installers`
+* `bash dependencies.sh` in the `installers` directory
 
 ## Config options
 
