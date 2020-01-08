@@ -1,6 +1,6 @@
-# MMM-VoiceCommander - Audio Setup
+# Hello-Lucy * Audio Setup
 
-> ***Please note: This is just examples, and not related to the config presented in README.md***
+> ***Please note: These are just examples, and not related to the config presented in README.md***
 
 ## Why?
 
@@ -10,7 +10,7 @@ Note that this setup was tested on Raspbian Linux distribution but it should wor
 ## I am ready to test
 
 Let's first test your speakers:
-
+is is
 1. Make sure speakers are plugged in and they are turned on
 2. Move some audio file (I used mp3 file) to your Raspberry
 3. Try to play your audio file with `aplay myAudioFile.mp3`
@@ -80,4 +80,3 @@ Let's break this down:
 More info on configuring `asoundrc` can be found [here](https://www.alsa-project.org/main/index.php/Asoundrc)
 
 After these steps your audio setup is done! If you still have problems play around with the setting and check the documentation on [asoundrc](https://www.alsa-project.org/main/index.php/Asoundrc)
-
