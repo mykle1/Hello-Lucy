@@ -29,8 +29,8 @@
 ### Please complete all 3
 
 * `git clone https://github.com/mykle1/Hello-Lucy` into the ~/MagicMirror/modules directory
-* `cd Hello-Lucy/installers`
-* `bash dependencies.sh` in the `installers` directory
+* `cd modules/Hello-Lucy/installers`
+* `bash dependencies.sh`
 
 ## Config options
 
@@ -40,7 +40,8 @@ disabled: false,
 module: "Hello-Lucy",
 position: "top_right",
 config: {
-  keyword: 'HELLO LUCY',               // MUST BE CAPITALS to make Lucy start listening
+  keyword: 'HELLO LUCY',              // MUST BE CAPITALS to make Lucy start listening
+  microphone: "0,0",                  // run "arecord -l" card# and device# of your microphone/sound card (Ex "0,0",)
   timeout: 15,                        // timeout listening for a command/sentence
   defaultOnStartup: 'Hello-Lucy',
   standByMethod: 'DPMS',              // 'DPMS' = anything else than RPi or 'PI'
@@ -56,7 +57,7 @@ config: {
   pageSevenModules: [],                             // modules to show on page seven
   pageEightModules: [],                             // modules to show on page eight
   pageNineModules: [],                              // modules to show on page nine
-  pageTenModules: []                               // modules to show on page ten
+  pageTenModules: []                                // modules to show on page ten
 }
 },
 ```
