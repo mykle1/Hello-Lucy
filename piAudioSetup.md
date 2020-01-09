@@ -23,7 +23,7 @@ Let's test your microphone next:
 2. Try to record yourself with `arecord --format cd --duration 15 --channels 1 test.wav`
 3. This will record you for 15 seconds so please talk continuously for 15 seconds
 4. If you get error like `arecord: main:788: audio open error: No such file or directory` you know right away that your mic is not setup properly so you can move to audio troubleshooting
-5. If it did record without problems play the file with `aplay alsa test.wav`
+5. If it did record without problems play the file with `aplay test.wav`
 6. If you can hear yourself then everything is setup correctly!
 7. If you can't hear yourself move to audio troubleshooting
 
