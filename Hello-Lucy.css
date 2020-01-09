@@ -26,9 +26,8 @@
    columns: 4;
   -webkit-columns: 4;
   -moz-columns: 4;
-  position: fixed;
-  top: 200px;
-  right: -350px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 /* help screen font and color */
