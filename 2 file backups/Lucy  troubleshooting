@@ -1,0 +1,27 @@
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib and Enter
+
+sudo ldconfig and Enter
+
+cat /proc/asound/cards
+
+arecord hw:1,0 -d 5 /tmp/test-mic.wav
+
+aplay -L
+
+arecord -L
+
+
+/////////////////////////////////////////////////////////////////////////
+User needs card number and device number for microphone: (0,0) in config.
+They should run "arecord -l"
+My example:
+pop@e8300:~/MagicMirror$ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC221 Analog [ALC221 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 2: ALC221 Alt Analog [ALC221 Alt Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+/////////////////////////////////////////////////////////////////////////
