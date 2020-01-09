@@ -24,6 +24,7 @@
 ## Very important Pi users!
 * Read and perform the steps in the piAudioSetup.md file to set up your microphone.
 * Your microphone should be working BEFORE the installation.
+* Run `arecord -l` in your terminal. You need the card# and device# of your microphone/sound card for config entry.
 
 ## 3 Step Installation
 ### Please complete all 3
