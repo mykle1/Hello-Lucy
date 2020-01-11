@@ -15,7 +15,7 @@ The results will look like this:
 In this case, my (sound)card# is 0 and my device(microphone)# is also zero.
 So, in my config entry I have, `microphone: "0,0",`
 
-You should try this first for you own setup. If it works, which it should, you can stop right here.
+You should try this first for your own setup. If it works, which it should, you can stop right here.
 
 If it doesn't work, you must continue through the rest of this guide
 
