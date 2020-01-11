@@ -7,10 +7,22 @@
 Before installing this module you need to make sure your speakers and microphone are working correctly.
 Note that this setup was tested on Raspbian Linux distribution but it should work with many others.
 
+## Before you do anything
+* Run `arecord -ls` in your terminal.
+The results will look like this:
+![](images/1.png)
+
+In this case, my (sound)card# is 0 and my device(microphone)# is also zero.
+So, in my config entry I have, `microphone: "0,0",`
+
+You should try this first for you own setup. If it works, which it should, you can stop right here.
+
+If it doesn't work, you must continue through the rest of this guide
+
 ## I am ready to test
 
 Let's first test your speakers:
-is is
+
 1. Make sure speakers are plugged in and they are turned on
 2. Move some audio file (I used mp3 file) to your Raspberry
 3. Try to play your audio file with `aplay myAudioFile.mp3`
