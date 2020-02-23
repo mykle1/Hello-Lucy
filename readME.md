@@ -86,8 +86,9 @@ config: {
 * clock
 * calendar
 * compliments
+* currentweather
 * newsfeed
-
+* weatherforecast
 * Hello-Lucy
 * MMM-Advice
 * MMM-AfterShip
