@@ -43,6 +43,9 @@
   ["SHOW","EARTHWIND","","","true","MMM-EarthWinds",""],
   ["HIDE","EARTHWIND","","","false","MMM-EarthWinds",""],
 
+  ["SHOW","EASYPIX","","","true","MMM-EasyPix",""],
+  ["HIDE","EASYPIX","","","false","MMM-EasyPix",""],
+
   ["SHOW","EVENTS","","","true","MMM-Events",""],
   ["HIDE","EVENTS","","","false","MMM-Events",""],
 
@@ -58,6 +61,9 @@
   ["SHOW","GAS","","","true","MMM-Gas",""],
   ["HIDE","GAS","","","false","MMM-Gas",""],
 
+  ["SHOW","HARDWARE","","","true","MMM-HardwareMonitor",""],
+  ["HIDE","HARDWARE","","","false","MMM-HardwareMonitor",""],
+
   ["SHOW","HISTORY","","","true","MMM-History",""],
   ["HIDE","HISTORY","","","false","MMM-History",""],
 
@@ -70,6 +76,9 @@
   ["SHOW","HOROSCOPE","","","true","MMM-Astro",""],
   ["HIDE","HOROSCOPE","","","false","MMM-Astro",""],
 
+  ["SHOW","IFRAME","","","true","MMM-iFrame",""],
+  ["HIDE","IFRAME","","","false","MMM-iFrame",""],
+
   ["SHOW","INSULTS","","","true","MMM-Insults",""],
   ["HIDE","INSULTS","","","false","MMM-Insults",""],
 
@@ -79,11 +88,11 @@
   ["SHOW","LICE","","","true","MMM-LICE",""],
   ["HIDE","LICE","","","false","MMM-LICE",""],
 
+  ["SHOW","LIGHTS","","","true","mmm-hue-lights",""],
+  ["HIDE","LIGHTS","","","false","mmm-hue-lights",""],
+
   ["SHOW","LOTTERY","","","true","MMM-Lottery",""],
   ["HIDE","LOTTERY","","","false","MMM-Lottery",""],
-
-  ["SHOW","EASYPIX","","","true","MMM-EasyPix",""],
-  ["HIDE","EASYPIX","","","false","MMM-EasyPix",""],
 
   ["SHOW","MARS","","","true","MMM-MARS",""],
   ["HIDE","MARS","","","false","MMM-MARS",""],
@@ -96,6 +105,9 @@
 
   ["SHOW","NASA","","","true","MMM-NASA",""],
   ["HIDE","NASA","","","false","MMM-NASA",""],
+
+  ["SHOW","NETWORK","","","true","MMM-NetworkScanner",""],
+  ["HIDE","NETWORK","","","false","MMM-NetworkScanner",""],
 
   ["SHOW","NEWSFEED","","","true","newsfeed",""],
   ["HIDE","NEWSFEED","","","false","newsfeed",""],
@@ -127,17 +139,25 @@
   ["SHOW","SHIPPING","","","true","MMM-AfterShip",""],
   ["HIDE","SHIPPING","","","false","MMM-AfterShip",""],
 
-  ["SHOW","STATION","","","true","MMM-ISS",""],
-  ["HIDE","STATION","","","false","MMM-ISS",""],
+  ["SHOW","SOLAR","","","true","MMM-Solar",""],
+  ["HIDE","SOLAR","","","false","MMM-Solar",""],
+
+  ["SHOW","SOUNDMACHINE","","","true","MMM-SoundMachine",""],
+  ["HIDE","SOUNDMACHINE","","","false","MMM-SoundMachine",""],
 
   ["SHOW","SPACE","","","true","MMM-ISS-Live",""],
   ["HIDE","SPACE","","","false","MMM-ISS-Live",""],
 
+  ["SHOW","STATION","","","true","MMM-ISS",""],
+  ["HIDE","STATION","","","false","MMM-ISS",""],
+
   ["SHOW","STATS","","","true","MMM-PC-Stats",""],
   ["HIDE","STATS","","","false","MMM-PC-Stats",""],
+  ["SHOW","STATS","","","true","MMM-SystemStats",""],
+  ["HIDE","STATS","","","false","MMM-SystemStats",""],
 
-  ["SHOW","SOUNDMACHINE","","","true","MMM-SoundMachine",""],
-  ["HIDE","SOUNDMACHINE","","","false","MMM-SoundMachine",""],
+  ["SHOW","STOCKS","","","true","MMM-stocks",""],
+  ["HIDE","STOCKS","","","false","MMM-stocks",""],
 
   ["SHOW","SUNRISE","","","true","MMM-SunRiseSet",""],
   ["HIDE","SUNRISE","","","false","MMM-SunRiseSet",""],
@@ -157,6 +177,10 @@
   ["SHOW","WEATHER","","","true","MMM-BMW-DS",""],
   ["HIDE","WEATHER","","","false","MMM-BMW-DS",""],
   ["SHOW","WEATHER","","","true","MMM-NOAA3",""],
-  ["HIDE","WEATHER","","","false","MMM-NOAA3",""]
+  ["HIDE","WEATHER","","","false","MMM-NOAA3",""],
+  ["SHOW","WEATHER","","","true","currentweather",""],
+  ["HIDE","WEATHER","","","false","currentweather",""],
+  ["SHOW","WEATHER","","","true","weatherforecast",""],
+  ["HIDE","WEATHER","","","false","weatherforecast",""],
   ]
 }
