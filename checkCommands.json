@@ -4,8 +4,16 @@
   ["SHOW","COMMAND","","","true","MMM-ModuleName",""],
   ["HIDE","COMMAND","","","false","MMM-ModuleName",""],
 
+  ["SHOW","ADVICE","","","true","MMM-Advice",""],
+  ["HIDE","ADVICE","","","false","MMM-Advice",""],
+
   ["SHOW","BACKGROUND","","","true","MMM-EasyBack",""],
   ["HIDE","BACKGROUND","","","false","MMM-EasyBack",""],
+
+  ["SHOW","BASEBALL","","","true","MMM-MLB",""],
+  ["HIDE","BASEBALL","","","false","MMM-MLB",""],
+  ["SHOW","BASEBALL","","","true","MMM-MLBStandings",""],
+  ["HIDE","BASEBALL","","","false","MMM-MLBStandings",""],
 
   ["SHOW","CALENDAR","","","true","calendar",""],
   ["HIDE","CALENDAR","","","false","calendar",""],
@@ -19,7 +27,8 @@
   ["SHOW","CLOCK","","","true","clock",""],
   ["HIDE","CLOCK","","","false","clock",""],
 
-  ["SHOW","CLOCK","","","true","MMM-Glock",""],
+  ["SHOW","CLOCK","","","true","MMM-Glock",""],["SHOW","BASEBALL","","","true","MMM-MLB",""],
+  ["HIDE","BASEBALL","","","false","MMM-MLB",""],
   ["HIDE","CLOCK","","","false","MMM-Glock",""],
 
   ["SHOW","COCKTAILS","","","true","MMM-Cocktails",""],
@@ -34,11 +43,17 @@
   ["SHOW","EARTHWIND","","","true","MMM-EarthWinds",""],
   ["HIDE","EARTHWIND","","","false","MMM-EarthWinds",""],
 
+  ["SHOW","EASYPIX","","","true","MMM-EasyPix",""],
+  ["HIDE","EASYPIX","","","false","MMM-EasyPix",""],
+
   ["SHOW","EVENTS","","","true","MMM-Events",""],
   ["HIDE","EVENTS","","","false","MMM-Events",""],
 
   ["SHOW","EYECANDY","","","true","MMM-EyeCandy",""],
   ["HIDE","EYECANDY","","","false","MMM-EyeCandy",""],
+
+  ["SHOW","FAX","","","true","MMM-rfacts",""],
+  ["HIDE","FAX","","","false","MMM-rfacts",""],
 
   ["SHOW","FORTUNE","","","true","MMM-Fortune",""],
   ["HIDE","FORTUNE","","","false","MMM-Fortune",""],
@@ -46,11 +61,23 @@
   ["SHOW","GAS","","","true","MMM-Gas",""],
   ["HIDE","GAS","","","false","MMM-Gas",""],
 
+  ["SHOW","HARDWARE","","","true","MMM-HardwareMonitor",""],
+  ["HIDE","HARDWARE","","","false","MMM-HardwareMonitor",""],
+
   ["SHOW","HISTORY","","","true","MMM-History",""],
   ["HIDE","HISTORY","","","false","MMM-History",""],
 
+  ["SHOW","HOCKEY","","","true","MMM-NHL",""],
+  ["HIDE","HOCKEY","","","false","MMM-NHL",""],
+
+  ["SHOW","HOLIDAY","","","true","MMM-Holiday",""],
+  ["HIDE","HOLIDAY","","","false","MMM-Holiday",""],
+
   ["SHOW","HOROSCOPE","","","true","MMM-Astro",""],
   ["HIDE","HOROSCOPE","","","false","MMM-Astro",""],
+
+  ["SHOW","IFRAME","","","true","MMM-iFrame",""],
+  ["HIDE","IFRAME","","","false","MMM-iFrame",""],
 
   ["SHOW","INSULTS","","","true","MMM-Insults",""],
   ["HIDE","INSULTS","","","false","MMM-Insults",""],
@@ -61,11 +88,11 @@
   ["SHOW","LICE","","","true","MMM-LICE",""],
   ["HIDE","LICE","","","false","MMM-LICE",""],
 
+  ["SHOW","LIGHTS","","","true","mmm-hue-lights",""],
+  ["HIDE","LIGHTS","","","false","mmm-hue-lights",""],
+
   ["SHOW","LOTTERY","","","true","MMM-Lottery",""],
   ["HIDE","LOTTERY","","","false","MMM-Lottery",""],
-
-  ["SHOW","EASYPIX","","","true","MMM-EasyPix",""],
-  ["HIDE","EASYPIX","","","false","MMM-EasyPix",""],
 
   ["SHOW","MARS","","","true","MMM-MARS",""],
   ["HIDE","MARS","","","false","MMM-MARS",""],
@@ -73,11 +100,20 @@
   ["SHOW","MOON","","","true","MMM-Lunartic",""],
   ["HIDE","MOON","","","false","MMM-Lunartic",""],
 
+  ["SHOW","MUSIC","","","true","MMM-MusicCharts",""],
+  ["HIDE","MUSIC","","","false","MMM-MusicCharts",""],
+
   ["SHOW","NASA","","","true","MMM-NASA",""],
   ["HIDE","NASA","","","false","MMM-NASA",""],
 
+  ["SHOW","NETWORK","","","true","MMM-NetworkScanner",""],
+  ["HIDE","NETWORK","","","false","MMM-NetworkScanner",""],
+
   ["SHOW","NEWSFEED","","","true","newsfeed",""],
   ["HIDE","NEWSFEED","","","false","newsfeed",""],
+
+  ["SHOW","NICE","THINGS","","true","MMM-NiceThings",""],
+  ["HIDE","NICE","THINGS","","false","MMM-NiceThings",""],
 
   ["SHOW","PETS","","","true","MMM-PetFinder",""],
   ["HIDE","PETS","","","false","MMM-PetFinder",""],
@@ -91,6 +127,9 @@
   ["SHOW","QUOTE","","","true","MMM-DailyQuotes",""],
   ["HIDE","QUOTE","","","false","MMM-DailyQuotes",""],
 
+  ["SHOW","RECIPE","","","true","MMM-Recipe",""],
+  ["HIDE","RECIPE","","","false","MMM-Recipe",""],
+
   ["SHOW","REMINDER","","","true","MMM-ToDoLive",""],
   ["HIDE","REMINDER","","","false","MMM-ToDoLive",""],
 
@@ -100,17 +139,25 @@
   ["SHOW","SHIPPING","","","true","MMM-AfterShip",""],
   ["HIDE","SHIPPING","","","false","MMM-AfterShip",""],
 
-  ["SHOW","STATION","","","true","MMM-ISS",""],
-  ["HIDE","STATION","","","false","MMM-ISS",""],
+  ["SHOW","SOLAR","","","true","MMM-Solar",""],
+  ["HIDE","SOLAR","","","false","MMM-Solar",""],
+
+  ["SHOW","SOUNDMACHINE","","","true","MMM-SoundMachine",""],
+  ["HIDE","SOUNDMACHINE","","","false","MMM-SoundMachine",""],
 
   ["SHOW","SPACE","","","true","MMM-ISS-Live",""],
   ["HIDE","SPACE","","","false","MMM-ISS-Live",""],
 
+  ["SHOW","STATION","","","true","MMM-ISS",""],
+  ["HIDE","STATION","","","false","MMM-ISS",""],
+
   ["SHOW","STATS","","","true","MMM-PC-Stats",""],
   ["HIDE","STATS","","","false","MMM-PC-Stats",""],
+  ["SHOW","STATS","","","true","MMM-SystemStats",""],
+  ["HIDE","STATS","","","false","MMM-SystemStats",""],
 
-  ["SHOW","SOUNDMACHINE","","","true","MMM-SoundMachine",""],
-  ["HIDE","SOUNDMACHINE","","","false","MMM-SoundMachine",""],
+  ["SHOW","STOCKS","","","true","MMM-stocks",""],
+  ["HIDE","STOCKS","","","false","MMM-stocks",""],
 
   ["SHOW","SUNRISE","","","true","MMM-SunRiseSet",""],
   ["HIDE","SUNRISE","","","false","MMM-SunRiseSet",""],
@@ -130,6 +177,10 @@
   ["SHOW","WEATHER","","","true","MMM-BMW-DS",""],
   ["HIDE","WEATHER","","","false","MMM-BMW-DS",""],
   ["SHOW","WEATHER","","","true","MMM-NOAA3",""],
-  ["HIDE","WEATHER","","","false","MMM-NOAA3",""]
+  ["HIDE","WEATHER","","","false","MMM-NOAA3",""],
+  ["SHOW","WEATHER","","","true","currentweather",""],
+  ["HIDE","WEATHER","","","false","currentweather",""],
+  ["SHOW","WEATHER","","","true","weatherforecast",""],
+  ["HIDE","WEATHER","","","false","weatherforecast",""],
   ]
 }
