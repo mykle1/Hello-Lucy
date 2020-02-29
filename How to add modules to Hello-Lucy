@@ -73,7 +73,9 @@ You've just added a module for use with Hello-Lucy OR you fucked up. ;-)
 
 
 
+## Important!
 
+When adding to the checkCommands.json file. The last array in the file CANNOT have a comma after it
 
 
 

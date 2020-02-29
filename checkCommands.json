@@ -179,7 +179,9 @@
   ["SHOW","WEATHER","","","true","currentweather",""],
   ["HIDE","WEATHER","","","false","currentweather",""],
   ["SHOW","WEATHER","","","true","weatherforecast",""],
-  ["HIDE","WEATHER","","","false","weatherforecast",""]
+  ["HIDE","WEATHER","","","false","weatherforecast",""],
+  ["SHOW","WEATHER","","","true","MMM-DarkSkyForecast",""],
+  ["HIDE","WEATHER","","","false","MMM-DarkSkyForecast",""]
 
   ]
 }
