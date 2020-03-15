@@ -95,6 +95,9 @@
   ["SHOW","MARS","","","true","MMM-MARS",""],
   ["HIDE","MARS","","","false","MMM-MARS",""],
 
+  ["SHOW","MERCURY","","","true","MMM-MercuryInRetrograde",""],
+  ["HIDE","MERCURY","","","false","MMM-MercuryInRetrograde",""],
+
   ["SHOW","MOON","","","true","MMM-Lunartic",""],
   ["HIDE","MOON","","","false","MMM-Lunartic",""],
 
@@ -109,6 +112,8 @@
 
   ["SHOW","NEWSFEED","","","true","newsfeed",""],
   ["HIDE","NEWSFEED","","","false","newsfeed",""],
+  ["SHOW","NEWSFEED","","","true","MMM-EveryNews",""],
+  ["HIDE","NEWSFEED","","","false","MMM-EveryNews",""],
 
   ["SHOW","NICE","THINGS","","true","MMM-NiceThings",""],
   ["HIDE","NICE","THINGS","","false","MMM-NiceThings",""],
@@ -174,6 +179,13 @@
 
   ["SHOW","WEATHER","","","true","MMM-BMW-DS",""],
   ["HIDE","WEATHER","","","false","MMM-BMW-DS",""],
+
+  ["SHOW","WEATHER","","","true","MMM-PLOW",""],
+  ["HIDE","WEATHER","","","false","MMM-PLOW",""],
+
+  ["SHOW","WEATHER","","","true","MMM-WeatherOrNot",""],
+  ["HIDE","WEATHER","","","false","MMM-WeatherOrNot",""],
+
   ["SHOW","WEATHER","","","true","MMM-NOAA3",""],
   ["HIDE","WEATHER","","","false","MMM-NOAA3",""],
   ["SHOW","WEATHER","","","true","currentweather",""],

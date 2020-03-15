@@ -86,7 +86,9 @@ config: {
 * clock
 * calendar
 * compliments
+* currentweather
 * newsfeed
+* weatherforecast
 
 * Hello-Lucy
 * MMM-Advice
@@ -98,12 +100,14 @@ config: {
 * MMM-Census
 * MMM-Cocktails
 * MMM-DailyQuotes
+* MMM-DarkSkyForecast
 * MMM-EARTH
 * MMM-EarthWinds
 * MMM-EasyBack
 * MMM-EasyPix
 * MMM-EventHorizon
 * MMM-Events
+* MMM-EveryNews
 * MMM-EyeCandy
 * MMM-FMI
 * MMM-Fortune
@@ -119,6 +123,7 @@ config: {
 * MMM-Lottery
 * MMM-Lunartic
 * MMM-MARS
+* MMM-MercuryInRetrograde
 * MMM-MLB
 * MMM-MLBStandings
 * MMM-MusicCharts
@@ -129,9 +134,11 @@ config: {
 * MMM-PC-Stats
 * MMM-PetFinder
 * MMM-PilotWX
+* MMM-PLOW
 * MMM-Recipe
 * MMM-rfacts
 * MMM-SORT
 * MMM-SoundMachine
 * MMM-SunRiseSet
 * MMM-ToDoLive
+* MMM-WeatherOrNot
