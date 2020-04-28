@@ -95,7 +95,9 @@ config: {
 * MMM-AfterShip
 * MMM-Astro
 * MMM-ATM
-* MMM-BMW-DS
+* MMM-BMW-CC (ClimaCell)
+* MMM-BMW-DS (Darksky)
+* MMM-BMW-OW (OpenWeather Coming soon)
 * MMM-CARDS
 * MMM-Census
 * MMM-Cocktails
