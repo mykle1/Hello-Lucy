@@ -89,15 +89,17 @@ config: {
 * currentweather
 * newsfeed
 * weatherforecast
-
+*
 * Hello-Lucy
 * MMM-Advice
+* MMM-AVStock
 * MMM-AfterShip
 * MMM-Astro
 * MMM-ATM
-* MMM-BMW-CC (ClimaCell)
-* MMM-BMW-DS (Darksky)
-* MMM-BMW-OW (OpenWeather Coming soon)
+* MMM-BMW-CC (using ClimaCell)
+* MMM-BMW-DS (using Darksky)
+* MMM-BMW-OW (Using OpenWeather)
+* MMM-CalendarExt2
 * MMM-CARDS
 * MMM-Census
 * MMM-Cocktails
@@ -122,6 +124,7 @@ config: {
 * MMM-Insults
 * MMM-JEOPARDY
 * MMM-LICE
+* MMM-lichess-daily
 * MMM-Lottery
 * MMM-Lunartic
 * MMM-MARS
@@ -138,6 +141,7 @@ config: {
 * MMM-PilotWX
 * MMM-PLOW
 * MMM-Recipe
+* MMM-Remote-Control
 * MMM-rfacts
 * MMM-SORT
 * MMM-SoundMachine
