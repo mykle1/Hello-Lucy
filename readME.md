@@ -72,15 +72,11 @@ config: {
 | `startHidden` | true/false | whether at MagciMirror startup to hide all modules and show image | default=true |
 
 ## How to add any module you want for use with Hello-Lucy
-* You can ask me to add them for you or follow the example directions below.
-* If you are not comfortable modifying files it's best that I do it. :-)
-
-* Otherwise, please read the "How to add modules to Hello-Lucy" file included with this repo.
+* Please read the "How to add modules to Hello-Lucy" file included with this repo.
 
 ### Future upgrades for Hello_Lucy will eliminate the need for any modifications by the user (That's you)
 
 ## Modules below that work by default
-### Note: I can add modules for you. Usually, in less than 24 hours.
 
 * alert
 * clock
