@@ -12,7 +12,7 @@ function readTextFile(file, callback) {
 	};
 	rawFile.send(null);
 }
-const sfn=document.currentScript.src.substring(7,document.currentScript.src.lastIndexOf(document.currentScript.src.includes('//')?'//':'/'))
+const sfn= document.currentScript.src.substring(7,document.currentScript.src.lastIndexOf(document.currentScript.src.slice(7).includes('//')?'//':'/'))
 const localPath= sfn.substring(sfn.indexOf('modules'))
 const ModuleName=localPath.substring(localPath.lastIndexOf("/")+1)
 //console.log("localPath="+localPath+" modulename="+ModuleName);
@@ -46,7 +46,7 @@ Module.register(ModuleName, {
 		standByMethod: "DPMS",                      // 'DPMS' = anything else than RPi or 'PI'
 		sounds: ["a.mp3",  "b.mp3",  "c.mp3" , "d.mp3"], // welcome sounds at startup randomly chosen
 		startHideAll: false,                        // if true, all modules start as hidden
-		microphone: "default",                      // 
+		microphone: "default",                      //
 		speed: 1000,                                // transition speed between show/no-show/show in milliseconds
 	    	pageOneModules: ["Hello-Lucy"],         // default modules to show on page one/startup
 		    pageTwoModules: [],                         // modules to show on page two
