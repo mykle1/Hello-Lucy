@@ -21,14 +21,6 @@
     "url": "https://github.com/mykle1/Hello-Lucy/issues"
   },
   "homepage": "https://github.com/mykle1/Hello-Lucy#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^11.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "jsdoc": "^3.4.3",
-    "stylelint": "^7.8.0",
-    "stylelint-config-standard": "^16.0.0"
-  },
   "dependencies": {
     "lmtool": "2.0.3",
     "pocketsphinx-continuous": "git://github.com/mykle1/pocketsphinx-continuous-node.git"
